@@ -1,0 +1,28 @@
+01:53:29  Log file: dataset/logs/tau_safe_vs_tau_phy_20260906_015329.log
+01:53:29  delta_max=0.6931 (learned T_safe bounded to [tau_phy*0.500, tau_phy*2.000])
+01:53:29  [1/2] Bench2Drive test split ...
+01:53:46  [2/2] DeepAccident (all instances with native label) ...
+01:57:42        ... 2000 files scanned, 125046 agent-rows so far
+02:00:19        ... 4000 files scanned, 202831 agent-rows so far
+02:03:31        ... 6000 files scanned, 297166 agent-rows so far
+02:06:09        ... 8000 files scanned, 374762 agent-rows so far
+02:06:44  -> 391980 agent-instance rows total
+02:06:44  Bounded-residual check: T_safe/tau_phy ratio range observed=[0.501, 1.593], allowed=[0.500, 2.000], out-of-bound rows=0/391980
+02:06:45  Per (interaction_type, relative-speed bin): mean tau_phy vs. mean learned T_safe, log2-ratio:
+02:06:45      car-following            fast-closing     n=  3213  tau_phy=2.152s  T_safe_learned=1.151s  log2(ratio)=-0.899 (less conservative than prior)
+02:06:45      car-following            medium           n= 10945  tau_phy=0.812s  T_safe_learned=0.469s  log2(ratio)=-0.791 (less conservative than prior)
+02:06:45      car-following            receding/slow    n=  7272  tau_phy=0.395s  T_safe_learned=0.222s  log2(ratio)=-0.834 (less conservative than prior)
+02:06:45      crossing                 fast-closing     n= 58812  tau_phy=2.639s  T_safe_learned=1.422s  log2(ratio)=-0.889 (less conservative than prior)
+02:06:45      crossing                 medium           n= 45858  tau_phy=1.085s  T_safe_learned=0.619s  log2(ratio)=-0.809 (less conservative than prior)
+02:06:45      crossing                 receding/slow    n= 45856  tau_phy=0.415s  T_safe_learned=0.230s  log2(ratio)=-0.854 (less conservative than prior)
+02:06:45      merging/lane-change      fast-closing     n= 15971  tau_phy=2.885s  T_safe_learned=1.514s  log2(ratio)=-0.927 (less conservative than prior)
+02:06:45      merging/lane-change      medium           n= 16265  tau_phy=1.140s  T_safe_learned=0.610s  log2(ratio)=-0.900 (less conservative than prior)
+02:06:45      merging/lane-change      receding/slow    n= 19378  tau_phy=0.467s  T_safe_learned=0.254s  log2(ratio)=-0.876 (less conservative than prior)
+02:06:45      oncoming                 fast-closing     n= 32915  tau_phy=3.039s  T_safe_learned=1.621s  log2(ratio)=-0.902 (less conservative than prior)
+02:06:45      oncoming                 medium           n= 28989  tau_phy=1.146s  T_safe_learned=0.642s  log2(ratio)=-0.832 (less conservative than prior)
+02:06:45      oncoming                 receding/slow    n= 36009  tau_phy=0.517s  T_safe_learned=0.290s  log2(ratio)=-0.821 (less conservative than prior)
+02:06:45      other                    fast-closing     n= 19749  tau_phy=2.588s  T_safe_learned=1.377s  log2(ratio)=-0.906 (less conservative than prior)
+02:06:45      other                    medium           n= 28603  tau_phy=1.049s  T_safe_learned=0.582s  log2(ratio)=-0.849 (less conservative than prior)
+02:06:45      other                    receding/slow    n= 22145  tau_phy=0.418s  T_safe_learned=0.229s  log2(ratio)=-0.866 (less conservative than prior)
+02:06:45  wrote dataset/results_experiments/tau_safe_vs_tau_phy_summary.json
+02:06:45  Total time: 795.6s

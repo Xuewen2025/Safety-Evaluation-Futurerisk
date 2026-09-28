@@ -1,0 +1,64 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 19 May
+ Time: 3:0
+ Primary Road Name: I-95
+ Secondary Road Name: None
+ Latitude: 38.2176
+ Longitude: -77.49909167
+ First Harmful Event: Pedestrian
+ Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 2
+ event 1: 
+    Area of Impact 1: 10 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+ event 2: 
+    Area of Impact 1: Undercarriage
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 2
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet S-10/T-10 Pickup
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: 10 Clock Point
+   Speed: 070 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Pedestrian in road
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: C13-Single Driver-Forward Impact-Pedestrian/ Animal
+   Damages: ['10 Clock Value']
+
+ Vehicle 2:
+   Model: Freightliner Medium/Heavy - CBE
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: Undercarriage
+   Speed: 065 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Pedestrian approaching road
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: M98-Other Crash Type
+   Damages: ['12 Clock Value', 'Undercarriage']
+

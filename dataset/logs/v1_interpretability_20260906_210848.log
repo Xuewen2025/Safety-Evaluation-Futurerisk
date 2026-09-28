@@ -1,0 +1,17 @@
+21:08:49  [1/3] DeepAccident in-domain test (native label) ...
+21:11:23        in-domain: full CARM AUROC=0.793 AUPRC=0.490   Stage-1-only AUROC=0.764 AUPRC=0.459
+21:11:23        formula-anchored fraction (FutureRisk) = 0.7006
+21:11:23        g_r stats: mean=-0.9811 std=0.5154
+21:11:23          g_r by type  oncoming                 n=18960 mean=-0.9765 std=0.5479
+21:11:23          g_r by type  other                    n=13550 mean=-1.0514 std=0.4963
+21:11:23          g_r by type  merging/lane-change      n=10168 mean=-0.9807 std=0.5187
+21:11:23          g_r by type  car-following            n= 3930 mean=-0.7250 std=0.4244
+21:11:23          g_r by type  crossing                 n=29144 mean=-0.9862 std=0.5012
+21:11:23  [2/3] Bench2Drive cross-domain test (geometric label) ...
+21:11:47        ... 1000 instances scored
+21:12:06        ... 2000 instances scored
+21:12:29        ... 3000 instances scored
+21:12:47        cross-domain: full CARM AUROC=0.808 AUPRC=0.328   Stage-1-only AUROC=0.818 AUPRC=0.333
+21:12:47  [3/3] Writing results ...
+21:12:48  wrote dataset/results_v1/v1_interpretability_summary.json
+21:12:48  Total time: 239.2s

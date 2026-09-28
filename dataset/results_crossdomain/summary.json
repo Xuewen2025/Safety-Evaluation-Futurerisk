@@ -1,0 +1,20 @@
+{
+  "n_instances": 8279,
+  "n_instances_missing_native_label": 0,
+  "n_collisions_native": 1649,
+  "n_collisions_geometric": 1124,
+  "native_geometric_label_agreement": 0.8674960744051214,
+  "auroc_model": 0.6366447236635943,
+  "auprc_model": 0.32212050245171603,
+  "auroc_analytic": 0.6363362044915928,
+  "auprc_analytic": 0.3613679692354078,
+  "auroc_raw_ttc": 0.6339801900141501,
+  "auprc_raw_ttc": 0.33695567414160404,
+  "operating_threshold": 0.0,
+  "n_colliding_instances_native": 1649,
+  "n_colliding_no_geometric_time_match": 811,
+  "n_warned_before_impact": 838,
+  "lead_time_mean_s": 3.5846062052505974,
+  "lead_time_median_s": 3.9000000000000004,
+  "calibration_ece": 0.14650565289345208
+}

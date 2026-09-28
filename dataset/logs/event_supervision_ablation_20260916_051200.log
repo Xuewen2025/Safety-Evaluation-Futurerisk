@@ -1,0 +1,89 @@
+05:12:00  [0/5] Loading cached DeepAccident preprocessing (identical to train_deepaccident_v1.py) ...
+05:24:14        native-ground-truth target override: 1649 instances
+05:24:14  [1/5] Required check #2/#3: verifying lambda_evt=0 gradient isolation ...
+05:24:15  [check] lambda_evt=0 hazard_head grad == L_risk-only hazard_head grad: True (max abs diff=0.000e+00)
+05:24:15  [check] hazard_head receives nonzero gradient via L_risk alone on batch 0: False (grad abs-sum=0.0000, R_instance sample=[1.0, 1.0, 1.0, 1.0, 1.0])
+05:24:15        batch 0 hit the R_instance clamp-saturation issue (see module docstring) -- NOT treated as fatal here; measure_saturation_frequency() below quantifies how often this happens across a full epoch.
+05:24:18  [check] saturation frequency over 1 full Stage-1 epoch (156 batches, 4967 instances, freshly initialized model): 79/156 batches (50.6%) had EXACTLY ZERO hazard_head gradient; 4872/4967 instances (98.1%) individually hit the R_instance>=1-1e-6 clamp boundary.
+05:24:18  [2/5] Required check #1: full-model reference (existing checkpoint/summary) ...
+05:24:18        Full CARM (existing checkpoint) in-domain native AUROC=0.793 AUPRC=0.490  (root.tex reports 0.793 / 0.490)
+05:24:18  [3/5] Training Full CARM w/o L_evt (lambda_evt=0, full two-stage schedule) ...
+05:24:18  [train] lambda_evt=0.0 lambda_risk=1.0 lambda_saturation=0.01 (Stage 2 always excludes L_evt/lambda_evt)
+05:24:18        Stage 1 (L_risk + L_saturation only; L_evt weight is 0):
+05:24:21          stage1 epoch   0  train_loss=3.9476  val_auroc=0.598  val_auprc=0.186  *best*
+05:24:23          stage1 epoch   1  train_loss=1.1333  val_auroc=0.656  val_auprc=0.210  *best*
+05:24:25          stage1 epoch   2  train_loss=1.0494  val_auroc=0.708  val_auprc=0.273  *best*
+05:24:27          stage1 epoch   3  train_loss=1.0591  val_auroc=0.756  val_auprc=0.347  *best*
+05:24:30          stage1 epoch   4  train_loss=0.9594  val_auroc=0.750  val_auprc=0.330
+05:24:32          stage1 epoch   5  train_loss=0.9223  val_auroc=0.775  val_auprc=0.382  *best*
+05:24:34          stage1 epoch   6  train_loss=0.8978  val_auroc=0.768  val_auprc=0.339
+05:24:36          stage1 epoch   7  train_loss=0.8773  val_auroc=0.774  val_auprc=0.372
+05:24:38          stage1 epoch   8  train_loss=0.8561  val_auroc=0.781  val_auprc=0.406  *best*
+05:24:41          stage1 epoch   9  train_loss=0.8353  val_auroc=0.794  val_auprc=0.430  *best*
+05:24:43          stage1 epoch  10  train_loss=0.8322  val_auroc=0.777  val_auprc=0.371
+05:24:45          stage1 epoch  11  train_loss=0.8171  val_auroc=0.763  val_auprc=0.395
+05:24:47          stage1 epoch  12  train_loss=0.8014  val_auroc=0.792  val_auprc=0.420
+05:24:50          stage1 epoch  13  train_loss=0.7843  val_auroc=0.808  val_auprc=0.459  *best*
+05:24:52          stage1 epoch  14  train_loss=0.7636  val_auroc=0.811  val_auprc=0.454  *best*
+05:24:54          stage1 epoch  15  train_loss=0.7636  val_auroc=0.809  val_auprc=0.469
+05:24:56          stage1 epoch  16  train_loss=0.7461  val_auroc=0.807  val_auprc=0.478
+05:24:59          stage1 epoch  17  train_loss=0.7268  val_auroc=0.824  val_auprc=0.489  *best*
+05:25:01          stage1 epoch  18  train_loss=0.7270  val_auroc=0.814  val_auprc=0.494
+05:25:03          stage1 epoch  19  train_loss=0.7222  val_auroc=0.799  val_auprc=0.426
+05:25:06          stage1 epoch  20  train_loss=0.7189  val_auroc=0.832  val_auprc=0.536  *best*
+05:25:08          stage1 epoch  21  train_loss=0.7920  val_auroc=0.798  val_auprc=0.477
+05:25:10          stage1 epoch  22  train_loss=0.7322  val_auroc=0.818  val_auprc=0.501
+05:25:13          stage1 epoch  23  train_loss=0.6993  val_auroc=0.830  val_auprc=0.521
+05:25:15          stage1 epoch  24  train_loss=0.6857  val_auroc=0.829  val_auprc=0.528
+05:25:17          stage1 epoch  25  train_loss=0.6694  val_auroc=0.829  val_auprc=0.533
+05:25:20          stage1 epoch  26  train_loss=0.6867  val_auroc=0.821  val_auprc=0.475
+05:25:22          stage1 epoch  27  train_loss=0.7215  val_auroc=0.815  val_auprc=0.481
+05:25:24          stage1 epoch  28  train_loss=0.6853  val_auroc=0.827  val_auprc=0.515
+05:25:27          stage1 epoch  29  train_loss=0.6557  val_auroc=0.826  val_auprc=0.515
+05:25:29          stage1 epoch  30  train_loss=0.6839  val_auroc=0.832  val_auprc=0.513
+05:25:31          stage1 epoch  31  train_loss=0.6356  val_auroc=0.829  val_auprc=0.510
+05:25:34          stage1 epoch  32  train_loss=0.6275  val_auroc=0.830  val_auprc=0.498
+05:25:36          stage1 epoch  33  train_loss=0.6130  val_auroc=0.819  val_auprc=0.484
+05:25:38          stage1 epoch  34  train_loss=0.6055  val_auroc=0.826  val_auprc=0.505
+05:25:40          stage1 epoch  35  train_loss=0.5994  val_auroc=0.832  val_auprc=0.501
+05:25:43          stage1 epoch  36  train_loss=0.5947  val_auroc=0.831  val_auprc=0.495
+05:25:45          stage1 epoch  37  train_loss=0.6046  val_auroc=0.823  val_auprc=0.492
+05:25:47          stage1 epoch  38  train_loss=0.5877  val_auroc=0.818  val_auprc=0.485
+05:25:49          stage1 epoch  39  train_loss=0.5872  val_auroc=0.827  val_auprc=0.484
+05:25:49        Stage 2 (L_risk only -- identical procedure to the full model):
+05:25:50          stage2 epoch   0  train_loss=0.5426  val_auroc=0.839  val_auprc=0.513  *best*
+05:25:52          stage2 epoch   1  train_loss=0.5367  val_auroc=0.842  val_auprc=0.523  *best*
+05:25:53          stage2 epoch   2  train_loss=0.5437  val_auroc=0.844  val_auprc=0.534  *best*
+05:25:54          stage2 epoch   3  train_loss=0.5332  val_auroc=0.845  val_auprc=0.538  *best*
+05:25:55          stage2 epoch   4  train_loss=0.5234  val_auroc=0.846  val_auprc=0.538  *best*
+05:25:56          stage2 epoch   5  train_loss=0.5205  val_auroc=0.846  val_auprc=0.540  *best*
+05:25:57          stage2 epoch   6  train_loss=0.5334  val_auroc=0.846  val_auprc=0.542  *best*
+05:25:58          stage2 epoch   7  train_loss=0.5321  val_auroc=0.847  val_auprc=0.545  *best*
+05:25:59          stage2 epoch   8  train_loss=0.5316  val_auroc=0.844  val_auprc=0.535
+05:26:00          stage2 epoch   9  train_loss=0.5260  val_auroc=0.845  val_auprc=0.537
+05:26:01          stage2 epoch  10  train_loss=0.5249  val_auroc=0.844  val_auprc=0.534
+05:26:03          stage2 epoch  11  train_loss=0.5237  val_auroc=0.847  val_auprc=0.543
+05:26:04          stage2 epoch  12  train_loss=0.5222  val_auroc=0.848  val_auprc=0.549  *best*
+05:26:05          stage2 epoch  13  train_loss=0.5199  val_auroc=0.845  val_auprc=0.541
+05:26:06          stage2 epoch  14  train_loss=0.5202  val_auroc=0.845  val_auprc=0.541
+05:26:07          stage2 epoch  15  train_loss=0.5194  val_auroc=0.847  val_auprc=0.548
+05:26:08          stage2 epoch  16  train_loss=0.5172  val_auroc=0.847  val_auprc=0.546
+05:26:09          stage2 epoch  17  train_loss=0.5188  val_auroc=0.846  val_auprc=0.545
+05:26:10          stage2 epoch  18  train_loss=0.5200  val_auroc=0.844  val_auprc=0.536
+05:26:11          stage2 epoch  19  train_loss=0.5183  val_auroc=0.844  val_auprc=0.536
+05:26:11  [train] best checkpoint: stage=2 epoch=12 val_auroc=0.848 val_auprc=0.549 -- restoring it
+05:26:12        DeepAccident in-domain test (native label) n=1656  AUROC=0.821  AUPRC=0.502
+05:26:12        saved checkpoint to dataset/checkpoints/carm_deepaccident_v1_no_evt.pt
+05:26:12  [4/5] Zero-shot Bench2Drive cross-domain eval ...
+05:26:36        ... 1000 Bench2Drive instances scored
+05:26:55        ... 2000 Bench2Drive instances scored
+05:27:18        ... 3000 Bench2Drive instances scored
+05:27:36        Bench2Drive cross-domain (geometric label)  AUROC=0.829 AUPRC=0.357
+05:27:36  [4/5] Fine-grained correlation: rho(R, a_max) and rho(R, -m) ...
+05:40:54        rho(R, a_max) = +0.082 (n=6630, p=1.75e-11)
+05:40:54        rho(R, -m) = +0.214 (n=286, p=2.72e-04)
+05:40:54  [5/5] Optional event-head diagnostic (agent-level F_K vs. T_evt-finite) ...
+05:40:54        no-evt model: agent-level event AUROC=0.534 AUPRC=0.558 (n=75752, triggered=40198)  mean F_K: triggered=0.030 not-triggered=0.024
+05:40:54        full model:  agent-level event AUROC=0.720 AUPRC=0.755  mean F_K: triggered=0.426 not-triggered=0.229
+05:40:54  wrote dataset/results_v1/event_supervision_ablation_summary.json
+05:40:54  Total wall-clock time: 1734.3s

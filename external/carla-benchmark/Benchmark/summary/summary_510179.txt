@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 15 March
+ Time: 22:20
+ Primary Road Name: US-301
+ Secondary Road Name: WASHINGTON ST
+ Latitude: 37.22810833
+ Longitude: -77.40179167
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: Four-Way Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 3 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet C, K, R, V-series pickup/Silverado
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 077 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Crossing Over (Passing Through) Junction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: L86-Intersecting Paths-Straight Paths-Striking from the Right
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Mercury Marquis/Monterey (car version; for van version 2004 on see code 444) /Grand Marquis
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 3 Clock Point
+   Speed: 025 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From crossing street, across path
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: L87-Intersecting Paths-Straight Paths-Struck on the Right
+   Damages: ['2 Clock Value', '3 Clock Value', '4 Clock Value']
+

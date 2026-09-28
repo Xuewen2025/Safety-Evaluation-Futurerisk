@@ -1,0 +1,11 @@
+20:44:39  Log file: dataset/logs/extract_deepaccident_native_labels_20260904_204439.log
+20:44:39  Building raw instances from 202 files (record_stride=10) ...
+20:45:47    ... 40/202 files, 1664 instances so far
+20:46:48    ... 80/202 files, 3272 instances so far
+20:47:42    ... 120/202 files, 4976 instances so far
+20:48:35    ... 160/202 files, 6635 instances so far
+20:49:35    ... 200/202 files, 8211 instances so far
+20:49:37    ... 202/202 files, 8279 instances so far
+20:49:37  Collected native labels for 8279 instances, 1649 (19.9%) with collision_label=1
+20:49:37  Wrote dataset/DeepAccident-preprocessed/native_collision_labels.json
+20:49:37  Total time: 298.5s

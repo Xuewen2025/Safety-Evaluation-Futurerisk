@@ -1,0 +1,129 @@
+{
+  "delta_max": 0.6931471805599453,
+  "bound_lo": 0.5,
+  "bound_hi": 2.0,
+  "n_out_of_bound": 0,
+  "n_total": 391980,
+  "groups": [
+    {
+      "interaction_type": "car-following",
+      "speed_bin": "fast-closing",
+      "n": 3213,
+      "mean_tau_phy": 2.1517829597089064,
+      "mean_T_safe_learned": 1.1512395171521053,
+      "mean_log2_ratio": -0.8985808084273489
+    },
+    {
+      "interaction_type": "car-following",
+      "speed_bin": "medium",
+      "n": 10945,
+      "mean_tau_phy": 0.8117578523270123,
+      "mean_T_safe_learned": 0.46923416479775326,
+      "mean_log2_ratio": -0.7907477214190831
+    },
+    {
+      "interaction_type": "car-following",
+      "speed_bin": "receding/slow",
+      "n": 7272,
+      "mean_tau_phy": 0.3948842244196122,
+      "mean_T_safe_learned": 0.22161013686187295,
+      "mean_log2_ratio": -0.8340981094133907
+    },
+    {
+      "interaction_type": "crossing",
+      "speed_bin": "fast-closing",
+      "n": 58812,
+      "mean_tau_phy": 2.6385061526484193,
+      "mean_T_safe_learned": 1.4224235763132171,
+      "mean_log2_ratio": -0.8892325547813966
+    },
+    {
+      "interaction_type": "crossing",
+      "speed_bin": "medium",
+      "n": 45858,
+      "mean_tau_phy": 1.085075756070674,
+      "mean_T_safe_learned": 0.618994318071971,
+      "mean_log2_ratio": -0.8088210412553087
+    },
+    {
+      "interaction_type": "crossing",
+      "speed_bin": "receding/slow",
+      "n": 45856,
+      "mean_tau_phy": 0.4149331790820773,
+      "mean_T_safe_learned": 0.2296962701481236,
+      "mean_log2_ratio": -0.853843713111066
+    },
+    {
+      "interaction_type": "merging/lane-change",
+      "speed_bin": "fast-closing",
+      "n": 15971,
+      "mean_tau_phy": 2.8845634082280123,
+      "mean_T_safe_learned": 1.5140130723469185,
+      "mean_log2_ratio": -0.9268501066223919
+    },
+    {
+      "interaction_type": "merging/lane-change",
+      "speed_bin": "medium",
+      "n": 16265,
+      "mean_tau_phy": 1.140227884252072,
+      "mean_T_safe_learned": 0.6099535205640538,
+      "mean_log2_ratio": -0.8995805495861666
+    },
+    {
+      "interaction_type": "merging/lane-change",
+      "speed_bin": "receding/slow",
+      "n": 19378,
+      "mean_tau_phy": 0.46747720222476097,
+      "mean_T_safe_learned": 0.2535475266902996,
+      "mean_log2_ratio": -0.8760187126518332
+    },
+    {
+      "interaction_type": "oncoming",
+      "speed_bin": "fast-closing",
+      "n": 32915,
+      "mean_tau_phy": 3.039060540951151,
+      "mean_T_safe_learned": 1.6207124938505608,
+      "mean_log2_ratio": -0.9022787215314072
+    },
+    {
+      "interaction_type": "oncoming",
+      "speed_bin": "medium",
+      "n": 28989,
+      "mean_tau_phy": 1.1456890569885378,
+      "mean_T_safe_learned": 0.6416028351107744,
+      "mean_log2_ratio": -0.8324680486880324
+    },
+    {
+      "interaction_type": "oncoming",
+      "speed_bin": "receding/slow",
+      "n": 36009,
+      "mean_tau_phy": 0.5169232666915384,
+      "mean_T_safe_learned": 0.2897867962865743,
+      "mean_log2_ratio": -0.8211488744705636
+    },
+    {
+      "interaction_type": "other",
+      "speed_bin": "fast-closing",
+      "n": 19749,
+      "mean_tau_phy": 2.587613784788204,
+      "mean_T_safe_learned": 1.3768033663697397,
+      "mean_log2_ratio": -0.9061037431256541
+    },
+    {
+      "interaction_type": "other",
+      "speed_bin": "medium",
+      "n": 28603,
+      "mean_tau_phy": 1.0493728228673207,
+      "mean_T_safe_learned": 0.582221112294876,
+      "mean_log2_ratio": -0.8492988035956842
+    },
+    {
+      "interaction_type": "other",
+      "speed_bin": "receding/slow",
+      "n": 22145,
+      "mean_tau_phy": 0.41767099968976323,
+      "mean_T_safe_learned": 0.22863170426514703,
+      "mean_log2_ratio": -0.8656450791672717
+    }
+  ]
+}

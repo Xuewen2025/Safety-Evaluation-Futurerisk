@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 700" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrowThin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill:#ffffff; stroke:#333333; stroke-width:1.3; rx:6; }
+    .boxHazard { fill:#eaf1fb; stroke:#3B6EA5; stroke-width:1.3; rx:6; }
+    .boxSafeTTC { fill:#fdeee7; stroke:#C1592B; stroke-width:1.3; rx:6; }
+    .boxComp { fill:#eef2ea; stroke:#4C7A3D; stroke-width:1.3; rx:6; }
+    .boxResid { fill:#fbeef7; stroke:#9C3E86; stroke-width:1.3; rx:6; }
+    .boxAgg { fill:#f5f0e3; stroke:#8A6D1F; stroke-width:1.3; rx:6; }
+    .lbl { font-size:15px; fill:#111; }
+    .lblSmall { font-size:12.5px; fill:#333; }
+    .eq { font-size:12.5px; fill:#222; font-style:italic; }
+    .grouplbl { font-size:13px; fill:#555; font-weight:600; }
+    .edge { stroke:#333; stroke-width:1.3; fill:none; marker-end:url(#arrow); }
+    .edgeThin { stroke:#666; stroke-width:1.1; fill:none; marker-end:url(#arrowThin); }
+    .stageBoundary { fill:none; stroke:#999; stroke-width:1.2; stroke-dasharray:6,4; rx:10; }
+  </style>
+
+  <!-- ================= INPUTS ================= -->
+  <rect x="20" y="270" width="150" height="90" class="box"/>
+  <text x="95" y="292" text-anchor="middle" class="lbl">Ego trajectory</text>
+  <text x="95" y="309" text-anchor="middle" class="eq">ξₑ</text>
+  <text x="95" y="335" text-anchor="middle" class="lbl">Agent j trajectory</text>
+  <text x="95" y="352" text-anchor="middle" class="eq">(part of W^obs)</text>
+
+  <line x1="170" y1="315" x2="215" y2="315" class="edge"/>
+
+  <!-- ================= FEATURE GROUPS ================= -->
+  <rect x="220" y="215" width="165" height="42" class="box"/>
+  <text x="302" y="240" text-anchor="middle" class="lblSmall">relative kinematics  x^j_kin</text>
+
+  <rect x="220" y="272" width="165" height="42" class="box"/>
+  <text x="302" y="290" text-anchor="middle" class="lblSmall">interaction sequence  X^j_int</text>
+  <text x="302" y="305" text-anchor="middle" class="lblSmall" font-size="10.5">(3D motion + signed clearance)</text>
+
+  <rect x="220" y="329" width="165" height="42" class="box"/>
+  <text x="302" y="354" text-anchor="middle" class="lblSmall">scene context  x^j_ctx</text>
+
+  <line x1="385" y1="236" x2="425" y2="290" class="edgeThin"/>
+  <line x1="385" y1="293" x2="425" y2="293" class="edge"/>
+  <line x1="385" y1="350" x2="425" y2="296" class="edgeThin"/>
+
+  <!-- ================= INTERACTION ENCODER ================= -->
+  <rect x="430" y="245" width="175" height="100" class="box"/>
+  <text x="517" y="268" text-anchor="middle" class="lbl">Interaction Encoder</text>
+  <text x="517" y="286" text-anchor="middle" class="lblSmall">GRU/LSTM + attention</text>
+  <text x="517" y="301" text-anchor="middle" class="lblSmall">pooling over X^j_int</text>
+  <text x="517" y="316" text-anchor="middle" class="lblSmall">+ MLP(x_kin, x_ctx)</text>
+  <text x="517" y="334" text-anchor="middle" class="eq">f_enc → h^j</text>
+
+  <line x1="605" y1="295" x2="655" y2="295" class="edge"/>
+  <text x="630" y="285" text-anchor="middle" class="eq" font-size="13">h^j</text>
+
+  <!-- ================= STAGE-1 STRUCTURED BOUNDARY ================= -->
+  <rect x="655" y="55" width="520" height="500" class="stageBoundary"/>
+  <text x="670" y="78" class="grouplbl">Stage 1 (structured, interpretable branch)</text>
+
+  <!-- Hazard head branch -->
+  <rect x="680" y="95" width="200" height="90" class="boxHazard"/>
+  <text x="780" y="118" text-anchor="middle" class="lbl">Hazard head</text>
+  <text x="780" y="136" text-anchor="middle" class="eq">q_k = σ(g^evt_k(h))</text>
+  <text x="780" y="152" text-anchor="middle" class="lblSmall">per-bin conditional hazard</text>
+  <text x="780" y="167" text-anchor="middle" class="lblSmall">k = 1 … K time bins</text>
+
+  <line x1="655" y1="120" x2="680" y2="140" class="edgeThin"/>
+
+  <rect x="920" y="95" width="185" height="90" class="boxHazard"/>
+  <text x="1012" y="118" text-anchor="middle" class="lbl">Event-time CDF</text>
+  <text x="1012" y="136" text-anchor="middle" class="eq">p_k = q_k·Π(1−q_ℓ)</text>
+  <text x="1012" y="152" text-anchor="middle" class="eq">F_k = Σ p_ℓ  (survival)</text>
+  <text x="1012" y="167" text-anchor="middle" class="lblSmall">monotone event CDF</text>
+
+  <line x1="880" y1="140" x2="920" y2="140" class="edge"/>
+
+  <!-- Safe-TTC head branch -->
+  <rect x="680" y="220" width="200" height="105" class="boxSafeTTC"/>
+  <text x="780" y="242" text-anchor="middle" class="lbl">Safe-TTC head</text>
+  <text x="780" y="260" text-anchor="middle" class="eq">μs=log τ_phy+Δmax·tanh(gμ(h))</text>
+  <text x="780" y="276" text-anchor="middle" class="eq">σs=σmin+(σmax−σmin)σ(gσ(h))</text>
+  <text x="780" y="292" text-anchor="middle" class="eq">Ts ~ LogNormal(μs, σs²)</text>
+  <text x="780" y="309" text-anchor="middle" class="lblSmall">context-dependent recovery time</text>
+
+  <line x1="655" y1="255" x2="680" y2="270" class="edgeThin"/>
+
+  <!-- physics prior anchor -->
+  <rect x="700" y="360" width="160" height="55" class="box" stroke-dasharray="2,2"/>
+  <text x="780" y="382" text-anchor="middle" class="lbl">Physics prior</text>
+  <text x="780" y="400" text-anchor="middle" class="eq">τ_phy (closing speed,</text>
+  <text x="780" y="412" text-anchor="middle" class="lblSmall">decel., reaction time)</text>
+  <line x1="780" y1="360" x2="780" y2="325" class="edgeThin"/>
+  <text x="800" y="345" class="lblSmall" font-size="10.5">anchors μs</text>
+
+  <line x1="880" y1="272" x2="920" y2="230" class="edge"/>
+
+  <!-- Composition -->
+  <rect x="920" y="200" width="185" height="90" class="boxComp"/>
+  <text x="1012" y="222" text-anchor="middle" class="lbl">Composition</text>
+  <text x="1012" y="240" text-anchor="middle" class="eq">R̃_CARM = E_Ts[F_evt(Ts)]</text>
+  <text x="1012" y="256" text-anchor="middle" class="lblSmall">≈ Σ F_k·Pr(bₖ₋₁&lt;Ts≤bₖ)</text>
+  <text x="1012" y="271" text-anchor="middle" class="lblSmall">+ F_K·Pr(Ts&gt;b_K)</text>
+
+  <line x1="1012" y1="185" x2="1012" y2="200" class="edge"/>
+
+  <line x1="1105" y1="245" x2="1145" y2="245" class="edge"/>
+
+  <!-- ================= STAGE-2 RESIDUAL ================= -->
+  <text x="1150" y="78" class="grouplbl">Stage 2</text>
+  <rect x="1150" y="200" width="185" height="90" class="boxResid"/>
+  <text x="1242" y="222" text-anchor="middle" class="lbl">Bounded residual</text>
+  <text x="1242" y="240" text-anchor="middle" class="eq">R^j = σ(logit(R̃_CARM)</text>
+  <text x="1242" y="256" text-anchor="middle" class="eq">     + β·tanh(g_r(h^j)))</text>
+  <text x="1242" y="271" text-anchor="middle" class="lblSmall">frozen structured branch</text>
+
+  <!-- per-agent note -->
+  <rect x="1150" y="310" width="185" height="40" class="box" stroke-dasharray="2,2"/>
+  <text x="1242" y="334" text-anchor="middle" class="lblSmall">shared weights, repeated per agent j</text>
+  <line x1="1242" y1="290" x2="1242" y2="310" class="edgeThin"/>
+
+  <line x1="1335" y1="245" x2="1400" y2="245" class="edge"/>
+  <text x="1367" y="235" text-anchor="middle" class="eq" font-size="13">R^j</text>
+
+  <!-- ================= AGGREGATION ================= -->
+  <rect x="1400" y="200" width="140" height="90" class="boxAgg"/>
+  <text x="1470" y="225" text-anchor="middle" class="lbl">Noisy-OR</text>
+  <text x="1470" y="243" text-anchor="middle" class="lblSmall">over agents j</text>
+  <text x="1470" y="261" text-anchor="middle" class="eq">R = 1−Πⱼ(1−R^j)</text>
+  <text x="1470" y="277" text-anchor="middle" class="lbl" font-weight="700">R  (final risk)</text>
+
+  <!-- legend -->
+  <rect x="20" y="600" width="14" height="14" class="boxHazard"/>
+  <text x="40" y="612" class="lblSmall">Hazard / event-time branch</text>
+  <rect x="230" y="600" width="14" height="14" class="boxSafeTTC"/>
+  <text x="250" y="612" class="lblSmall">Safe-TTC branch (physics-anchored)</text>
+  <rect x="480" y="600" width="14" height="14" class="boxComp"/>
+  <text x="500" y="612" class="lblSmall">Composition</text>
+  <rect x="620" y="600" width="14" height="14" class="boxResid"/>
+  <text x="640" y="612" class="lblSmall">Bounded residual (Stage 2)</text>
+  <rect x="850" y="600" width="14" height="14" class="boxAgg"/>
+  <text x="870" y="612" class="lblSmall">Trajectory-level aggregation</text>
+
+  <text x="20" y="650" class="lblSmall" font-size="11">
+    Superscript j indexes one surrounding agent; every quantity above is computed independently per agent with shared weights, then aggregated across agents into one trajectory-level R.
+  </text>
+</svg>

@@ -1,0 +1,10 @@
+instance_id,num_agents,y_analytic,R_predicted,collision_label
+AccidentTwoWays_Town12_Route1444_Weather0__w00000,7,0.0,0.021479904651641846,0
+AccidentTwoWays_Town12_Route1444_Weather0__w00051,15,0.6709332466125488,0.24327850341796875,1
+AccidentTwoWays_Town12_Route1444_Weather0__w00102,17,0.6949784755706787,0.5302799940109253,1
+AccidentTwoWays_Town12_Route1444_Weather0__w00153,17,0.6843928694725037,0.37087225914001465,1
+AccidentTwoWays_Town12_Route1444_Weather0__w00204,15,0.8337210416793823,0.49300509691238403,1
+AccidentTwoWays_Town12_Route1444_Weather0__w00255,12,0.0,0.8356581926345825,0
+ConstructionObstacle_Town05_Route68_Weather8__w00051,11,0.9341958165168762,0.33005642890930176,1
+ConstructionObstacle_Town05_Route68_Weather8__w00102,13,0.0,0.08720272779464722,0
+ConstructionObstacle_Town05_Route68_Weather8__w00153,11,0.0,0.21545684337615967,0

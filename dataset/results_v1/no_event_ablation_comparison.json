@@ -1,0 +1,56 @@
+{
+  "full_carm": {
+    "checkpoint": "dataset/checkpoints/carm_deepaccident_v1.pt",
+    "in_domain": {
+      "n": 1656,
+      "n_collisions": 320,
+      "auroc": 0.7934424120508983,
+      "auprc": 0.49034162372755663
+    },
+    "cross_domain": {
+      "n": 3679,
+      "n_collisions": 346,
+      "auroc": 0.8084195702807274,
+      "auprc": 0.32778661761743666
+    },
+    "finegrained": {
+      "rho_vs_a_max": {
+        "n": 6630,
+        "spearman_rho": 0.2760469294987877,
+        "p_value": 2.963739401464867e-116
+      },
+      "rho_vs_neg_m": {
+        "n": 286,
+        "spearman_rho": 0.2902634232760065,
+        "p_value": 5.875685401241412e-07
+      }
+    }
+  },
+  "no_event": {
+    "checkpoint": "dataset/checkpoints/carm_deepaccident_v1_no_event.pt",
+    "in_domain": {
+      "n": 1656,
+      "n_collisions": 320,
+      "auroc": 0.821010712949102,
+      "auprc": 0.5022932741948842
+    },
+    "cross_domain": {
+      "n": 3679,
+      "n_collisions": 346,
+      "auroc": 0.8282432289471722,
+      "auprc": 0.3561787172082766
+    },
+    "finegrained": {
+      "rho_vs_a_max": {
+        "n": 6630,
+        "spearman_rho": 0.06882429312226361,
+        "p_value": 2.0279406181397998e-08
+      },
+      "rho_vs_neg_m": {
+        "n": 286,
+        "spearman_rho": 0.2004107912765435,
+        "p_value": 0.0006518671422495709
+      }
+    }
+  }
+}

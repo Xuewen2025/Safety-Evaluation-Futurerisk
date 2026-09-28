@@ -1,0 +1,492 @@
+\section{FutureRisk: A Post-Hoc Metric for Latent Future Risk}
+\label{sec:method}
+
+\subsection{Problem Setup and Scope}
+\label{sec:setup}
+
+FutureRisk is a \textbf{post-hoc, outcome-agnostic} safety evaluation metric.
+Given a trajectory $\bm{\xi}_e$ that has already been executed (either logged
+human driving, or a trajectory produced by a policy and rolled out in
+closed-loop simulation) together with its fully observed future scene
+evolution $\mathcal{W}^{\mathrm{obs}} = \{\bm{\xi}_j\}_{j=1}^{J}$ over horizon
+$H$, FutureRisk assigns a continuous risk score $R \in [0,1]$ that
+distinguishes collision-free trajectories by how closely and how
+persistently they approached an unsafe interaction state, rather than by
+whether a collision occurred.
+
+\textbf{Explicit scope statement (must appear in the paper and constrains
+implementation):}
+\begin{itemize}
+    \item The metric operates on a \emph{single, fully observed} future
+    realization per trajectory instance. It does \emph{not} require a
+    future-prediction or world model, and does \emph{not} perform
+    counterfactual rollout generation.
+    \item Because $\bm{\xi}_e$ is the trajectory that actually produced
+    $\mathcal{W}^{\mathrm{obs}}$, there is no reactive-consistency gap: other
+    agents' observed behavior is a genuine response to $\bm{\xi}_e$ (exactly
+    true in closed-loop simulation; also true for logged human trajectories,
+    since they are the trajectory that was actually driven).
+    \item FutureRisk is \emph{not} designed to score hypothetical candidate
+    trajectories that were not executed (no counterfactual claim is made).
+    Its intended use is (a) auditing the safety profile of trajectories
+    already produced by a planner/policy or by human drivers, and (b)
+    comparing methods by comparing the risk-score distributions of their
+    respective \emph{independently executed} trajectories on matched
+    scenarios.
+    \item The interaction encoder is \textbf{bidirectional over the full
+    horizon $[0,H]$} (post-hoc audit setting). FutureRisk is not intended for
+    causal, real-time onboard risk estimation; that would require restricting
+    the encoder to past-only information, which we leave as future work.
+\end{itemize}
+
+Notation: index trajectory instances by $i$ (a single executed trajectory in
+some scenario, from some dataset/method), and within each instance index
+surrounding agents by $j$ and discrete time bins by $k=1,\dots,K$ over
+$[0,H]$.
+
+\subsection{Geometry-Aware 3D-TTC}
+\label{sec:3dttc}
+
+Let $\mathcal{B}_e(t)$ and $\mathcal{B}_j(t)$ denote the oriented 3D occupied
+volumes (position, heading, box extent) of the ego and agent $j$ at time $t$,
+read directly from the observed trajectories (no prediction). Define
+
+\begin{equation}
+\tau_{\mathrm{3D}}^{j}(t) = \inf\left\{\delta \ge 0 :
+\mathcal{B}_e(t+\delta) \cap \mathcal{B}_j(t+\delta) \neq \varnothing,\;
+t+\delta \le H \right\},
+\label{eq:3dttc}
+\end{equation}
+with $\tau_{\mathrm{3D}}^{j}(t) = +\infty$ if no overlap occurs within
+$[t, H]$.
+
+\textbf{Implementation note:} compute via forward simulation of both boxes at
+their \emph{observed} future poses (already known, since we operate post-hoc)
+using discretized $\delta$ steps (e.g. 0.1s) up to a cap (e.g. 5s), and
+polygon-intersection test (SAT / oriented bounding box overlap in BEV, plus a
+vertical-extent check if 3D). Vectorize across all $(t, j)$ pairs per
+trajectory instance for efficiency.
+
+\subsection{Interaction Type Classification}
+\label{sec:interaction-type}
+
+We assign each $(t, j)$ pair a discrete interaction type
+$c(t,j) \in \mathcal{C}$ used both for threshold statistics
+(\S\ref{sec:proxy-event}) and as a context feature. We use
+$\mathcal{C} = \{\text{car-following}, \text{crossing}, \text{merging/lane-change},
+\text{oncoming}, \text{other}\}$, assigned by a lightweight heuristic rule
+based on relative heading $\Delta\psi$ and relative lateral offset, evaluated
+at each $t$:
+
+\begin{algorithm}[H]
+\caption{Interaction type heuristic}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} ego pose, agent $j$ pose at time $t$; lane graph if available
+\STATE $\Delta\psi \gets$ wrap-to-$[-\pi,\pi]$ heading difference between ego and $j$
+\STATE $d_{\mathrm{lat}} \gets$ lateral offset of $j$ relative to ego's Frenet frame
+\IF{$|\Delta\psi| < 20^\circ$ \AND $|d_{\mathrm{lat}}| <$ half lane width}
+    \STATE \textbf{return} car-following
+\ELSIF{$|\Delta\psi| > 150^\circ$}
+    \STATE \textbf{return} oncoming
+\ELSIF{$60^\circ \le |\Delta\psi| \le 120^\circ$}
+    \STATE \textbf{return} crossing
+\ELSIF{lane graph indicates ego or $j$ changing/merging lanes within $\pm$1.5s of $t$}
+    \STATE \textbf{return} merging/lane-change
+\ELSE
+    \STATE \textbf{return} other
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+If lane-graph information is unavailable (e.g. some CARLA scenarios), drop
+the merging condition and fall back to \{car-following, crossing, oncoming,
+other\} using only $\Delta\psi$ and $d_{\mathrm{lat}}$.
+
+\subsection{Context-Dependent Safety Margin and Continuous Risk}
+\label{sec:margin}
+
+\begin{equation}
+m^{j}(t) = \tau_{\mathrm{3D}}^{j}(t) - \tau_{\mathrm{safe}}^{j}(t), \qquad
+m = \min_{j}\min_{t\in[0,H]} m^{j}(t).
+\label{eq:margin}
+\end{equation}
+
+$\tau_{\mathrm{safe}}^{j}(t)$ is produced by CARM (\S\ref{sec:carm}); at
+training time an \emph{analytic prior} $\tau_{\mathrm{phy}}^j(t)$ is also
+computed in closed form (used both as CARM's input prior and as a dense
+self-supervised target, see \S\ref{sec:supervision}):
+
+\begin{equation}
+\tau_{\mathrm{phy}}^{j}(t) = t_{\mathrm{react}} +
+\frac{v_{\mathrm{rel,close}}^{j}(t)}{a_{\mathrm{avail}}} + \epsilon_{\mathrm{unc}}(t),
+\label{eq:phy-prior}
+\end{equation}
+
+where $v_{\mathrm{rel,close}}^j(t)$ is the closing-speed component along the
+current relative bearing, $a_{\mathrm{avail}}$ is an assumed available
+deceleration (e.g. 4 m/s$^2$, dataset-configurable), $t_{\mathrm{react}}$ is a
+fixed reaction time constant (e.g. 0.5s), and $\epsilon_{\mathrm{unc}}(t)$ is
+a small constant safety pad (e.g. 0.2s). Clip $\tau_{\mathrm{phy}}$ to a
+reasonable range (e.g. $[0.2, 8.0]$s).
+
+Continuous risk mapping (unchanged in form):
+\begin{equation}
+r(t) = \phi(m(t)) = \sigma\!\left(-\frac{m(t)}{T_m}\right), \qquad
+R_{\mathrm{analytic}} = \max_{j,t} \phi\big(-m^j(t)\big) \; \text{equivalently} \;
+\phi(-m)
+\label{eq:phi}
+\end{equation}
+where $T_m$ (e.g. 1.0s) is a fixed temperature hyperparameter shared across
+all experiments. Note $R_{\mathrm{analytic}}$ uses $\tau_{\mathrm{phy}}$ in
+place of the learned $\tau_{\mathrm{safe}}$ and is fully computable without
+any learned component — this is the dense self-supervision target
+$y_{\mathrm{analytic}}$ in \S\ref{sec:supervision}.
+
+\subsection{Harsh-Evasive Critical-Event Proxy}
+\label{sec:proxy-event}
+
+Because true collisions are extremely sparse, we construct a denser
+supervision signal for \emph{when} an interaction becomes safety-critical,
+using observable harsh-evasive maneuvers as a proxy, in addition to true
+collisions.
+
+\subsubsection{Kinematic Event Signal}
+
+At each time $t$, compute:
+\begin{itemize}
+    \item Longitudinal jerk-adjusted deceleration magnitude
+    $a_{\mathrm{lon}}(t)$ (ego and, where available, agent $j$).
+    \item Lateral acceleration magnitude $a_{\mathrm{lat}}(t)$ (proxy for
+    hard steering), computed as $v(t)^2 \cdot \kappa(t)$ from curvature
+    $\kappa(t)$ of the trajectory, or directly from heading-rate $\times$
+    speed.
+    \item Combined evasive-severity scalar:
+    $a(t) = \sqrt{\max(-a_{\mathrm{lon}}(t), 0)^2 + a_{\mathrm{lat}}(t)^2}$
+    (only braking, not accelerating, counts toward the longitudinal term).
+\end{itemize}
+
+\subsubsection{Per-(Dataset, Interaction-Type) Threshold Statistics}
+
+Let $\mathcal{D} = \{\text{DeepAccident}, \text{nuPlan}, \text{Bench2Drive}\}$.
+For each dataset $d \in \mathcal{D}$ and interaction type $c \in \mathcal{C}$,
+independently collect the empirical distribution of $a(t)$ over all
+$(t, j)$ pairs labeled with type $c$ within dataset $d$, and set
+
+\begin{equation}
+\theta_{d,c} = \mathrm{Percentile}_{95}\big(a(t) \mid \text{dataset}=d,\ \text{interaction-type}=c\big).
+\label{eq:threshold}
+\end{equation}
+
+\begin{algorithm}[H]
+\caption{Threshold estimation (offline, run once per dataset before training)}
+\begin{algorithmic}[1]
+\FOR{each dataset $d \in \mathcal{D}$}
+    \STATE Initialize empty lists $A_{d,c} \gets []$ for each $c \in \mathcal{C}$
+    \FOR{each trajectory instance $i$ in $d$}
+        \FOR{each agent $j$, each time $t$}
+            \STATE $c \gets$ interaction-type$(t, j)$ (\S\ref{sec:interaction-type})
+            \STATE append $a(t)$ (computed above) to $A_{d,c}$
+        \ENDFOR
+    \ENDFOR
+    \FOR{each $c \in \mathcal{C}$}
+        \IF{$|A_{d,c}| < N_{\min}$ (e.g. 500)}
+            \STATE merge $c$ into \texttt{other} for this dataset (insufficient samples)
+        \ENDIF
+        \STATE $\theta_{d,c} \gets \mathrm{Percentile}_{95}(A_{d,c})$
+    \ENDFOR
+    \STATE Save $\{\theta_{d,c}\}_c$ to a lookup table for dataset $d$
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Important implementation note:} thresholds are computed
+\emph{independently per dataset} — do NOT pool $a(t)$ samples across
+DeepAccident / nuPlan / Bench2Drive when computing percentiles, to avoid
+simulation-vs-real and accident-biased-vs-normal distribution shift
+contaminating the threshold definition (see rationale in method discussion).
+The threshold lookup table $\{\theta_{d,c}\}$ is a fixed preprocessing
+artifact, computed once, stored (e.g. as a JSON/YAML config keyed by
+\texttt{(dataset, interaction\_type)}), and reused for all subsequent label
+generation and training runs.
+
+\subsubsection{Critical-Event Time Label}
+
+Combining true collision and the harsh-evasive proxy:
+\begin{equation}
+T_{\mathrm{evt}}^{j} = \inf\Big\{ t \in [0,H] :\ \mathrm{collision}(t) \ \lor\
+a(t) > \theta_{d,c(t,j)} \Big\},
+\label{eq:tevt}
+\end{equation}
+with $T_{\mathrm{evt}}^j = +\infty$ (no-event) if neither condition is ever
+met within $[0,H]$ for agent $j$. This is computed \emph{once per trajectory
+instance, per agent}, using the dataset-and-type-specific threshold from
+\S\ref{sec:proxy-event}, and stored as a preprocessed label alongside each
+trajectory instance.
+
+\subsection{Context-Adaptive Risk Model (CARM)}
+\label{sec:carm}
+
+\subsubsection{Feature Inputs (per agent $j$, single observed future, no mode index)}
+
+\begin{itemize}
+    \item $\bm{x}_{\mathrm{kin}}^{j}$: current-time relative kinematics —
+    relative position (2D or 3D), relative velocity, relative heading,
+    closing speed, ego speed, agent speed. (Fixed-size vector.)
+    \item $\bm{X}_{\mathrm{int}}^{j} \in \mathbb{R}^{K \times d_{\mathrm{int}}}$:
+    full-horizon (bidirectional, \emph{all} of $[0,H]$ — post-hoc setting,
+    see \S\ref{sec:setup}) sequence of relative 3D motion \emph{and} signed
+    geometric clearance between oriented boxes at each of $K$ time bins.
+    Signed clearance: negative if boxes overlap, positive distance
+    otherwise (retains geometry underlying Eq.~\ref{eq:3dttc}).
+    \item $\bm{x}_{\mathrm{ctx}}^{j}$: semantic scene context — interaction
+    type $c(t,j)$ (one-hot, time-varying or a per-instance dominant type),
+    road geometry features (curvature, number of lanes, speed limit if
+    available), agent class (vehicle/pedestrian/cyclist).
+    \item \textbf{Explicitly excluded:} dataset/domain identity. No
+    dataset-source indicator is fed to the model at training time (see
+    \S\ref{sec:cross-domain}).
+\end{itemize}
+
+Encoder:
+\begin{equation}
+\bm{h}^{j} = f_{\mathrm{enc}}\big(\bm{x}_{\mathrm{kin}}^{j},\ \bm{X}_{\mathrm{int}}^{j},\ \bm{x}_{\mathrm{ctx}}^{j}\big),
+\label{eq:encoder}
+\end{equation}
+implemented as a bidirectional GRU/LSTM (or bidirectional Transformer encoder)
+over $\bm{X}_{\mathrm{int}}^j$, with $\bm{x}_{\mathrm{kin}}^j,
+\bm{x}_{\mathrm{ctx}}^j$ encoded by small MLPs and fused (concatenation +
+MLP) with the pooled sequence representation (e.g. final hidden state
+concatenation of both directions, or attention pooling).
+
+\subsubsection{Event-Time Hazard Head}
+
+Discretize $[0,H]$ into $K$ bins $0=b_0<b_1<\dots<b_K=H$ (e.g. $K=25$ for
+$H=5$s, 0.2s bins). Predict conditional hazards:
+\begin{equation}
+q_k^j = \sigma\big(g_k^{\mathrm{evt}}(\bm{h}^j)\big), \qquad
+p_k^j = q_k^j \prod_{\ell<k}(1-q_\ell^j), \qquad
+F_k^j = \sum_{\ell \le k} p_\ell^j.
+\label{eq:hazard}
+\end{equation}
+$g^{\mathrm{evt}}$ is an MLP with $K$ sigmoid outputs (discrete-time survival
+head, standard implementation e.g. via \texttt{DeepSurv}-style discrete
+hazard parameterization).
+
+\subsubsection{Context-Adaptive Safe-TTC Head}
+
+\begin{equation}
+\mu_s^j = \log \tau_{\mathrm{phy}}^j + \Delta_{\max}\tanh(g_\mu(\bm{h}^j)), \qquad
+\sigma_s^j = \sigma_{\min} + (\sigma_{\max}-\sigma_{\min})\sigma(g_\sigma(\bm{h}^j)),
+\label{eq:safettc}
+\end{equation}
+with $T_s^j \sim \mathrm{LogNormal}(\mu_s^j, (\sigma_s^j)^2)$. Suggested
+hyperparameters: $\Delta_{\max} = \log 2$ (i.e. correction bounded to
+$[0.5\times, 2\times]$ the physical prior), $\sigma_{\min}=0.05$,
+$\sigma_{\max}=0.5$. $\tau_{\mathrm{phy}}^j$ is taken at the time of the
+predicted critical event (or, for implementation simplicity, evaluated at
+the time bin midpoint $t=b_{k}$ used when composing Eq.~\ref{eq:composition}
+below — i.e., $\tau_{\mathrm{phy}}^j$ should be treated as a per-bin
+sequence $\tau_{\mathrm{phy}}^j(b_k)$, not a single scalar).
+
+\textbf{Critical implementation detail:} $T_s^j$ has \emph{no direct
+regression loss}. It is only ever used inside Eq.~\ref{eq:composition} below;
+gradients into $\mu_s^j, \sigma_s^j$ come solely from
+$\mathcal{L}_{\mathrm{evt}}$ via this composition. Do not add an auxiliary
+MSE/regression loss on $T_s^j$ against any constructed pseudo-label — this
+was explicitly rejected to avoid circularity (see method discussion).
+
+\subsubsection{Composition and Bounded Residual}
+
+\begin{equation}
+\widetilde{R}_{\mathrm{CARM}}^{j} = \mathrm{clip}\!\left(
+\sum_{k=1}^{K} F_k^j \cdot \Pr(b_{k-1} < T_s^j \le b_k) + F_K^j \cdot \Pr(T_s^j > b_K),\ \epsilon,\ 1-\epsilon\right)
+\label{eq:composition}
+\end{equation}
+($\epsilon = 10^{-4}$ for numerical stability of the logit below;
+$\Pr(\cdot)$ under the LogNormal $T_s^j$ evaluated via its CDF).
+
+\begin{equation}
+R^{j} = \sigma\Big(\mathrm{logit}(\widetilde{R}_{\mathrm{CARM}}^{j}) + \beta \tanh(g_r(\bm{h}^j))\Big),
+\label{eq:bounded-residual}
+\end{equation}
+with $\beta$ a fixed scalar hyperparameter (e.g. $\beta=2.0$) bounding the
+residual's logit-space contribution.
+
+\subsubsection{Candidate-Level (Trajectory-Instance-Level) Aggregation}
+
+No mode dimension (single observed future). Aggregate only across agents:
+\begin{equation}
+R = 1 - \prod_{j} (1 - R^{j}).
+\label{eq:agg}
+\end{equation}
+
+\subsection{Supervision and Training Objective}
+\label{sec:supervision}
+
+Two supervision sources, deliberately kept separate in role:
+
+\begin{enumerate}
+    \item \textbf{Dense, self-supervised, analytic target} $y_{\mathrm{analytic}}$
+    from Eq.~\ref{eq:phi} (computed for every trajectory instance, no labels
+    needed):
+    \begin{equation}
+    \mathcal{L}_{\mathrm{risk}} = \mathrm{BCE}\big(R,\ y_{\mathrm{analytic}}\big).
+    \label{eq:l-risk}
+    \end{equation}
+    \item \textbf{Sparse, real-event-driven hazard supervision} from
+    $T_{\mathrm{evt}}^j$ (Eq.~\ref{eq:tevt}):
+    \begin{equation}
+    \mathcal{L}_{\mathrm{evt}} = -\frac{1}{J}\sum_j \sum_{k=1}^{K}
+    \Big[\mathbb{1}[T_{\mathrm{evt}}^j \in (b_{k-1},b_k]] \log q_k^j
+    + \mathbb{1}[T_{\mathrm{evt}}^j > b_k] \log(1-q_k^j)\Big].
+    \label{eq:l-evt}
+    \end{equation}
+    Apply at-risk masking: only sum over bins $k$ up to and including the
+    event bin (standard discrete-hazard / survival loss masking — stop
+    accumulating loss for bins after the event has occurred).
+\end{enumerate}
+
+\textbf{Class imbalance handling for $\mathcal{L}_{\mathrm{evt}}$:} true
+collisions and harsh-evasive events are rare overall (though far denser than
+collisions alone). Apply: (a) positive-class upweighting in the BCE terms of
+Eq.~\ref{eq:l-evt} (e.g. inverse-frequency weighting computed per dataset),
+and (b) oversampling of trajectory instances containing at least one
+critical event during minibatch construction (e.g. ensure each minibatch has
+a minimum fraction, e.g. 25\%, of instances with $T_{\mathrm{evt}} 
+\infty$ for at least one agent).
+
+\textbf{Ranking loss (for method comparison, optional / stage 2 only):} when
+two trajectory instances $i, i'$ on matched scenarios are available (e.g.
+Bench2Drive: two different policies' closed-loop rollouts on the same
+initial scenario), and one is known/assumed to have a worse safety outcome
+(e.g. one collides and the other doesn't, or one has strictly more/more
+severe critical events), apply a margin ranking loss:
+\begin{equation}
+\mathcal{L}_{\mathrm{rank}} = \max\big(0,\ \gamma - (R_{i} - R_{i'})\big)
+\quad \text{if } i \text{ is the known-worse instance},
+\label{eq:l-rank}
+\end{equation}
+with margin $\gamma$ (e.g. 0.1). This loss is only applicable on
+Bench2Drive-style matched closed-loop pairs, not on nuPlan/DeepAccident
+(no matched-scenario multi-policy data there).
+
+Total objective:
+\begin{equation}
+\mathcal{L} = \lambda_{\mathrm{evt}}\mathcal{L}_{\mathrm{evt}} +
+\lambda_{\mathrm{risk}}\mathcal{L}_{\mathrm{risk}} +
+\lambda_{\mathrm{rank}}\mathcal{L}_{\mathrm{rank}}.
+\label{eq:total-loss}
+\end{equation}
+Suggested starting weights: $\lambda_{\mathrm{evt}}=1.0$,
+$\lambda_{\mathrm{risk}}=1.0$, $\lambda_{\mathrm{rank}}=0.5$ (tune via
+validation AUC on held-out critical events).
+
+\subsection{Two-Stage Training Procedure}
+\label{sec:training}
+
+\begin{algorithm}[H]
+\caption{CARM Two-Stage Training}
+\begin{algorithmic}[1]
+\STATE \textbf{Stage 1 (structured branch):} disable residual (set
+$g_r(\cdot) \equiv 0$, i.e. $R^j = \sigma(\mathrm{logit}(\widetilde R^j_{\mathrm{CARM}}))$).
+Train encoder $f_{\mathrm{enc}}$, hazard head $g^{\mathrm{evt}}$, safe-TTC
+head $(g_\mu, g_\sigma)$ jointly using
+$\mathcal{L} = \lambda_{\mathrm{evt}}\mathcal{L}_{\mathrm{evt}} + \lambda_{\mathrm{risk}}\mathcal{L}_{\mathrm{risk}}$
+on the pooled training set (nuPlan + Bench2Drive; see
+\S\ref{sec:cross-domain} for DeepAccident's role as held-out).
+\STATE \textbf{Stage 2 (bounded residual):} freeze $f_{\mathrm{enc}},
+g^{\mathrm{evt}}, g_\mu, g_\sigma$. Train only $g_r$ (and $\beta$ if made
+learnable) using
+$\mathcal{L} = \lambda_{\mathrm{risk}}\mathcal{L}_{\mathrm{risk}} + \lambda_{\mathrm{rank}}\mathcal{L}_{\mathrm{rank}}$,
+using $\mathcal{L}_{\mathrm{rank}}$ only on Bench2Drive matched-pair data.
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Data Pipeline Across Datasets}
+\label{sec:data-pipeline}
+
+\begin{enumerate}
+    \item \textbf{Per-dataset preprocessing} (run independently for
+    DeepAccident, nuPlan, Bench2Drive):
+    \begin{itemize}
+        \item Extract ego + surrounding-agent trajectories at a common time
+        resolution (resample to e.g. 10Hz if needed).
+        \item Compute $\tau_{\mathrm{3D}}^j(t)$ (\S\ref{sec:3dttc}),
+        interaction type $c(t,j)$ (\S\ref{sec:interaction-type}), evasive
+        severity $a(t)$ (\S\ref{sec:proxy-event}).
+        \item Compute per-(dataset, interaction-type) thresholds
+        $\theta_{d,c}$ (Eq.~\ref{eq:threshold}) — this requires a full pass
+        over the dataset \emph{before} label generation.
+        \item Generate $T_{\mathrm{evt}}^j$ (Eq.~\ref{eq:tevt}) and
+        $\tau_{\mathrm{phy}}^j(t)$ (Eq.~\ref{eq:phy-prior}) per trajectory
+        instance; cache as preprocessed tensors (e.g. one \texttt{.npz}/
+        \texttt{.pt} file per instance, or a sharded format for
+        large-scale nuPlan).
+    \end{itemize}
+    \item \textbf{Do not} include any dataset-identity field in the cached
+    feature tensors used as model input (keep it in metadata only, for
+    later use in evaluation).
+    \item \textbf{Train/val/test split:}
+    \begin{itemize}
+        \item Training pool: nuPlan (majority) + Bench2Drive.
+        \item DeepAccident: held out entirely from training, reserved for
+        the cross-domain generalization test (\S\ref{sec:cross-domain}) and
+        for early-warning evaluation (accident-lead-time analysis).
+        \item Standard held-out val/test splits within nuPlan + Bench2Drive
+        for hyperparameter tuning and Stage-1/Stage-2 loss monitoring.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Cross-Domain Generalization Evaluation}
+\label{sec:cross-domain}
+
+Since no domain label is given to the model at training time, we can
+directly test whether the learned context-adaptive safety criterion
+transfers to an unseen data distribution.
+
+\begin{itemize}
+    \item \textbf{Setup:} train CARM only on nuPlan + Bench2Drive (as in
+    \S\ref{sec:data-pipeline}); evaluate zero-shot on DeepAccident, which has
+    (a) a different domain (real vs. sim mixture the model has not seen
+    Deep-Accident's specific sim characteristics) and (b) genuine labeled
+    accidents.
+    \item \textbf{Metrics on DeepAccident test set:}
+    \begin{enumerate}
+        \item \emph{Discrimination:} AUROC / AUPRC of trajectory-level $R$
+        (max over time, or at a fixed lead time before the labeled accident)
+        against the binary true-collision label.
+        \item \emph{Early-warning lead time:} for trajectories that do
+        collide, find the earliest time $t^*$ at which $r(t)$ crosses a fixed
+        operating-point threshold (chosen from val set to hit e.g. 5\% false
+        positive rate on non-colliding trajectories); report the distribution
+        of $(t_{\mathrm{collision}} - t^*)$ as the warning lead time.
+        \item \emph{Calibration:} reliability diagram / ECE of $R$ against
+        empirical collision frequency, binned by predicted risk.
+    \end{enumerate}
+    \item \textbf{Baseline comparison:} report the same three metrics for
+    (a) raw 3D-TTC thresholding, (b) the analytic-only risk
+    $y_{\mathrm{analytic}}$ (Eq.~\ref{eq:phi}, no learned component), and (c)
+    other standard SSMs (PET, DRAC) computed on the same DeepAccident test
+    set, to isolate how much the learned context-adaptive correction
+    ($T_s$/hazard head) adds over the fixed-formula baseline.
+\end{itemize}
+
+\subsection{Case-Study Visualization (for qualitative validation)}
+\label{sec:case-study}
+
+For at least a handful of collision-free trajectory instances (ideally with
+visibly different outcomes despite both being collision-free — e.g. one with
+large sustained margin, one with a brief close call), plot $R(t)$ (using
+CARM evaluated with a sliding window / bin-wise reveal, or simply visualize
+$m(t)$ and per-bin hazard $q_k$) over time alongside the scenario. This
+should visually demonstrate margin collapse and recovery that a binary
+collision label would not capture — this is the primary qualitative evidence
+for the paper's core motivation and should be included regardless of
+quantitative results.
+
+实验设计：
+1. 证明一致性（和其他collision rate 证明一致性）
+2. 证明更加细颗粒度
+3. 证明泛化/鲁棒性
+4. case Study
+5. 可解释性（因为中间加了deep learning，能否有可解释性）

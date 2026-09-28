@@ -1,0 +1,9 @@
+01:41:38  Log file: dataset/logs/preprocess_trace_replay_20260916_014138.log
+01:41:38  [1/2] Building RawTrajectoryInstances from real-CARLA replays in external/carla-benchmark/Benchmark/replay ...
+01:41:38        -> 530 windowed instances from 49 scenarios (39 positive / 491 negative) in 0.1s
+01:41:38  [2/2] Fitting thresholds + generating T_evt/tau_phy + caching to dataset/TRACE-replay-preprocessed ...
+01:41:45        thresholds: {'car-following': 22.495463883909167, 'crossing': 508.34429829805475, 'oncoming': 439.55430200373576, 'other': 607.2836922733085}
+01:41:45        merged_into_other: {'car-following': False, 'crossing': False, 'merging/lane-change': True, 'oncoming': False, 'other': False}
+01:41:45        preprocessing pass took 6.8s
+01:41:45  Total wall-clock time: 6.9s
+01:41:45  Cached instances directory: dataset/TRACE-replay-preprocessed

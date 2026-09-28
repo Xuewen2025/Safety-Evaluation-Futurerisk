@@ -1,0 +1,122 @@
+{
+  "n_windows": 273,
+  "n_underlying_scenarios": 52,
+  "caveats": [
+    "trajectories are a kinematic reconstruction, not a CARLA physics replay (futurerisk/adapters/trace.py)",
+    "collision label is geometric (SAT overlap on paths routed through the annotated crash_point), not an independent native label",
+    "instances from the same scenario are correlated -- n_windows != n_independent_samples"
+  ],
+  "table1_instance_consistency": {
+    "n": 273,
+    "n_collisions": 105,
+    "n_underlying_scenarios": 52,
+    "methods": {
+      "y_analytic": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "raw 3D-TTC": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "Forward TTC (2-D)": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "Forward TTC (1-D)": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "PET": {
+        "auroc": 0.9680839002267574,
+        "auprc": 0.9455680444910178
+      },
+      "RSS": {
+        "auroc": 0.913095238095238,
+        "auprc": 0.8351217088137151
+      },
+      "Lu et al.": {
+        "auroc": 0.9986961451247166,
+        "auprc": 0.9981693997804982
+      },
+      "GSSM (Jiao et al., zero-shot)": {
+        "auroc": 0.9929138321995465,
+        "auprc": 0.979279997389202
+      },
+      "FutureRisk (CARM)": {
+        "auroc": 0.8425170068027211,
+        "auprc": 0.8410474388650357
+      }
+    }
+  },
+  "table2_finegrained": {
+    "n_windows": 168,
+    "n_underlying_scenarios": 32,
+    "methods": {
+      "y_analytic": {
+        "rho_vs_a_max": null,
+        "rho_vs_neg_m": null
+      },
+      "raw 3D-TTC": {
+        "rho_vs_a_max": null,
+        "rho_vs_neg_m": null
+      },
+      "Forward TTC (2-D)": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.399223568842672,
+          "p_value": 8.300497557637347e-08
+        },
+        "rho_vs_neg_m": null
+      },
+      "Forward TTC (1-D)": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.38093267585174506,
+          "p_value": 3.5063248549707787e-07
+        },
+        "rho_vs_neg_m": null
+      },
+      "PET": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.27120570496546614,
+          "p_value": 0.0003767408248350981
+        },
+        "rho_vs_neg_m": null
+      },
+      "RSS": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.29904637677181023,
+          "p_value": 8.228766936510004e-05
+        },
+        "rho_vs_neg_m": null
+      },
+      "Lu et al.": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.4656483160573055,
+          "p_value": 2.0156453421752947e-10
+        },
+        "rho_vs_neg_m": null
+      },
+      "GSSM (Jiao et al., zero-shot)": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.4932503731446605,
+          "p_value": 1.0998309632268384e-11
+        },
+        "rho_vs_neg_m": null
+      },
+      "FutureRisk (CARM)": {
+        "rho_vs_a_max": {
+          "n": 168,
+          "spearman_rho": 0.5498228557863896,
+          "p_value": 1.1734634598637193e-14
+        },
+        "rho_vs_neg_m": null
+      }
+    }
+  }
+}

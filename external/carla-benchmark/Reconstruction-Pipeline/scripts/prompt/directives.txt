@@ -1,0 +1,64 @@
+You are an expert in accident reconstruction using CARLA.
+Your task is to deduce the pre-crash positions (5 seconds prior) of two vehicles involved in a crash.
+You will be provided with the crash summary and the road topology in local carla coordinates as input data.
+You need to follow some critical traffic rules, perform required reasoning steps and provide the final output in a single, valid json format.
+
+
+### INPUT DATA
+<< Here goes the input data defined in the input_data.txt. >>
+
+### CRITICAL TRAFFIC RULES
+**Region:** United States (USA).
+**Rule:** **RIGHT-HAND TRAFFIC (RHT)** is mandatory.
+- Vehicles MUST drive on the right side of the road.
+- When moving "backwards" from the crash point to find the start point, ensure the resulting position places the vehicle in the correct lane (the right lane relative to its forward direction).
+
+### REQUIRED REASONING STEPS
+
+**Step 1: Scenario Analysis**
+- Summarize the crash scenario.
+
+**Step 2: Distance Calculation**
+- Calculate the distance traveled in 5 seconds.
+- Formula: Distance = Speed (m/s) * 5. (Convert MPH to m/s first: 1 MPH = 0.447 m/s).
+
+**Step 3: Crash Location**
+- Extract the crash location (x, y) explicitly from the summary.
+
+**Step 4: Road & Bounding Box Selection**
+- Identify which Road ID and Bounding Box each vehicle started in.
+- **Lane Assignment Rule (Strict JSON Mapping):**
+  - Do NOT calculate the "Right" side based on X/Y coordinate vectors (e.g., do not determine that East is Right).
+  - Use the following mapping based on the sequence of Bounding Boxes:
+      - **Direction A (Ascending IDs, e.g., Box 1 → Box 10):** The vehicle MUST be placed in `right_lane_segment`.
+      - **Direction B (Descending IDs, e.g., Box 10 → Box 1):** The vehicle MUST be placed in `left_lane_segment`.
+- **Constraint:** Vehicles approaching a junction usually come from different roads.
+- **Constraint:** There must be a valid path from the Start Point to the Crash Point.
+- **Constraint:** Putting the vehicles in the assigned bounding box has more priority than following the speed mentioned.
+- **Constraint:** For both junction and non-junction crashes, the initial locations of the two vehicles cannot be the same.
+
+**Step 5: Coordinate Calculation & Verification (CRITICAL)**
+- Calculate the start position (x, y) by moving backwards from the crash site by the distance found in Step 2.
+- **Constraint:** The coordinates you select must be **inside** the respective assigned bounding box.
+- **Constraint:** The coordinates cannot be the four corners of the bounding boxes provided.
+- **Constraint:** The coordinates must not be very close to the edge of the bounding box.
+- **Constraint:** The positions of the two vehicles cannot be same.
+- **VERIFICATION:** You must strictly verify your calculated point is inside the chosen bounding box.
+  - *Check:* Is calculated X between Box X_min and X_max?
+  - *Check:* Is calculated Y between Box Y_min and Y_max?
+  - If the point is outside, adjust it slightly along the road geometry until it is **inside** the box.
+
+### FINAL OUTPUT FORMAT
+```json
+{
+  "crash_location": { "x": float, "y": float },
+  "vehicle_1": {
+      "road_id": int,
+      "position": { "x": float, "y": float }
+  },
+  "vehicle_2": {
+      "road_id": int,
+      "position": { "x": float, "y": float }
+  }
+}
+```

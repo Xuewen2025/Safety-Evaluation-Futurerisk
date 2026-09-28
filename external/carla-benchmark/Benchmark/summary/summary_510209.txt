@@ -1,0 +1,78 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 12 April
+ Time: 14:25
+ Primary Road Name: I-64
+ Secondary Road Name: None
+ Latitude: 37.36491944
+ Longitude: -76.74545278
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Rear
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 4
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 6 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+ event 2: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Left
+
+ event 3: 
+    Area of Impact 1: Not Reported
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Tree (Standing Only)
+
+ event 4: 
+    Area of Impact 1: Non-Collision
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Rollover/Overturn
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Honda CR-V
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Rear
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 095 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Crossing Over (Passing Through) Junction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Departed roadway
+   Accident Type: D24-Same Trafficway, Same Direction-Rear End-Slower
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '4 Clock Value', '5 Clock Value', '7 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Volvo Medium/Heavy – CBE
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Rear
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 6 Clock Point
+   Speed: 065 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Traveling in same direction with lower steady speed
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Skidding laterally clockwise rotation
+   P_CRASH5: Stayed on roadway, not known if left original travel lane
+   Accident Type: D25-Same Trafficway, Same Direction-Rear End-Slower, Going Straight
+   Damages: ['6 Clock Value', 'Undercarriage']
+

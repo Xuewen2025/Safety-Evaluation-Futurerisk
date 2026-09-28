@@ -1,0 +1,55 @@
+00:59:35  Log file: dataset/logs/consistency_finegrained_eval_20260906_005935.log
+00:59:35  [1/4] Loading checkpoint dataset/checkpoints/carm_bench2drive_base.pt ...
+00:59:35        best_val_auroc=0.9462033631108775 best_val_auprc=0.7096026992661623
+00:59:35  [2/4] Scoring Bench2Drive test split (in-domain) ...
+00:59:54        -> 760 Bench2Drive test instances scored
+00:59:54  [3/4] Scoring DeepAccident (cross-domain, zero-shot, native label) ...
+01:04:04        ... 2000 files scanned, 2000 usable so far
+01:06:50        ... 4000 files scanned, 4000 usable so far
+01:10:11        ... 6000 files scanned, 6000 usable so far
+01:12:56        ... 8000 files scanned, 8000 usable so far
+01:13:33        -> 8279 DeepAccident instances scored (native label available)
+01:13:33  [4/4] Computing consistency + fine-grained + per-type results ...
+01:13:33  [Bench2Drive-test(in-domain)] overall (n=760, collisions=53):
+01:13:33      CARM (R)                     AUROC=0.935  AUPRC=0.558
+01:13:33      analytic-only (y_analytic)   AUROC=1.000  AUPRC=1.000
+01:13:33      raw 3D-TTC                   AUROC=1.000  AUPRC=1.000
+01:13:33      PET                          AUROC=0.698  AUPRC=0.107
+01:13:33      DRAC                         AUROC=0.641  AUPRC=0.103
+01:13:33  [Bench2Drive-test(in-domain)] per-interaction-type AUROC (三.1):
+01:13:33      car-following                   CARM=nan(n=202)  analytic-only=nan(n=202)         raw=nan(n=202)         PET=nan(n=202)        DRAC=nan(n=202)
+01:13:33      crossing                        CARM=0.945(n=196)  analytic-only=1.000(n=196)         raw=1.000(n=196)         PET=0.817(n=196)        DRAC=0.869(n=196)
+01:13:33      merging/lane-change             CARM=0.864(n=69)  analytic-only=1.000(n=69)         raw=1.000(n=69)         PET=0.506(n=69)        DRAC=0.498(n=69)
+01:13:33      oncoming                        CARM=0.781(n=147)  analytic-only=1.000(n=147)         raw=1.000(n=147)         PET=0.688(n=147)        DRAC=0.745(n=147)
+01:13:33      other                           CARM=0.960(n=146)  analytic-only=1.000(n=146)         raw=1.000(n=146)         PET=0.738(n=146)        DRAC=0.640(n=146)
+01:13:33  [Bench2Drive-test(in-domain)] Spearman rho (sign-corrected, collision-free only, 二.1/二.3):
+01:13:33      R_predicted_vs_max_evasive_severity      rho=+0.544 (n=707, p=1.13e-55)
+01:13:33      y_analytic_vs_max_evasive_severity       rho=+nan (n=707, p=nan)
+01:13:33      raw_ttc_score_vs_max_evasive_severity    rho=+nan (n=707, p=nan)
+01:13:33      pet_score_vs_max_evasive_severity        rho=+0.131 (n=707, p=4.72e-04)
+01:13:33      drac_score_vs_max_evasive_severity       rho=+0.241 (n=707, p=8.55e-11)
+01:13:33  [DeepAccident(cross-domain,native)] overall (n=8279, collisions=1649):
+01:13:33      CARM (R)                     AUROC=0.627  AUPRC=0.300
+01:13:33      analytic-only (y_analytic)   AUROC=0.636  AUPRC=0.361
+01:13:33      raw 3D-TTC                   AUROC=0.634  AUPRC=0.337
+01:13:33      PET                          AUROC=0.669  AUPRC=0.319
+01:13:33      DRAC                         AUROC=0.652  AUPRC=0.281
+01:13:33  [DeepAccident(cross-domain,native)] per-interaction-type AUROC (三.1):
+01:13:33      car-following                   CARM=0.611(n=961)  analytic-only=0.564(n=961)         raw=0.561(n=961)         PET=0.605(n=961)        DRAC=0.614(n=961)
+01:13:33      crossing                        CARM=0.686(n=2621)  analytic-only=0.686(n=2621)         raw=0.685(n=2621)         PET=0.717(n=2621)        DRAC=0.686(n=2621)
+01:13:33      merging/lane-change             CARM=0.535(n=1100)  analytic-only=0.673(n=1100)         raw=0.661(n=1100)         PET=0.645(n=1100)        DRAC=0.657(n=1100)
+01:13:33      oncoming                        CARM=0.614(n=2452)  analytic-only=0.601(n=2452)         raw=0.601(n=2452)         PET=0.639(n=2452)        DRAC=0.620(n=2452)
+01:13:33      other                           CARM=0.571(n=1145)  analytic-only=0.626(n=1145)         raw=0.623(n=1145)         PET=0.657(n=1145)        DRAC=0.636(n=1145)
+01:13:33  [DeepAccident(cross-domain,native)] Spearman rho (sign-corrected, collision-free only, 二.1/二.3):
+01:13:33      R_predicted_vs_worst_margin              rho=+0.284 (n=286, p=1.07e-06)
+01:13:33      y_analytic_vs_worst_margin               rho=+1.000 (n=286, p=0.00e+00)
+01:13:33      raw_ttc_score_vs_worst_margin            rho=+nan (n=286, p=nan)
+01:13:33      pet_score_vs_worst_margin                rho=+0.155 (n=286, p=8.86e-03)
+01:13:33      drac_score_vs_worst_margin               rho=+0.558 (n=286, p=9.24e-25)
+01:13:33      R_predicted_vs_max_evasive_severity      rho=+0.348 (n=6630, p=5.10e-188)
+01:13:33      y_analytic_vs_max_evasive_severity       rho=+0.007 (n=6630, p=5.79e-01)
+01:13:33      raw_ttc_score_vs_max_evasive_severity    rho=+0.006 (n=6630, p=6.29e-01)
+01:13:33      pet_score_vs_max_evasive_severity        rho=-0.093 (n=6630, p=2.76e-14)
+01:13:33      drac_score_vs_max_evasive_severity       rho=+0.245 (n=6630, p=4.38e-91)
+01:13:34        wrote dataset/results_experiments/summary.json
+01:13:34  Total wall-clock time: 838.2s

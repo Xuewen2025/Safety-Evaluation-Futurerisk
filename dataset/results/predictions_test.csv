@@ -1,0 +1,3 @@
+instance_id,num_agents,y_analytic,R_predicted,collision_label
+OppositeVehicleTakingPriority_Town13_Route600_Weather2__w00051,4,0.0,0.0002989768981933594,0
+YieldToEmergencyVehicle_Town04_Route165_Weather7__w00051,17,0.740486741065979,0.053728461265563965,1

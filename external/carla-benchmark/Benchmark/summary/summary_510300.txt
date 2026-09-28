@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 17 May
+ Time: 20:57
+ Primary Road Name: MU-134 HOLLAND RD
+ Secondary Road Name: STONESHORE RD
+ Latitude: 36.80668889
+ Longitude: -76.09092222
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: Four-Way Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 2 Clock Point
+    Vehicle Number 1: 2
+    Vehicle Number 2: 1
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: KIA Sportage
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 2 Clock Point
+   Speed: Reported as Unknown
+   P_CRASH1: Turning Left
+   P_CRASH2: Turning Left
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: J68-Changing Trafficway, Vehicle Turning-Turn Across Path-Initial Opposite Directions (Left/Right)
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value']
+
+ Vehicle 2:
+   Model: Isuzu Ascender
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 053 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: J69-Changing Trafficway, Vehicle Turning-Turn Across Path-Initial Opposite Directions (Going Straight)
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+

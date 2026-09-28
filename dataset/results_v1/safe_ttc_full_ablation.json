@@ -1,0 +1,32 @@
+{
+  "raw": {
+    "auroc_indomain": 0.7314324476047904,
+    "auprc_indomain": 0.44228339715073783,
+    "auroc_crossdomain": 0.799166332818253,
+    "auprc_crossdomain": 0.3436798931075876
+  },
+  "delta_mu_only": {
+    "auroc_indomain": 0.7528653630239521,
+    "auprc_indomain": 0.4826807835133308,
+    "auroc_crossdomain": 0.8118681810377569,
+    "auprc_crossdomain": 0.341307323971157
+  },
+  "c_sigma_only": {
+    "auroc_indomain": 0.7177137911676646,
+    "auprc_indomain": 0.4168081280683664,
+    "auroc_crossdomain": 0.8024631942963082,
+    "auprc_crossdomain": 0.35146500760175625
+  },
+  "stage1_only": {
+    "auroc_indomain": 0.7639478854790419,
+    "auprc_indomain": 0.4594435312969847,
+    "auroc_crossdomain": 0.8175579118605503,
+    "auprc_crossdomain": 0.33298781264647864
+  },
+  "full_carm": {
+    "auroc_indomain": 0.7934424120508983,
+    "auprc_indomain": 0.49034162372755663,
+    "auroc_crossdomain": 0.8084204374194645,
+    "auprc_crossdomain": 0.32778679531356286
+  }
+}

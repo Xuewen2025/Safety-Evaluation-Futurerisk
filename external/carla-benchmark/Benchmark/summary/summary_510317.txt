@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 28 May
+ Time: 12:0
+ Primary Road Name: US-11
+ Secondary Road Name: None
+ Latitude: 38.71516389
+ Longitude: -78.64696944
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Front
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Ford Edge (For model years 2007-2018 only.  For model years 2019 on, see 12-424.)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Changing Lanes
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Steering right
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: G51-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Going Straight)
+   Damages: ['10 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Harley-Davidson 750cc or greater
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Changing Lanes
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Steering left
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: G50-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+

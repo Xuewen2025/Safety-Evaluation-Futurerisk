@@ -1,0 +1,31 @@
+**1. Crash Summary:**
+<< Extracted Crash Summary >>
+
+**2. Map Context (Local CARLA Coordinates):**
+[
+    {
+        "vehicle id": "V1",
+        "junction_road_id": X1,
+        "junction_segment": [
+           << coordinates of the four corners of the bounding box >>
+        ],
+        "connected_road_id": Y1,
+        "connected_segments": [
+            << coordinates of the four corners of the bounding boxes >>
+        ]
+    },
+    {
+        "vehicle id": "V2",
+        "junction_road_id": X2,
+        "junction_segment": [
+            << coordinates of the four corners of the bounding box >>
+        ],
+        "connected_road_id": Y2,
+        "connected_segments": [
+            << coordinates of the four corners of the bounding boxes >>
+        ]
+    }
+]
+
+
+

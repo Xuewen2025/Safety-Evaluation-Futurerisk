@@ -1,0 +1,64 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 31 March
+ Time: 19:50
+ Primary Road Name: US-13
+ Secondary Road Name: RT-175
+ Latitude: 37.94600556
+ Longitude: -75.54028889
+ First Harmful Event: Pedestrian
+ Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+ Collision Place: Four-Way Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 2
+ event 1: 
+    Area of Impact 1: 1 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+ event 2: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 2
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet Impala/Caprice (For SS from 2014 on, use 20-021.)
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: 1 Clock Point
+   Speed: 040 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Pedestrian in road
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: C13-Single Driver-Forward Impact-Pedestrian/ Animal
+   Damages: ['1 Clock Value']
+
+ Vehicle 2:
+   Model: Unknown Make Unknown (as to automobile, motored cycle, light truck or truck)
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: 12 Clock Point
+   Speed: Not Reported
+   P_CRASH1: Going Straight
+   P_CRASH2: Pedestrian in road
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: M98-Other Crash Type
+   Damages: ['12 Clock Value']
+

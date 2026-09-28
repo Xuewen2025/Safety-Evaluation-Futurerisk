@@ -1,0 +1,7 @@
+04:54:46  [1/4] Loading split from CARM v1 checkpoint (same split as v1_full_eval.py) ...
+04:54:46        train: 4967 instance ids
+04:54:46        val: 1656 instance ids
+04:54:46        test: 1656 instance ids
+04:54:46  [2/4] Computing forward-TTC (2D CTRV + 1D naive) for DeepAccident train/val/test ...
+04:58:56        ... train: 500/4967 instance ids processed
+05:03:04        ... train: 1000/4967 instance ids processed

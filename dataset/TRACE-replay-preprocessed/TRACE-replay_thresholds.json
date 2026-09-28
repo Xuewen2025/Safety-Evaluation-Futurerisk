@@ -1,0 +1,18 @@
+{
+  "TRACE-replay": {
+    "dataset": "TRACE-replay",
+    "thresholds": {
+      "car-following": 22.495463883909167,
+      "crossing": 508.34429829805475,
+      "oncoming": 439.55430200373576,
+      "other": 607.2836922733085
+    },
+    "merged_into_other": {
+      "car-following": false,
+      "crossing": false,
+      "merging/lane-change": true,
+      "oncoming": false,
+      "other": false
+    }
+  }
+}

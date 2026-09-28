@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 7 April
+ Time: 7:15
+ Primary Road Name: CR-718
+ Secondary Road Name: WI POWELL RD
+ Latitude: 36.73865
+ Longitude: -79.47411944
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: T-Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 9 Clock Point
+    Vehicle Number 1: 2
+    Vehicle Number 2: 1
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Toyota Camry
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 9 Clock Point
+   Speed: 005 MPH
+   P_CRASH1: Turning Left
+   P_CRASH2: Turning Left
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: K82-Changing Trafficway, Vehicle Turning-Turn Into Path-Turn Into Opposite Directions (Turning Left)
+   Damages: ['7 Clock Value', '8 Clock Value', '9 Clock Value', '10 Clock Value', '11 Clock Value']
+
+ Vehicle 2:
+   Model: Other Make Western Star
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 040 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From crossing street, turning into opposite direction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: K83-Changing Trafficway, Vehicle Turning-Turn Into Path-Turn Into Opposite Directions (Going Straight)
+   Damages: ['10 Clock Value', '11 Clock Value', '12 Clock Value']
+

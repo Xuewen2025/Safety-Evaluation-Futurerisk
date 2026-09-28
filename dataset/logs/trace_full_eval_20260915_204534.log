@@ -1,0 +1,27 @@
+20:45:34  [1/5] Loading CARM v1 checkpoint (DeepAccident-only, zero-shot on TRACE) ...
+20:45:35  [2/5] Fitting Lu et al. reproduction on DeepAccident TRAIN (never on TRACE) ...
+20:52:11        Lu et al. fit on 4967 DeepAccident-train instances
+20:52:11  [3/5] Scoring every TRACE instance (zero-shot) from dataset/TRACE-preprocessed ...
+20:52:17        -> 273 TRACE windowed instances from 52 underlying scenarios scored
+20:52:17  [4/5] Scoring GSSM (released SHRP2 checkpoint, zero-shot, one batched subprocess call) ...
+20:52:24  [5/5] Table 1' (AUROC/AUPRC vs geometric collision label) and Table 2' (rho vs a_max / -m) ...
+20:52:24        [Table 1'] y_analytic                       AUROC=1.000  AUPRC=1.000
+20:52:24        [Table 1'] raw 3D-TTC                       AUROC=1.000  AUPRC=1.000
+20:52:24        [Table 1'] Forward TTC (2-D)                AUROC=1.000  AUPRC=1.000
+20:52:24        [Table 1'] Forward TTC (1-D)                AUROC=1.000  AUPRC=1.000
+20:52:24        [Table 1'] PET                              AUROC=0.968  AUPRC=0.946
+20:52:24        [Table 1'] RSS                              AUROC=0.913  AUPRC=0.835
+20:52:24        [Table 1'] Lu et al.                        AUROC=0.999  AUPRC=0.998
+20:52:24        [Table 1'] GSSM (Jiao et al., zero-shot)    AUROC=0.993  AUPRC=0.979
+20:52:24        [Table 1'] FutureRisk (CARM)                AUROC=0.843  AUPRC=0.841
+20:52:24        [Table 2'] y_analytic                       rho_vs_a_max=+nan  rho_vs_-m=+nan
+20:52:24        [Table 2'] raw 3D-TTC                       rho_vs_a_max=+nan  rho_vs_-m=+nan
+20:52:24        [Table 2'] Forward TTC (2-D)                rho_vs_a_max=+0.399  rho_vs_-m=+nan
+20:52:24        [Table 2'] Forward TTC (1-D)                rho_vs_a_max=+0.381  rho_vs_-m=+nan
+20:52:24        [Table 2'] PET                              rho_vs_a_max=+0.271  rho_vs_-m=+nan
+20:52:24        [Table 2'] RSS                              rho_vs_a_max=+0.299  rho_vs_-m=+nan
+20:52:24        [Table 2'] Lu et al.                        rho_vs_a_max=+0.466  rho_vs_-m=+nan
+20:52:24        [Table 2'] GSSM (Jiao et al., zero-shot)    rho_vs_a_max=+0.493  rho_vs_-m=+nan
+20:52:24        [Table 2'] FutureRisk (CARM)                rho_vs_a_max=+0.550  rho_vs_-m=+nan
+20:52:24  wrote dataset/results_trace/trace_full_eval_summary.json
+20:52:24  Total time: 410.2s

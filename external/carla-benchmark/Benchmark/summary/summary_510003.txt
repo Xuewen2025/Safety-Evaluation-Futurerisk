@@ -1,0 +1,71 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 2 January
+ Time: 21:32
+ Primary Road Name: US-29
+ Secondary Road Name: RT-655
+ Latitude: 37.70848611
+ Longitude: -78.93292778
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: Four-Way Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 3
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 3 Clock Point
+    Vehicle Number 1: 2
+    Vehicle Number 2: 1
+    Event Name: Motor Vehicle In-Transport
+
+ event 2: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Left
+
+ event 3: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Traffic Sign Support
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet Impala/Caprice (For SS from 2014 on, use 20-021.)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 3 Clock Point
+   Speed: 025 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Crossing Over (Passing Through) Junction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: L87-Intersecting Paths-Straight Paths-Struck on the Right
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '4 Clock Value', '5 Clock Value']
+
+ Vehicle 2:
+   Model: Chevrolet Spark
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 060 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From crossing street, across path
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: L86-Intersecting Paths-Straight Paths-Striking from the Right
+   Damages: ['1 Clock Value', '2 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+

@@ -1,0 +1,124 @@
+{
+  "n_windows": 66,
+  "n_underlying_scenarios": 45,
+  "caveats": [
+    "collision label is CARLA's own sensor.other.collision event -- independent of any TTC/geometry formula",
+    "both vehicles always spawned as vehicle.tesla.model3 regardless of the real crash report's vehicle models (TRACE authors' own simplification)",
+    "instances from the same scenario are correlated -- n_windows != n_independent_samples",
+    "not every scenario's closed-loop BasicAgent replay reproduced an actual collision -- non-colliding replays kept as real negatives",
+    "excluded 4 scenario(s) with status in ['no_collision_tick_cap_reached'] (['510026', '510131', '510230', '510332']) -- these hit the 3000-tick cap with the vehicle stuck oscillating in place (inspected directly), not driving; see EXCLUDED_STATUSES docstring in this script"
+  ],
+  "table1_instance_consistency": {
+    "n": 66,
+    "n_collisions": 39,
+    "n_underlying_scenarios": 45,
+    "methods": {
+      "y_analytic": {
+        "auroc": 0.8974358974358974,
+        "auprc": 0.916083916083916
+      },
+      "raw 3D-TTC": {
+        "auroc": 0.8974358974358974,
+        "auprc": 0.916083916083916
+      },
+      "Forward TTC (2-D)": {
+        "auroc": 0.9772079772079773,
+        "auprc": 0.9799703220755852
+      },
+      "Forward TTC (1-D)": {
+        "auroc": 0.9848053181386515,
+        "auprc": 0.9809183064997018
+      },
+      "PET": {
+        "auroc": 0.936372269705603,
+        "auprc": 0.9011704778595386
+      },
+      "RSS": {
+        "auroc": 0.8865147198480532,
+        "auprc": 0.8779016644144257
+      },
+      "Lu et al.": {
+        "auroc": 0.9420702754036088,
+        "auprc": 0.9424154945514995
+      },
+      "GSSM (Jiao et al., zero-shot)": {
+        "auroc": 0.956315289648623,
+        "auprc": 0.9452748655271958
+      },
+      "FutureRisk (CARM)": {
+        "auroc": 0.8233618233618234,
+        "auprc": 0.8901794378421268
+      }
+    }
+  },
+  "table2_finegrained": {
+    "n_windows": 27,
+    "n_underlying_scenarios": 10,
+    "methods": {
+      "y_analytic": {
+        "rho_vs_a_max": null,
+        "rho_vs_neg_m": null
+      },
+      "raw 3D-TTC": {
+        "rho_vs_a_max": null,
+        "rho_vs_neg_m": null
+      },
+      "Forward TTC (2-D)": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.6324406673274926,
+          "p_value": 0.00040092218029173977
+        },
+        "rho_vs_neg_m": null
+      },
+      "Forward TTC (1-D)": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.6721449363801865,
+          "p_value": 0.0001231117454068794
+        },
+        "rho_vs_neg_m": null
+      },
+      "PET": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.07263839121196584,
+          "p_value": 0.7188049670455785
+        },
+        "rho_vs_neg_m": null
+      },
+      "RSS": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.6421449833693404,
+          "p_value": 0.0003050344072025269
+        },
+        "rho_vs_neg_m": null
+      },
+      "Lu et al.": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.7375973219808495,
+          "p_value": 1.1340919556888205e-05
+        },
+        "rho_vs_neg_m": null
+      },
+      "GSSM (Jiao et al., zero-shot)": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.6676907274109752,
+          "p_value": 0.00014176382990913636
+        },
+        "rho_vs_neg_m": null
+      },
+      "FutureRisk (CARM)": {
+        "rho_vs_a_max": {
+          "n": 27,
+          "spearman_rho": 0.828575799609282,
+          "p_value": 9.452176535844976e-08
+        },
+        "rho_vs_neg_m": null
+      }
+    }
+  }
+}

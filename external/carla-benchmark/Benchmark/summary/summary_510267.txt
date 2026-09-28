@@ -1,0 +1,92 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 4 May
+ Time: 11:10
+ Primary Road Name: CR-607
+ Secondary Road Name: None
+ Latitude: 38.20711667
+ Longitude: -78.35794722
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 6
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 2: 
+    Area of Impact 1: Not Reported
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+ event 3: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Right
+
+ event 4: 
+    Area of Impact 1: Non-Collision
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Rollover/Overturn
+
+ event 5: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 2
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Right
+
+ event 6: 
+    Area of Impact 1: Not Reported
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 2
+    Vehicle Number 2: 9999
+    Event Name: Ditch
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Freightliner Other (medium/heavy truck)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: Not Reported
+   Speed: 040 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Skidding longitudinally  rotation less than 30 degrees
+   P_CRASH5: Departed roadway
+   Accident Type: I64-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '4 Clock Value', '5 Clock Value', '6 Clock Value', '7 Clock Value']
+
+ Vehicle 2:
+   Model: KIA Rondo
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 040 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Departed roadway
+   Accident Type: I65-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Going Straight)
+   Damages: ['12 Clock Value']
+

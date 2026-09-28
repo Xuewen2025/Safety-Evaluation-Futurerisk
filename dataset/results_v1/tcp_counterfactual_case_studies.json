@@ -1,0 +1,132 @@
+[
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1102_Weather10",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.0200451114385074,
+    "n_agents": 7,
+    "R_real": 0.26365816593170166,
+    "collision_real": 1,
+    "R_tcp_counterfactual": 0.7643769979476929,
+    "collision_tcp_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1103_Weather11",
+    "ref_frame": 290,
+    "tcp_l2_mean": 1.057792531791912,
+    "n_agents": 8,
+    "R_real": 0.4643770456314087,
+    "collision_real": 1,
+    "R_tcp_counterfactual": 0.024426579475402832,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1104_Weather12",
+    "ref_frame": 210,
+    "tcp_l2_mean": 0.9907825719552064,
+    "n_agents": 10,
+    "R_real": 0.011524081230163574,
+    "collision_real": 1,
+    "R_tcp_counterfactual": 0.015319764614105225,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1105_Weather13",
+    "ref_frame": 150,
+    "tcp_l2_mean": 1.2938295020814223,
+    "n_agents": 8,
+    "R_real": 0.8195153474807739,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.9024056792259216,
+    "collision_tcp_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1106_Weather14",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.1710524533140194,
+    "n_agents": 10,
+    "R_real": 0.009587287902832031,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.0033768415451049805,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1107_Weather15",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.0822621219976536,
+    "n_agents": 8,
+    "R_real": 0.9999281764030457,
+    "collision_real": 1,
+    "R_tcp_counterfactual": 0.07042992115020752,
+    "collision_tcp_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1109_Weather9",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.1535484476053273,
+    "n_agents": 10,
+    "R_real": 0.009309232234954834,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.0037688612937927246,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1110_Weather18",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.3252795631542333,
+    "n_agents": 8,
+    "R_real": 0.11764323711395264,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.11733126640319824,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1112_Weather20",
+    "ref_frame": 210,
+    "tcp_l2_mean": 0.9908195126535653,
+    "n_agents": 10,
+    "R_real": 0.010782301425933838,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.02620917558670044,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1113_Weather21",
+    "ref_frame": 210,
+    "tcp_l2_mean": 0.9277898233217545,
+    "n_agents": 11,
+    "R_real": 0.009465038776397705,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.007759451866149902,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1115_Weather23",
+    "ref_frame": 170,
+    "tcp_l2_mean": 1.7890007671457169,
+    "n_agents": 9,
+    "R_real": 0.00861513614654541,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.05462843179702759,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1116_Weather23",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.1128077410644681,
+    "n_agents": 7,
+    "R_real": 0.16370058059692383,
+    "collision_real": 0,
+    "R_tcp_counterfactual": 0.09188133478164673,
+    "collision_tcp_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1117_Weather25",
+    "ref_frame": 210,
+    "tcp_l2_mean": 1.09605488809131,
+    "n_agents": 7,
+    "R_real": 0.190324068069458,
+    "collision_real": 1,
+    "R_tcp_counterfactual": 0.5575836896896362,
+    "collision_tcp_counterfactual": 1
+  }
+]

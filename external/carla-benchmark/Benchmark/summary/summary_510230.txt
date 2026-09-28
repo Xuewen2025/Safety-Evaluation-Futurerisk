@@ -1,0 +1,78 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 21 April
+ Time: 17:35
+ Primary Road Name: CR-802
+ Secondary Road Name: None
+ Latitude: 38.64657222
+ Longitude: -77.88453889
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Front
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 4
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Right
+
+ event 2: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Re-entering Roadway
+
+ event 3: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 4: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chrysler Pacifica
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 045 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Steering left
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: G50-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '9 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: GMC Medium/Heavy Pickup (pickup-style only - over 10,000 lbs
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 030 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: G51-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Going Straight)
+   Damages: ['1 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+

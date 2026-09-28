@@ -1,0 +1,43 @@
+20:49:10  [1/6] Loading v1 checkpoint ...
+20:49:10  [2/6] Scoring DeepAccident train/val/test (in-domain, native label) ...
+20:58:19        train: 4967 instances
+21:01:25        val: 1656 instances
+21:04:26        test: 1656 instances
+21:04:26  [3/6] Fitting Lu et al. reproduction on DeepAccident TRAIN, scoring all splits ...
+21:04:27  [4/6] Scoring Bench2Drive (cross-domain, zero-shot, geometric label) ...
+21:04:55        ... 1000 instances scored
+21:05:16        ... 2000 instances scored
+21:05:42        ... 3000 instances scored
+21:06:03        -> 3679 Bench2Drive instances scored
+21:06:03  [5/6] Table instance_consistency (5-method subset: CARM/y_analytic/raw_ttc/RSS/Lu) ...
+21:06:03        DeepAccident in-domain  FutureRisk (CARM)            AUROC=0.793 AUPRC=0.490
+21:06:03        DeepAccident in-domain  y_analytic                   AUROC=0.648 AUPRC=0.372
+21:06:03        DeepAccident in-domain  raw 3D-TTC                   AUROC=0.646 AUPRC=0.350
+21:06:03        DeepAccident in-domain  RSS                          AUROC=0.529 AUPRC=0.199
+21:06:03        DeepAccident in-domain  Lu et al. (reproduced)       AUROC=0.662 AUPRC=0.452
+21:06:03        Bench2Drive cross-domain  FutureRisk (CARM)            AUROC=0.808 AUPRC=0.328
+21:06:03        Bench2Drive cross-domain  y_analytic                   AUROC=1.000 AUPRC=1.000
+21:06:03        Bench2Drive cross-domain  raw 3D-TTC                   AUROC=1.000 AUPRC=1.000
+21:06:03        Bench2Drive cross-domain  RSS                          AUROC=0.662 AUPRC=0.155
+21:06:03        Bench2Drive cross-domain  Lu et al. (reproduced)       AUROC=0.990 AUPRC=0.933
+21:06:03  [6/6] SSM consistency, fine-grained baselines, per-type breakdown ...
+21:06:03        Car-following (stable)   TTC=+0.347  PET=+0.303  DRAC=+0.461  RSS=+0.267
+21:06:03        Oncoming                 TTC=+0.337  PET=+0.280  DRAC=+0.397  RSS=+0.208
+21:06:03        Crossing                 TTC=+0.469  PET=+0.447  DRAC=+0.529  RSS=+0.253
+21:06:03        Abrupt speed/heading    TTC=+0.435  PET=+0.404  DRAC=+0.432  RSS=+0.118
+21:06:03        rho(FutureRisk (CARM), a(t)) = +0.276 (n=6630)
+21:06:03        rho(y_analytic, a(t)) = +0.007 (n=6630)
+21:06:03        rho(raw 3D-TTC, a(t)) = +0.006 (n=6630)
+21:06:03        rho(PET, a(t)) = -0.093 (n=6630)
+21:06:03        rho(DRAC, a(t)) = +0.245 (n=6630)
+21:06:03        rho(RSS, a(t)) = +0.363 (n=6630)
+21:06:03        rho(Lu et al. (reproduced), a(t)) = -0.001 (n=6630)
+21:07:44        operating threshold (DeepAccident val, 5% FPR): 0.0000
+21:07:44        car-following            n=  923 coll=   8 AUROC=0.929 AUPRC=0.062 ECE=0.06139406887965755 lead_time=1.8625
+21:07:47        crossing                 n= 1087 coll= 153 AUROC=0.808 AUPRC=0.404 ECE=0.07592972194589159 lead_time=1.8620915032679743
+21:07:48        merging/lane-change      n=  353 coll=  32 AUROC=0.748 AUPRC=0.244 ECE=0.07941639119437328 lead_time=1.375
+21:07:48        oncoming                 n=  584 coll=  20 AUROC=0.752 AUPRC=0.248 ECE=0.05568114759987347 lead_time=2.9150000000000005
+21:07:50        other                    n=  732 coll= 133 AUROC=0.848 AUPRC=0.573 ECE=0.10233813866240078 lead_time=2.472932330827068
+21:07:57        overall                  n= 3679 coll= 346 AUROC=0.808 AUPRC=0.328 ECE=0.050434595315668296 lead_time=2.11271676300578
+21:07:57  wrote dataset/results_v1/v1_full_eval_summary.json
+21:07:57  Total time: 1126.5s

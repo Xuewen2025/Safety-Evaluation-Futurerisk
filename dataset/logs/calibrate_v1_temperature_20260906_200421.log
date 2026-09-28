@@ -1,0 +1,21 @@
+20:04:21  [1/3] Loading v1 checkpoint and scoring VAL split (native label) ...
+20:06:50        val: n=1656 collisions=318
+20:06:50  [2/3] Fitting temperature T on VAL (native label) ...
+20:06:50        fitted T=1.8211
+20:06:50        val ECE before=0.1532  after=0.2030
+20:06:50  [3/3] Applying T to TEST predictions ...
+20:09:15        TEST AUROC before=0.7934 after=0.7934 (should match -- monotonic transform)
+20:09:15        TEST AUPRC before=0.4903 after=0.4903
+20:09:15        TEST ECE   before=0.1335 after=0.1910
+20:09:15          bin [0.0,0.1) n=  58 conf=0.081 emp_freq=0.017
+20:09:15          bin [0.1,0.2) n= 359 conf=0.161 emp_freq=0.053
+20:09:15          bin [0.2,0.3) n= 410 conf=0.248 emp_freq=0.080
+20:09:15          bin [0.3,0.4) n= 257 conf=0.344 emp_freq=0.144
+20:09:15          bin [0.4,0.5) n= 134 conf=0.448 emp_freq=0.209
+20:09:15          bin [0.5,0.6) n=  94 conf=0.545 emp_freq=0.298
+20:09:15          bin [0.6,0.7) n= 103 conf=0.647 emp_freq=0.437
+20:09:15          bin [0.7,0.8) n=  87 conf=0.747 emp_freq=0.379
+20:09:15          bin [0.8,0.9) n=  67 conf=0.844 emp_freq=0.627
+20:09:15          bin [0.9,1.0) n=  87 conf=0.970 emp_freq=0.621
+20:09:15        wrote dataset/results_v1/temperature_calibration.json
+20:09:15  Total time: 294.4s

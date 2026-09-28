@@ -1,0 +1,10 @@
+20:42:51  Log file: dataset/logs/preprocess_trace_20260915_204251.log
+20:42:51  [1/2] Building RawTrajectoryInstances (kinematic reconstruction) from every scenario in external/carla-benchmark/Benchmark ...
+20:42:51        -> 273 windowed instances from 52 scenarios (105 positive / 168 negative) in 0.1s
+20:42:51        NOTE: instances from the same scenario are correlated (52 independent underlying events, not one per window) -- account for this in any significance test.
+20:42:51  [2/2] Fitting thresholds + generating T_evt/tau_phy + caching to dataset/TRACE-preprocessed ...
+20:42:53        thresholds: {'car-following': 41.2401741471524, 'crossing': 33.48435649268779, 'oncoming': 18.68605946026348, 'other': 25.5820892522654}
+20:42:53        merged_into_other: {'car-following': False, 'crossing': False, 'merging/lane-change': True, 'oncoming': False, 'other': False}
+20:42:53        preprocessing pass took 2.1s
+20:42:53  Total wall-clock time: 2.2s
+20:42:53  Cached instances directory: dataset/TRACE-preprocessed

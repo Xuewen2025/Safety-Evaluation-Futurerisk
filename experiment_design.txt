@@ -1,0 +1,281 @@
+FutureRisk / CARM 实验设计（新学习型安全指标的验证方案）
+====================================================
+
+背景：FutureRisk 是一个 post-hoc、outcome-agnostic 的连续安全风险指标 R∈[0,1]，
+核心模块 CARM 引入了 context-adaptive 的可学习安全阈值 τ_safe 与 bounded residual
+（见 instruction.txt 中 §Context-Adaptive Risk Model 及 §Two-Stage Training）。
+下面的实验设计用于系统性验证该指标是否合理、是否比传统 collision rate / SSM
+更有价值。
+
+【CCF-Experiment-Designer 审查后新增的统一协议，适用于以下所有实验】
+- Baseline全集：y_analytic（无学习成分）、raw 3D-TTC、PET、DRAC、RSS
+  （rule-based代表，Related Work点名的closest prior method之一）、Lu et al.
+  2022复现版（data-driven代表，Related Work点名的另一个closest prior
+  method）。后两个是本轮审查新增的，之前只有前四个纯公式化baseline。
+- Seeds/统计显著性：涉及训练的配置（CARM各变体、复现的Lu et al. baseline）
+  跑5个随机种子，结果报mean±std；用paired bootstrap（10000次重采样）做
+  显著性检验，p<0.05标注*。RSS/raw-TTC/PET/DRAC是确定性方法，跑一次即可，
+  不需要seed方差。
+
+
+一、一致性（Consistency）
+------------------------
+目标：证明 R 与既有的"碰撞发生与否 / 碰撞率"这一 ground truth 概念不矛盾，
+同时说明学习部分带来的增量价值。建议拆成两个层次，不要混为一谈：
+
+1. 实例级一致性
+   - 对 R（或 max_t r(t)）与二元碰撞标签做 AUROC / AUPRC。
+   - 不要只在跨域（DeepAccident）数据上做，也要在 in-domain
+     （nuPlan + Bench2Drive）测试集上报一份，作为一致性的基本证据。
+
+2. 方法级 / 排序一致性（更贴近实际使用场景，目前设计中缺失，建议补充）
+   - collision rate 在实践中主要用于比较不同 policy / 方法的安全性，而不是
+     判断单条轨迹。
+   - 实验：对 Bench2Drive 上的多个 driving agent / baseline 方法，分别计算
+     (a) 经验碰撞率，(b) 该方法 rollout 轨迹集合上 R 的均值或某个高分位数。
+   - 用 Spearman / Kendall's τ 检验两种排序是否一致。
+   - 这是"新指标能否替代/补充 collision rate 做方法间比较"的直接证据。
+
+3. 与其他 SSM（TTC / PET / DRAC / RSS）的一致性
+   - 不只报相关系数，而是分场景讨论：
+     * 在传统 SSM 可靠的场景（如稳定 car-following）下，R 应与其高度一致；
+     * 在传统 SSM 已知会失效的场景（oncoming、crossing、速度方向剧变）下，
+       R 应给出更合理的排序——这样"一致性"实验本身就顺带证明了方法价值，
+       而不仅仅是"数值差不多"。
+   - [CCF-Experiment-Designer 审查后补充] 加入 RSS（Responsibility-Sensitive
+     Safety）作为规则式 baseline 的代表——它是 Related Work 里明确点名的
+     rule-based 对照方法，之前只对比了 TTC/PET/DRAC，没有 RSS，属于"closest
+     prior method 缺失"。
+
+【CCF-Experiment-Designer 审查后新增：Gap 1 —— 一致性实验里缺 baseline】
+   - 现有 baseline（raw 3D-TTC / y_analytic / PET / DRAC）全部是公式化方法，
+     Related Work 里点名批评的"data-driven 但不可解释"这一派（Lu et al. 2022
+     的无监督表征学习方法）从未作为实际 baseline 出现在任何一致性/细粒度实验里。
+   - 需要在实例级一致性（Table II）、SSM一致性（Table IV）、细粒度对比
+     （Table V）里，把 RSS（rule-based代表）和 Lu et al.（data-driven代表）
+     都加进去做对照，否则"FutureRisk兼得两者优点"这个核心claim在实验上是
+     悬空的，只是Related Work里的一句论断。
+
+
+二、更细颗粒度（Fine-Grained Discrimination）
+--------------------------------------------
+目标：证明 R 能区分"同为碰撞-free但严重程度不同"的轨迹，这是 collision rate
+无法做到的核心卖点。不能只靠定性 case study，需要至少一个可量化实验：
+
+1. 按已有连续 severity proxy 分箱验证
+   - 使用文档中已有的 harsh-evasive 事件强度 a(t)、最小 margin m、或最小
+     3D-TTC，将碰撞-free 轨迹按这些 proxy 分 bin。
+   - 检验 R 是否随 proxy 单调变化（Spearman 相关 + 箱线图）。
+
+2. 参数化扰动实验（建议新增，成本不高但说服力强）
+   - 固定一个场景，系统性扫描 ego 轨迹某个自由度（如横向偏移量、变道时机），
+     从"安全"经"有惊无险"扫到"碰撞边缘"。
+   - 画 R(t) 随扰动参数变化的曲线，验证平滑单调，并且比 raw TTC / PET 更早、
+     更细地分辨出严重程度差异。
+   - 该实验同时可为"五、可解释性"提供 sanity check 证据。
+
+3. 与 baseline 的细粒度对比
+   - 在同一分箱 / 扫描实验上，对比 analytic-only y_analytic、raw 3D-TTC、
+     PET、DRAC，量化"学习部分比纯解析公式多分辨出了多少"。
+
+
+三、泛化 / 鲁棒性（Generalization / Robustness）
+------------------------------------------------
+现有 §Cross-Domain Generalization Evaluation 已经比较扎实（AUROC/AUPRC、
+early-warning lead time、calibration，并与 raw 3D-TTC / analytic-only /
+PET / DRAC 做了 baseline 对比），建议在此基础上补充：
+
+1. 按 interaction type 拆分报告
+   - 将 AUROC / calibration 等跨域指标按 {car-following, crossing,
+     merging/lane-change, oncoming, other} 拆开报告，而不只给整体数字。
+   - 某些交互类型可能泛化得好、某些差，这本身是有价值的发现，笼统报告会
+     削弱"泛化"这个 claim 的说服力。
+
+2. 输入扰动鲁棒性（与分布泛化是不同的 claim，建议单独做）
+   - 对轨迹坐标加噪声 / 改变采样率 / 模拟传感器抖动，检验 R 是否稳定，
+     不会因输入小扰动而大幅跳变。
+
+3. 超参数敏感性
+   - 对 T_m（温度）、θ_{d,c}（阈值统计量）等关键超参做小范围扰动，报告
+     排序结论（尤其是一、二部分的结论）是否稳定。成本低，但能提前堵住
+     审稿人常见质疑。
+
+
+四、Case Study（定性验证）
+--------------------------
+现有设计（选取若干"同为碰撞-free但轨迹形态明显不同"的场景，可视化 R(t) /
+m(t) / q_k）已经很好地抓住了论文核心 motivation，建议保留，并补充：
+
+- 至少一个"失败案例"：R 表现不如预期（误报或漏报）的场景，并简要分析原因。
+  主动暴露局限性能增加论文可信度，也为第五部分可解释性分析提供素材。
+
+
+五、可解释性（Interpretability）
+--------------------------------
+"能否有可解释性"需要落到具体、成本可控的分析上，建议如下：
+
+0.（CCF-Experiment-Designer 审查后新增，优先级最高）可解释性-灵活性权衡实验
+   - 直接对应 Gap 1：把 RSS（rule-based极端，formula-anchored fraction=100%，
+     由构造保证）和 Lu et al. 2022 复现版（data-driven极端，formula-anchored
+     fraction=0%，由构造保证）与 FutureRisk 放进同一张表，同时报"可解释性
+     代理指标"（formula-anchored fraction，FutureRisk的算法是
+     1 - E[|β·tanh(g_r)|/|logit(R_CARM~)|]，即最终logit里有多少比例是被
+     bounded residual之外的结构化分支决定的）和"适应性/判别力指标"
+     （in-domain/cross-domain AUROC、与a(t)的排序相关性）。
+   - 这是把"我们兼得两者"从Related Work的一句论断，变成一张可以被审稿人
+     直接检验的表——如果FutureRisk的判别力接近Lu et al.、可解释性代理
+     接近RSS，这个核心claim才算真正被证明了。
+
+1. 残差消融
+   - 对比 Stage-1-only（g_r ≡ 0，纯 structured branch）与完整 CARM
+     （含 bounded residual），量化残差带来的性能增量。
+   - 画残差 g_r 的分布，检验其是否集中在预期场景（如 oncoming / crossing
+     这类解析公式假设本就不成立的场景）——既是消融，也是可解释性证据。
+
+2. 学到的 τ_safe 与解析先验 τ_phy 的对比可视化
+   - 按 interaction type 和相对速度分 bin，画学到的安全阈值相对 τ_phy 的
+     偏移方向，检验是否符合直觉（如 oncoming 场景要求更大安全裕度）。
+
+3. "有界残差"作为 interpretability-by-construction 的论述
+   - 因为 g_r 是 bounded 的，模型不可能任意偏离物理先验，这一点可以直接
+     写入论文作为设计层面的可解释性保证，而不仅是事后分析。
+
+4.（可选，优先级较低）特征归因
+   - 对 hazard head 的输入特征做简单消融或梯度归因，看哪些特征驱动预测。
+   - 成本更高，若时间有限可以省略，前三条已经足够支撑 interpretability
+     这一节。
+
+
+六、组件消融（Ablation，建议新增的一项）
+------------------------------------------
+Pipeline 包含多个模块：3D-TTC → interaction type → context-dependent
+margin → CARM（hazard head / safe-TTC head / bounded residual）。建议单独
+列一个消融实验，逐步加入各组件，观察一致性（Spearman/AUROC）、细粒度
+分辨力等指标如何变化。这是多模块方法论文审稿人几乎必问的一项，可与第五
+部分合并，也可单列一节。
+
+【CCF-Experiment-Designer 审查后新增：Gap 3 —— 聚合方式没被消融过】
+   - noisy-OR跨agent聚合（R = 1 - prod_j(1-R^j)）是一个具体的设计选择，
+     但没有和其他聚合方式（取max、取mean）对比过。审稿人会问"为什么是
+     noisy-OR不是简单取max"，建议补一个小消融：固定完整CARM其余部分，
+     只替换聚合规则，对比in-domain/cross-domain AUROC。
+
+【CCF-Experiment-Designer 审查后新增：Gap 4 —— critical-event label本身
+没被单独验证（优先级较低，可选）】
+   - T_evt的定义（碰撞 或 harsh-evasive proxy超阈值）是hazard head监督
+     信号的根基，但没有实验单独检验"这个proxy label加进来到底有没有用"。
+   - 建议补一个轻量消融：hazard head只用"碰撞"作为监督 vs. 用"碰撞或proxy
+     超阈值"作为监督（当前默认），对比两者的AUROC，看proxy信号是否真的
+     必要——考虑到Bench2Drive真实碰撞极稀疏，这个消融成本不高但能回应
+     "T_evt构造是否合理"的潜在质疑。
+
+
+小结
+----
+整体框架方向正确、覆盖面完整；主要待补充点：
+1. "一致性"需拆分为实例级与方法级排序一致性，并补充方法级排序实验；
+2. "细粒度"需要至少一个可量化实验（分箱相关性或参数化扰动曲线），
+   不能只靠定性 case study；
+3. "泛化/鲁棒性"建议按交互类型拆分报告，并补充输入扰动与超参敏感性；
+4. "可解释性"落到残差消融 + τ_safe 可视化 + bounded-by-design 论述三点；
+5. 建议新增组件消融实验。
+
+【CCF-Experiment-Designer 审查（用 references/evidence-design.md 的 reviewer
+questions + baseline matrix + minimum convincing package 框架逐条核对）
+后新增的待补充点】：
+6. [最关键，Gap 1] 一致性/细粒度实验里完全没有 data-driven baseline（Lu et
+   al. 2022），也没有把 RSS 当作 rule-based baseline 用起来——Related Work
+   点名批评的两个"极端"方法从未被拿来实际对比，导致"FutureRisk兼得两者
+   优点"这个全文最核心的claim在实验上是悬空的。已在一、五节补上具体表格
+   设计（一致性表加RSS/Lu et al.两行；新增"可解释性-灵活性权衡"专项实验，
+   用formula-anchored fraction这个可量化的可解释性代理指标，把RSS/Lu et
+   al./FutureRisk放进同一张表直接对比）。
+7. [Gap 2] 所有实验设计目前都是单次跑的点估计，没有seeds/统计显著性——
+   按AI/ML venue的标准checklist，这是审稿人必问项。建议：每个需要训练的
+   配置（CARM各变体、复现的Lu et al. baseline）跑5个随机种子，所有结果表
+   报mean±std，用paired bootstrap检验显著性（RSS/raw-TTC/PET/DRAC是确定性
+   方法，不需要跑seed）。
+8. [Gap 3] noisy-OR跨agent聚合这个设计选择没被消融过，建议补一个小实验
+   （noisy-OR vs. max vs. mean），成本低但能回应"为什么是这个聚合方式"的
+   质疑。
+9. [Gap 4，可选、优先级较低] critical-event label的构造（碰撞 vs. 碰撞+proxy）
+   本身没被单独验证过，可以补一个轻量消融，但如果时间有限可以只在正文里
+   一句话带过，不必单列实验。
+
+标注：以上 6-9 项已同步写入论文 root.tex 的 Experiments 节（Table
+IV-B/IV-C/IV-F.1/IV-G.2/IV-G.3），本文件的更新只是让实验设计文档本身
+保持和论文一致。
+
+【2026-09-14 新增，用户直接提出的两个 P0 可解释性加强实验，已实际跑出
+真实数据并写入 root.tex，不是设计稿】
+
+10. [P0-1] Table IV / Sec. exp_tradeoff 的 "Anchored 70.1%" 从均值改成了
+    分布：
+    - 脚本改动：scripts/experiments/v1_interpretability.py 现在把每个
+      unmasked agent 的 anchored fraction (1 - formula_frac_terms) 单独
+      存下来（不再只留展平后的均值），并按 (a) native/geometric碰撞标签、
+      (b) 该 agent 的 ground-truth critical-event 标签 T_evt
+      (eq:carm_critical_event，就是hazard head监督用的那个标签，不是对
+      模型自己q_k的阈值) 是否有限（触发/未触发）两个维度分组，写入新文件
+      dataset/results_v1/v1_interpretability_per_agent.csv（113,943条
+      agent级记录，DeepAccident in-domain 75,752 + Bench2Drive
+      cross-domain 38,191）。
+    - 新增分析/画图脚本 scripts/experiments/render_anchored_fraction_
+      distribution.py：读CSV，算rank-biserial效应量（配合Mann-Whitney p
+      值，因为n很大时p值本身没有信息量）、识别并如实报告一个<0.22%的
+      比值爆炸型离群尾巴（logit(R_tilde)≈0时该比值定义不稳定，不是
+      "第二个可解释性区间"），产出图 icra/figures/
+      anchored_fraction_distribution.png（三组箱线图：整体/按碰撞/按
+      critical-event，DeepAccident与Bench2Drive并排）。
+    - 真实结果（单seed）：分布是单峰的，不是双峰——中位数(0.741,
+      IQR[0.666,0.803], in-domain；0.846, IQR[0.805,0.878], cross-domain)
+      其实略高于均值70.1%，差距完全由那条<0.22%的离群尾巴造成。按碰撞
+      标签分组几乎没区分度（中位数只差0.009，效应量r=-0.066，n=75752下
+      p<1e-35但没有实际意义）；按critical-event触发分组区分度明显更大
+      （0.700 vs 0.769，中位数差0.069，r=0.371，中等效应量）——即模型
+      在"这次交互后来被证实真的进入了危险状态"时更多调用free residual，
+      而不是在"这次交互后来被证实发生了碰撞"时更多调用——这是比原始
+      "70.1%恒定"更细致、也更诚实的故事，已写入 root.tex Sec.
+      exp_tradeoff 与新图 fig:anchored_fraction_distribution。
+    - 【重要说明，供后续决策参考】用户原话提到"已经用了三个seed，可以
+      顺手报一下三个seed间的稳定性"——核实后这个前提在当前项目里不成立：
+      全项目只有一个CARM checkpoint (dataset/checkpoints/
+      carm_deepaccident_v1.pt)，训练脚本固定了SEED常量，没有任何多seed
+      变体，root.tex里所有相关表格也都标注"single seed"。已采用的处理
+      方式：如实只报单seed结果，用percentile bootstrap（对test agent
+      重采样10000次）给出中位数的95% CI作为"这个估计本身的抽样不确定性"
+      的证据，并在正文和图注里明确写清楚这不是"训练种子间的稳定性"，
+      两者不能混淆。如果之后想要真正的多seed稳定性证据，需要用
+      train_deepaccident_v1.py额外训练2个种子（改SEED常量重跑），这是
+      新增训练开销，超出了当初"不需要新采数据"的范围，留作后续可选项，
+      本轮未做。
+
+11. [P0-2] Table IV 从"2个定义端点(RSS100%/Lu et al. 0%) + 1个实测值
+    (FutureRisk 70.1%)"变成了"2个按构造成立的精确结构性事实 + 1个实测值
+    + GSSM"：
+    - GSSM的AUROC(in)=0.567、AUROC(cross)=0.817、ρ vs a(t)=0.070 三个数
+      都是复用 dataset/results_v1/gssm_baseline_eval.json 里已经跑出来的
+      真实结果（AUROC(in)和ρ vs a(t)在root.tex其他表格里也已经出现过，
+      跟这里引用的数值一致；AUROC(cross)=0.817是本轮第一次被写进正文，
+      同样来自该json的bench2drive_crossdomain.auroc字段，不是新算的）。
+    - "Anchored"这一列，GSSM被标为n/a，而不是硬凑一个数字：因为GSSM是
+      end-to-end的MLP直接预测log(spacing)~N(mu,sigma^2)，没有把任何
+      closed-form量加性地混入其输出（不像CARM把log(tau_phy)混进mu_s），
+      所以它的计算图里根本没有"结构化分支 vs 自由分支"这个可以拆分算
+      比例的结构——这个"不可定义"本身被写成了论点：四个方法里FutureRisk
+      是唯一一个"可解释性-灵活性位置"能和它的判别力一起被放在同一个
+      尺度上测量的，因为它是唯一一个从设计上就有可拆分的closed-form
+      分支的方法。
+    - 也重新措辞了RSS=100%/Lu et al.=0%："这些不是需要被测量的估计值，
+      而是精确的结构性事实——RSS没有任何自由成分、Lu et al.没有任何
+      closed-form成分"，避免被误读成"偷懒没测"。
+    - 已写入 root.tex Table~\ref{tab:interpretability_tradeoff} 新增
+      GSSM行、表注，以及 Sec. exp_tradeoff 开头一段新论述。
+    - 未做（如果需要可以再补）：GSSM输出与3D-TTC/y_analytic之间的R²
+      "行为层面锚定代理指标"作为Table IV之外的补充列——现有
+      gssm_baseline_eval.json里这个字段(gssm_score_vs_min_tau3d)是null，
+      没被算出来，需要额外跑一次GSSM的isolated venv推理管线，本轮判断
+      "不可定义"论证已经足够支撑论点，成本效益比更高，故未做。
+
+以上两项改动已用 pdflatex 重新编译验证（root.pdf，11页，无undefined
+references），真实数字来自实际跑的脚本，不是编造。

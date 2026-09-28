@@ -1,0 +1,64 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 16 April
+ Time: 20:14
+ Primary Road Name: US-258
+ Secondary Road Name: None
+ Latitude: 37.04376389
+ Longitude: -76.35492778
+ First Harmful Event: Pedestrian
+ Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 2
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+ event 2: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 2
+    Vehicle Number 2: 9999
+    Event Name: Pedestrian
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Unknown Make Unknown (as to automobile, motored cycle, light truck or truck)
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: 12 Clock Point
+   Speed: Reported as Unknown
+   P_CRASH1: Unknown
+   P_CRASH2: Pedestrian in road
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Precrash stability unknown
+   P_CRASH5: Unknown
+   Accident Type: C13-Single Driver-Forward Impact-Pedestrian/ Animal
+   Damages: ['12 Clock Value']
+
+ Vehicle 2:
+   Model: Nissan/Datsun Versa
+   Body Type: N/A
+   Harmful Event: Pedestrian
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Pedestrian
+   Impact Point: 12 Clock Point
+   Speed: 040 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Pedestrian in road
+   P_CRASH3: No Avoidance Maneuver
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: M98-Other Crash Type
+   Damages: ['1 Clock Value', '12 Clock Value']
+

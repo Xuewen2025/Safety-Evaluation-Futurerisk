@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 28 March
+ Time: 17:47
+ Primary Road Name: MU-071 HUTSON RD
+ Secondary Road Name: None
+ Latitude: 36.67891389
+ Longitude: -79.47693333
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Sideswipe - Opposite Direction
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 11 Clock Point
+    Area of Impact 2: Not Reported
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet C, K, R, V-series pickup/Silverado
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Sideswipe - Opposite Direction
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 11 Clock Point
+   Speed: 045 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: I64-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '7 Clock Value', '8 Clock Value', '9 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Chevrolet Medium/Heavy – CBE
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Sideswipe - Opposite Direction
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: Not Reported
+   Speed: 015 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Steering right
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, not known if left original travel lane
+   Accident Type: I65-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Going Straight)
+   Damages: ['1 Clock Value', '7 Clock Value', '8 Clock Value', '9 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+

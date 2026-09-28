@@ -1,0 +1,92 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 23 May
+ Time: 6:33
+ Primary Road Name: US-11
+ Secondary Road Name: None
+ Latitude: 38.42175
+ Longitude: -78.89245
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Sideswipe - Opposite Direction
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 6
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 2: 
+    Area of Impact 1: 1 Clock Point
+    Area of Impact 2: 2 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+ event 3: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Left
+
+ event 4: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Curb
+
+ event 5: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Wall
+
+ event 6: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Utility Pole/Light Support
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: GMC Canyon
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Sideswipe - Opposite Direction
+   Most Harmful Event: Utility Pole/Light Support
+   Impact Point: 1 Clock Point
+   Speed: Not Reported
+   P_CRASH1: Going Straight
+   P_CRASH2: Over the lane line on left side of travel lane
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: I64-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Toyota RAV4 *
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Sideswipe - Opposite Direction
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 2 Clock Point
+   Speed: 035 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: I65-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Going Straight)
+   Damages: ['2 Clock Value']
+

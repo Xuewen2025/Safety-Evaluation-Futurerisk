@@ -1,0 +1,10 @@
+05:08:19  Log file: dataset/logs/preprocess_bench2drive_base_20260903_050819.log
+05:08:19  [1/2] Building RawTrajectoryInstances from every clip in dataset/Bench2Drive-Base ...
+06:32:53        -> 3679 windowed instances from 976 clips (38191 total agent-instance pairs) in 5074.1s
+06:32:53        instances with zero tracked agents: 0 (kept for record, dropped later by CARMDataset)
+06:32:53  [2/2] Fitting thresholds + generating T_evt/tau_phy + caching to dataset/Bench2Drive-Base-preprocessed ...
+06:36:42        thresholds: {'car-following': 7.375728228548422, 'crossing': 6.001803468488835, 'merging/lane-change': 10.207432797196958, 'oncoming': 6.686351037658383, 'other': 6.7476619603495465}
+06:36:42        merged_into_other: {'car-following': False, 'crossing': False, 'merging/lane-change': False, 'oncoming': False, 'other': False}
+06:36:42        preprocessing pass took 228.4s
+06:36:42  Total wall-clock time: 5302.5s
+06:36:42  Cached instances directory: dataset/Bench2Drive-Base-preprocessed

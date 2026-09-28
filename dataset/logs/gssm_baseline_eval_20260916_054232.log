@@ -1,0 +1,24 @@
+05:42:32  [1/5] Loading split from CARM v1 checkpoint (same split as v1_full_eval.py) ...
+05:42:32        train: 4967 instance ids
+05:42:32        val: 1656 instance ids
+05:42:32        test: 1656 instance ids
+05:42:32  [2/5] Building GSSM current+acc features for DeepAccident train/val/test ...
+05:50:08        train: 4967 instances
+05:52:40        val: 1656 instances
+05:55:09        test: 1656 instances
+05:55:09  [3/5] Building GSSM current+acc features for Bench2Drive (cross-domain) ...
+05:55:30        ... 1000 instances built
+05:55:46        ... 2000 instances built
+05:56:06        ... 3000 instances built
+05:56:22        -> 3679 Bench2Drive instances
+05:56:22  [4/5] Scoring ALL rows with the released GSSM checkpoint (one batched subprocess call) ...
+05:56:22        total rows to score: 17711995 (across 11958 instances)
+07:06:06        scoring done in 5014.4s total
+07:06:06  [5/5] Computing Table I (AUROC/AUPRC) and Table II (rho vs a(t)) ...
+07:06:06        DeepAccident in-domain   n=1656 coll=320 AUROC=0.567 AUPRC=0.226
+07:06:06        Bench2Drive cross-domain n=3679 coll=346 AUROC=0.817 AUPRC=0.308
+07:06:06        rho(GSSM, a(t)) = +0.070 (n=6630)
+07:06:06        Bench2Drive collision-free: 3333/3679
+07:06:06        [Bench2Drive] rho(GSSM, a(t)) = +0.317 (n=3333)
+07:06:06  wrote dataset/results_v1/gssm_baseline_eval.json
+07:06:06  Total time: 5014.4s

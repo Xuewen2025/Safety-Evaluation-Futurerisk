@@ -1,0 +1,64 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 23 February
+ Time: 15:58
+ Primary Road Name: US-340
+ Secondary Road Name: None
+ Latitude: 38.09791944
+ Longitude: -78.861675
+ First Harmful Event: Rollover/Overturn
+ Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 2
+ event 1: 
+    Area of Impact 1: Non-Collision
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Rollover/Overturn
+
+ event 2: 
+    Area of Impact 1: Other Objects or Person Set-In-Motion
+    Area of Impact 2: Not Reported
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport Strikes or is Struck by Cargo, Persons or Objects Set-in-Motion from/by Another Motor Vehicle In Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Suzuki 450-749cc
+   Body Type: N/A
+   Harmful Event: Rollover/Overturn
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Motor Vehicle In-Transport Strikes or is Struck by Cargo, Persons or Objects Set-in-Motion from/by Another Motor Vehicle In Transport
+   Impact Point: Non-Collision
+   Speed: 030 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: M98-Other Crash Type
+   Damages: ['9 Clock Value', '10 Clock Value', '11 Clock Value']
+
+ Vehicle 2:
+   Model: Chevrolet Fullsize Blazer/Tahoe
+   Body Type: N/A
+   Harmful Event: Rollover/Overturn
+   Manner of Collision: The First Harmful Event was Not a Collision with a Motor Vehicle in Transport
+   Most Harmful Event: Motor Vehicle In-Transport Strikes or is Struck by Cargo, Persons or Objects Set-in-Motion from/by Another Motor Vehicle In Transport
+   Impact Point: Not Reported
+   Speed: 040 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: From opposite direction over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, not known if left original travel lane
+   Accident Type: M98-Other Crash Type
+   Damages: ['11 Clock Value', '12 Clock Value']
+

@@ -1,0 +1,71 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 26 January
+ Time: 19:7
+ Primary Road Name: US-201
+ Secondary Road Name: None
+ Latitude: 36.682625
+ Longitude: -81.18691667
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Front
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 3
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 2: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+ event 3: 
+    Area of Impact 1: Non-Collision
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Fire/Explosion
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Nissan/Datsun Rogue (For 2008-2018 only. For model years 2019 on, see 35-404.)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: Over the lane line on left side of travel lane
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: G50-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Left/Right)
+   Damages: ['10 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Honda CR-V
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Negotiating a Curve
+   P_CRASH2: From opposite direction over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: G51-Same Trafficway, Opposite Direction-Head-On-Lateral Move (Going Straight)
+   Damages: ['10 Clock Value', '11 Clock Value', '12 Clock Value']
+

@@ -1,0 +1,47 @@
+05:16:40  [1/4] Loading split from CARM v1 checkpoint (same split as v1_full_eval.py) ...
+05:16:40        train: 4967 instance ids
+05:16:40        val: 1656 instance ids
+05:16:40        test: 1656 instance ids
+05:16:40  [2/4] Computing forward-TTC (2D CTRV + 1D naive) for DeepAccident train/val/test ...
+05:21:23        ... train: 500/4967 instance ids processed
+05:26:04        ... train: 1000/4967 instance ids processed
+05:30:41        ... train: 1500/4967 instance ids processed
+05:35:12        ... train: 2000/4967 instance ids processed
+05:39:47        ... train: 2500/4967 instance ids processed
+05:44:34        ... train: 3000/4967 instance ids processed
+05:49:10        ... train: 3500/4967 instance ids processed
+05:53:57        ... train: 4000/4967 instance ids processed
+05:58:24        ... train: 4500/4967 instance ids processed
+06:02:45        train: 4967 instances
+06:07:23        ... val: 500/1656 instance ids processed
+06:12:11        ... val: 1000/1656 instance ids processed
+06:16:35        ... val: 1500/1656 instance ids processed
+06:18:14        val: 1656 instances
+06:22:29        ... test: 500/1656 instance ids processed
+06:27:07        ... test: 1000/1656 instance ids processed
+06:31:51        ... test: 1500/1656 instance ids processed
+06:33:19        test: 1656 instances
+06:33:19  [3/4] Computing forward-TTC (2D CTRV + 1D naive) for Bench2Drive (cross-domain) ...
+06:35:51        ... 1000 instances built
+06:37:44        ... 2000 instances built
+06:40:07        ... 3000 instances built
+06:42:05        -> 3679 Bench2Drive instances
+06:42:05        scoring done in 5124.7s total
+06:42:05  [4/4] Computing Table I (AUROC/AUPRC), Table II (rho vs a(t)), and the 1D-vs-2D discrepancy report ...
+06:42:05     -- Table I --
+06:42:05        [2D] DeepAccident in-domain  n=1656 coll=320 AUROC=0.685 AUPRC=0.425
+06:42:05        [2D] Bench2Drive cross-domain n=3679 coll=346 AUROC=1.000 AUPRC=1.000
+06:42:05        [1D] DeepAccident in-domain  n=1656 coll=320 AUROC=0.684 AUPRC=0.424
+06:42:05        [1D] Bench2Drive cross-domain n=3679 coll=346 AUROC=1.000 AUPRC=1.000
+06:42:05     -- Table II (DeepAccident collision-free, all splits pooled) --
+06:42:05        [2D] rho(score, a(t)) = +0.274 (n=6630)
+06:42:05        [1D] rho(score, a(t)) = +0.265 (n=6630)
+06:42:05     -- 1D-vs-2D forward-TTC discrepancy (Li et al.'s own headline comparison, replicated on our data) --
+06:42:05        DeepAccident (train+val+test pooled):
+06:42:05        non_critical (tau_2d>=1.5s): n=3232 mean_rel_div=38.8% median=0.0% max=3200.0%
+06:42:05        critical (tau_2d<1.5s): n=2830 mean_rel_div=20.2% median=0.0% max=1300.0%
+06:42:05        Bench2Drive:
+06:42:05        non_critical (tau_2d>=1.5s): n=997 mean_rel_div=19.2% median=0.0% max=600.0%
+06:42:05        critical (tau_2d<1.5s): n=992 mean_rel_div=31.2% median=18.8% max=900.0%
+06:42:05  wrote dataset/results_v1/forward_ttc_baseline_eval.json
+06:42:05  Total time: 5124.8s

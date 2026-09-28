@@ -1,0 +1,78 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 28 March
+ Time: 7:57
+ Primary Road Name: US-501
+ Secondary Road Name: None
+ Latitude: 37.18161389
+ Longitude: -79.08033333
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 4
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Right
+
+ event 2: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Re-entering Roadway
+
+ event 3: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 4: 
+    Area of Impact 1: 3 Clock Point
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Ford Mustang/Mustang II
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 3 Clock Point
+   Speed: 020 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Off the edge of the road on the right side
+   P_CRASH3: Steering left
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: I64-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Left/Right)
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '4 Clock Value', '5 Clock Value', '6 Clock Value', '11 Clock Value', '12 Clock Value', 'Top']
+
+ Vehicle 2:
+   Model: GMC C, K, R, V-series pickup/     Sierra
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: I65-Same Trafficway, Opposite Direction-Angle, Sideswipe-Lateral Move (Going Straight)
+   Damages: ['1 Clock Value', '2 Clock Value', '3 Clock Value', '10 Clock Value', '11 Clock Value', '12 Clock Value']
+

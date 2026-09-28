@@ -1,0 +1,71 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 5 January
+ Time: 14:40
+ Primary Road Name: I-85
+ Secondary Road Name: None
+ Latitude: 36.98069722
+ Longitude: -77.70321389
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Rear
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 3
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 6 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+ event 2: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Ran Off Roadway - Left
+
+ event 3: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: Not a Motor Vehicle
+    Vehicle Number 1: 1
+    Vehicle Number 2: 9999
+    Event Name: Tree (Standing Only)
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet Equinox
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Rear
+   Most Harmful Event: Tree (Standing Only)
+   Impact Point: 12 Clock Point
+   Speed: Reported as Unknown
+   P_CRASH1: Going Straight
+   P_CRASH2: Traveling in same direction with lower steady speed
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: D24-Same Trafficway, Same Direction-Rear End-Slower
+   Damages: ['1 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Hyundai Elantra
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Rear
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 6 Clock Point
+   Speed: 065 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Traveling in same direction with higher speed
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: D25-Same Trafficway, Same Direction-Rear End-Slower, Going Straight
+   Damages: ['6 Clock Value', '7 Clock Value']
+

@@ -1,0 +1,14 @@
+19:32:44  [1/4] Loading v1 checkpoint + DeepAccident threshold table ...
+19:32:44        5 instances (every 400th of 1656 test instances)
+19:32:59        ... 5/5 instances done (15.5s elapsed)
+19:32:59  [2/4] Aggregating |R_perturbed - R_original| per condition ...
+19:32:59        noise_sigma_0.1      n=   10  mean|dR|=0.1545  std=0.2103  max=0.6895  p95=0.5255
+19:32:59        noise_sigma_0.3      n=   10  mean|dR|=0.1288  std=0.1453  max=0.5425  p95=0.3728
+19:32:59        noise_sigma_0.5      n=   10  mean|dR|=0.2546  std=0.1970  max=0.6331  p95=0.6046
+19:32:59        sensor_jitter        n=   10  mean|dR|=0.1142  std=0.1286  max=0.4583  p95=0.3305
+19:32:59        resample_2x          n=    5  mean|dR|=0.0372  std=0.0453  max=0.1058  p95=0.1001
+19:32:59        resample_0p5x        n=    5  mean|dR|=0.0126  std=0.0085  max=0.0248  p95=0.0234
+19:32:59  [3/4] wrote dataset/results_v1/input_perturbation_robustness.json
+19:32:59  [4/4] Rendering figure ...
+19:33:00        wrote icra/figures/input_perturbation.png
+19:33:00  Total wall-clock time: 15.6s

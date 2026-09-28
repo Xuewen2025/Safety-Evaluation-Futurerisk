@@ -1,0 +1,22 @@
+22:45:18  [1/4] DeepAccident in-domain test (native label) ...
+22:47:56        in-domain: full CARM AUROC=0.793 AUPRC=0.490   Stage-1-only AUROC=0.764 AUPRC=0.459
+22:47:56        formula-anchored fraction (FutureRisk) = 0.7006
+22:47:56        g_r stats: mean=-0.9811 std=0.5154
+22:47:56          g_r by type  oncoming                 n=18960 mean=-0.9765 std=0.5479
+22:47:56          g_r by type  other                    n=13550 mean=-1.0514 std=0.4963
+22:47:56          g_r by type  merging/lane-change      n=10168 mean=-0.9807 std=0.5187
+22:47:56          g_r by type  car-following            n= 3930 mean=-0.7250 std=0.4244
+22:47:56          g_r by type  crossing                 n=29144 mean=-0.9862 std=0.5012
+22:47:56  [2/4] Bench2Drive cross-domain test (geometric label) ...
+22:48:24        ... 1000 instances scored
+22:48:46        ... 2000 instances scored
+22:49:12        ... 3000 instances scored
+22:49:33        cross-domain: full CARM AUROC=0.808 AUPRC=0.328   Stage-1-only AUROC=0.818 AUPRC=0.333
+22:49:33  [3/4] Anchored-fraction distribution (P0-1: mean -> distribution) ...
+22:50:38        DeepAccident overall: median=0.741 IQR=[0.666,0.803] (n=75752)
+22:50:38        collision vs no-collision median: 0.749 vs 0.740  (Mann-Whitney p=6.54e-36)
+22:50:38        critical-event triggered vs not, median: 0.700 vs 0.769  (Mann-Whitney p=0.00e+00)
+22:50:38  wrote dataset/results_v1/v1_interpretability_per_agent.csv (113943 agent-level rows)
+22:50:38  [4/4] Writing results ...
+22:50:39  wrote dataset/results_v1/v1_interpretability_summary.json
+22:50:39  Total time: 320.9s

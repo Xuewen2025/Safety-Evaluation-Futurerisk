@@ -1,0 +1,98 @@
+{
+  "method_label_2d": "Forward TTC 2-D (Li et al. 2023, ours)",
+  "method_label_1d": "Forward TTC 1-D (Hayward 1972, naive)",
+  "table_i_2d": {
+    "deepaccident_indomain": {
+      "n": 1656,
+      "n_collisions": 320,
+      "auroc": 0.6851036208832336,
+      "auprc": 0.4254899615845404
+    },
+    "bench2drive_crossdomain": {
+      "n": 3679,
+      "n_collisions": 346,
+      "auroc": 1.0,
+      "auprc": 1.0
+    }
+  },
+  "table_i_1d": {
+    "deepaccident_indomain": {
+      "n": 1656,
+      "n_collisions": 320,
+      "auroc": 0.6837048559131736,
+      "auprc": 0.4235436770388463
+    },
+    "bench2drive_crossdomain": {
+      "n": 3679,
+      "n_collisions": 346,
+      "auroc": 1.0,
+      "auprc": 1.0
+    }
+  },
+  "table_ii_2d": {
+    "score_2d_vs_max_evasive_severity": {
+      "n": 6630,
+      "spearman_rho": 0.2737443468574973,
+      "p_value": 2.7951978553913734e-114
+    },
+    "score_2d_vs_worst_margin": null,
+    "score_2d_vs_min_tau3d": null
+  },
+  "table_ii_1d": {
+    "score_1d_vs_max_evasive_severity": {
+      "n": 6630,
+      "spearman_rho": 0.2651587250435955,
+      "p_value": 4.373631891158301e-107
+    },
+    "score_1d_vs_worst_margin": null,
+    "score_1d_vs_min_tau3d": null
+  },
+  "table_ii_2d_bench2drive": {
+    "score_2d_vs_max_evasive_severity": {
+      "n": 3333,
+      "spearman_rho": 0.28299841807635506,
+      "p_value": 2.026311061266836e-62
+    },
+    "score_2d_vs_worst_margin": null,
+    "score_2d_vs_min_tau3d": null
+  },
+  "table_ii_1d_bench2drive": {
+    "score_1d_vs_max_evasive_severity": {
+      "n": 3333,
+      "spearman_rho": 0.29084893307081294,
+      "p_value": 5.545899232030515e-66
+    },
+    "score_1d_vs_worst_margin": null,
+    "score_1d_vs_min_tau3d": null
+  },
+  "discrepancy_deepaccident": {
+    "n": 6861,
+    "non_critical (tau_2d>=1.5s)": {
+      "n": 3232,
+      "mean_relative_divergence_pct": 38.75975053294116,
+      "median_relative_divergence_pct": 0.0,
+      "max_relative_divergence_pct": 3200.0
+    },
+    "critical (tau_2d<1.5s)": {
+      "n": 2830,
+      "mean_relative_divergence_pct": 20.24402380455021,
+      "median_relative_divergence_pct": 0.0,
+      "max_relative_divergence_pct": 1300.0
+    }
+  },
+  "discrepancy_bench2drive": {
+    "n": 2335,
+    "non_critical (tau_2d>=1.5s)": {
+      "n": 997,
+      "mean_relative_divergence_pct": 19.179496790201398,
+      "median_relative_divergence_pct": 0.0,
+      "max_relative_divergence_pct": 599.9999999999999
+    },
+    "critical (tau_2d<1.5s)": {
+      "n": 992,
+      "mean_relative_divergence_pct": 31.150646143234646,
+      "median_relative_divergence_pct": 18.750000000000004,
+      "max_relative_divergence_pct": 900.0
+    }
+  }
+}

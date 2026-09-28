@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 460" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3B6EA5"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C1592B"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9C3E86"/>
+    </marker>
+    <linearGradient id="gauge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4C9A4C"/>
+      <stop offset="55%" stop-color="#D9A441"/>
+      <stop offset="100%" stop-color="#C1392B"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .edge{stroke:#333;stroke-width:1.4;fill:none;marker-end:url(#ar);}
+    .edgeB{stroke:#3B6EA5;stroke-width:1.4;fill:none;marker-end:url(#arB);}
+    .edgeO{stroke:#C1592B;stroke-width:1.4;fill:none;marker-end:url(#arO);}
+    .edgeP{stroke:#9C3E86;stroke-width:1.3;fill:none;marker-end:url(#arP);stroke-dasharray:5,3;}
+    .dash{stroke:#888;stroke-width:1.1;fill:none;stroke-dasharray:4,3;}
+    .lbl{font-size:13px;fill:#222;}
+    .lblSm{font-size:11px;fill:#444;}
+    .cap{font-size:12.5px;fill:#555;font-weight:600;}
+    .sym{font-size:14px;fill:#111;font-style:italic;font-weight:600;}
+  </style>
+
+  <!-- ============ PART A: analytic prior (compact) ============ -->
+  <text x="20" y="24" class="cap">FutureRisk (analytic)</text>
+
+  <circle cx="35" cy="70" r="6" fill="#3B6EA5"/>
+  <path d="M35,70 Q75,55 125,62" class="dash"/>
+  <circle cx="70" cy="61" r="2.3" fill="#3B6EA5"/>
+  <circle cx="100" cy="59" r="2.3" fill="#3B6EA5"/>
+  <circle cx="125" cy="62" r="3" fill="#3B6EA5"/>
+
+  <circle cx="35" cy="115" r="6" fill="#C1592B"/>
+  <path d="M35,115 Q75,124 125,92" class="dash"/>
+  <circle cx="70" cy="122" r="2.3" fill="#C1592B"/>
+  <circle cx="100" cy="106" r="2.3" fill="#C1592B"/>
+  <circle cx="125" cy="92" r="3" fill="#C1592B"/>
+
+  <line x1="140" y1="55" x2="140" y2="100" stroke="#333" stroke-width="1.4"/>
+  <text x="145" y="72" class="sym">τ₃D</text>
+  <text x="145" y="88" class="lblSm">− τsafe</text>
+  <line x1="125" y1="62" x2="140" y2="70" class="edge"/>
+  <line x1="125" y1="92" x2="140" y2="82" class="edge"/>
+
+  <line x1="195" y1="78" x2="215" y2="78" class="edge"/>
+  <path d="M220,100 Q220,80 240,60 Q248,52 258,48" fill="none" stroke="#333" stroke-width="1.6"/>
+  <text x="220" y="118" class="lblSm">σ(−m/Tₘ)</text>
+  <text x="262" y="46" class="sym">r(t)</text>
+
+  <rect x="130" y="47" width="35" height="60" fill="none" stroke="#9C3E86" stroke-width="1.6" stroke-dasharray="3,2" rx="4"/>
+  <text x="147" y="122" text-anchor="middle" class="lblSm" fill="#9C3E86">τsafe</text>
+  <path d="M147,107 C147,150 250,175 300,205" class="edgeP"/>
+  <text x="200" y="155" class="cap" fill="#9C3E86">learned by CARM ↴</text>
+
+  <!-- ============ PART B: CARM layer diagram ============ -->
+
+  <rect x="360" y="195" width="120" height="90" rx="8" fill="#f2f2f2" stroke="#bbb"/>
+  <rect x="352" y="187" width="120" height="90" rx="8" fill="#f7f7f7" stroke="#ccc"/>
+  <rect x="344" y="179" width="120" height="90" rx="8" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+
+  <circle cx="300" cy="210" r="5" fill="#3B6EA5"/>
+  <path d="M300,210 Q315,200 330,205" class="dash"/>
+  <circle cx="300" cy="240" r="5" fill="#C1592B"/>
+  <path d="M300,240 Q315,250 330,235" class="dash"/>
+  <line x1="330" y1="220" x2="344" y2="220" class="edge"/>
+
+  <rect x="356" y="191" width="46" height="30" rx="6" fill="#eef3fb" stroke="#3B6EA5"/>
+  <path d="M400,196 A10,10 0 1 1 398,206" fill="none" stroke="#3B6EA5" stroke-width="1.3" marker-end="url(#arB)"/>
+  <text x="379" y="210" text-anchor="middle" class="lblSm">GRU</text>
+
+  <circle cx="368" cy="238" r="1.8" fill="#555"/>
+  <circle cx="368" cy="248" r="1.8" fill="#555"/>
+  <circle cx="368" cy="258" r="1.8" fill="#555"/>
+  <line x1="368" y1="238" x2="392" y2="248" stroke="#555" stroke-width="0.9"/>
+  <line x1="368" y1="248" x2="392" y2="248" stroke="#555" stroke-width="0.9"/>
+  <line x1="368" y1="258" x2="392" y2="248" stroke="#555" stroke-width="0.9"/>
+  <circle cx="392" cy="248" r="2.4" fill="#333"/>
+  <text x="398" y="252" class="lblSm">attn</text>
+
+  <text x="379" y="276" text-anchor="middle" class="lbl" font-weight="700">h</text>
+  <text x="360" y="330" class="lblSm" font-style="italic">shared weights × agent j</text>
+  <line x1="379" y1="285" x2="379" y2="300" class="dash" marker-end="url(#ar)"/>
+
+  <line x1="464" y1="224" x2="510" y2="160" class="edgeB"/>
+  <line x1="464" y1="230" x2="510" y2="310" class="edgeO"/>
+
+  <!-- Hazard branch: small MLP stack -->
+  <polygon points="510,130 560,138 560,182 510,190" fill="#eaf1fb" stroke="#3B6EA5" stroke-width="1.3"/>
+  <polygon points="565,142 600,148 600,172 565,178" fill="#eaf1fb" stroke="#3B6EA5" stroke-width="1.3"/>
+  <text x="555" y="115" text-anchor="middle" class="cap" fill="#3B6EA5">Hazard head</text>
+  <line x1="600" y1="160" x2="640" y2="160" class="edgeB"/>
+
+  <polyline points="645,188 655,188 655,176 665,176 665,160 675,160 675,142 685,142 685,130"
+            fill="none" stroke="#3B6EA5" stroke-width="1.8"/>
+  <text x="662" y="202" text-anchor="middle" class="sym" fill="#3B6EA5">qₖ → Fₖ</text>
+
+  <!-- Safe-TTC branch: small MLP stack -->
+  <text x="555" y="266" text-anchor="middle" class="cap" fill="#C1592B">Safe-TTC head</text>
+  <polygon points="510,280 560,288 560,332 510,340" fill="#fdeee7" stroke="#C1592B" stroke-width="1.3"/>
+  <polygon points="565,292 600,298 600,322 565,328" fill="#fdeee7" stroke="#C1592B" stroke-width="1.3"/>
+  <line x1="600" y1="310" x2="640" y2="310" class="edgeO"/>
+
+  <!-- physics prior anchor icon -->
+  <circle cx="490" cy="392" r="17" fill="none" stroke="#777" stroke-width="1.3" stroke-dasharray="3,2"/>
+  <path d="M484,386 a6,6 0 1,0 12,0" fill="none" stroke="#777" stroke-width="1.2"/>
+  <line x1="490" y1="386" x2="490" y2="380" stroke="#777" stroke-width="1.2"/>
+  <text x="490" y="416" text-anchor="middle" class="lblSm">τ_phy</text>
+  <line x1="500" y1="380" x2="518" y2="342" class="dash" marker-end="url(#ar)"/>
+  <text x="522" y="365" class="lblSm">anchors</text>
+
+  <!-- bell curve icon (T_s ~ LogNormal) -->
+  <path d="M645,328 Q660,328 665,310 Q672,288 680,288 Q688,288 692,310 Q696,328 715,328"
+        fill="none" stroke="#C1592B" stroke-width="1.8"/>
+  <line x1="645" y1="328" x2="715" y2="328" stroke="#C1592B" stroke-width="1.2"/>
+  <text x="680" y="345" text-anchor="middle" class="sym" fill="#C1592B">Tₛ</text>
+
+  <!-- merge funnel -->
+  <path d="M690,160 L730,225 L690,320 Z" fill="#eef2ea" stroke="#4C7A3D" stroke-width="1.3"/>
+  <line x1="685" y1="142" x2="695" y2="170" class="edgeB"/>
+  <line x1="715" y1="328" x2="700" y2="280" class="edgeO"/>
+  <text x="710" y="230" text-anchor="middle" class="lbl" font-weight="700" fill="#4C7A3D">R̃</text>
+  <text x="702" y="253" text-anchor="middle" class="lblSm" fill="#4C7A3D">compose</text>
+
+  <line x1="730" y1="225" x2="770" y2="225" class="edge"/>
+
+  <!-- bounded residual: clamped tanh icon -->
+  <rect x="775" y="195" width="80" height="60" rx="8" fill="#fbeef7" stroke="#9C3E86" stroke-width="1.3"/>
+  <path d="M785,240 C795,240 800,210 815,210 C830,210 835,210 845,210" fill="none" stroke="#9C3E86" stroke-width="1.6"/>
+  <line x1="785" y1="210" x2="785" y2="240" stroke="#9C3E86" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="845" y1="210" x2="845" y2="240" stroke="#9C3E86" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="815" y="270" text-anchor="middle" class="cap" fill="#9C3E86">+ β·tanh(gᵣ)</text>
+
+  <line x1="855" y1="225" x2="895" y2="225" class="edge"/>
+  <text x="875" y="215" text-anchor="middle" class="sym">Rʲ</text>
+
+  <rect x="908" y="205" width="70" height="40" rx="6" fill="#f2f2f2" stroke="#ccc"/>
+  <rect x="902" y="199" width="70" height="40" rx="6" fill="#f7f7f7" stroke="#ccc"/>
+  <rect x="896" y="193" width="70" height="40" rx="6" fill="#ffffff" stroke="#333" stroke-width="1.2"/>
+  <text x="931" y="217" text-anchor="middle" class="lblSm">agent j</text>
+  <text x="931" y="230" text-anchor="middle" class="lblSm">(repeat)</text>
+
+  <line x1="978" y1="213" x2="1020" y2="213" class="edge"/>
+
+  <path d="M1020,170 L1075,213 L1020,256 Z" fill="#f5f0e3" stroke="#8A6D1F" stroke-width="1.3"/>
+  <text x="1040" y="217" text-anchor="middle" class="lblSm" fill="#8A6D1F">noisy-OR</text>
+
+  <line x1="1075" y1="213" x2="1115" y2="213" class="edge"/>
+
+  <path d="M1130,250 A70,70 0 0 1 1270,250" fill="none" stroke="url(#gauge)" stroke-width="12"/>
+  <line x1="1200" y1="250" x2="1240" y2="205" stroke="#222" stroke-width="2.2"/>
+  <circle cx="1200" cy="250" r="4" fill="#222"/>
+  <text x="1200" y="235" text-anchor="middle" class="lbl" font-weight="700" font-size="20">R</text>
+  <text x="1130" y="268" class="lblSm">0</text>
+  <text x="1262" y="268" class="lblSm">1</text>
+  <text x="1200" y="285" text-anchor="middle" class="cap">trajectory-level risk</text>
+
+  <!-- legend -->
+  <line x1="0" y1="432" x2="1560" y2="432" stroke="#eee" stroke-width="1"/>
+  <text x="20" y="450" class="lblSm">● ego   ● agent j   ‑ ‑ observed track</text>
+  <rect x="270" y="441" width="12" height="12" fill="#eaf1fb" stroke="#3B6EA5"/>
+  <text x="288" y="451" class="lblSm">hazard / event-time</text>
+  <rect x="440" y="441" width="12" height="12" fill="#fdeee7" stroke="#C1592B"/>
+  <text x="458" y="451" class="lblSm">safe-TTC (physics-anchored)</text>
+  <rect x="640" y="441" width="12" height="12" fill="#fbeef7" stroke="#9C3E86"/>
+  <text x="658" y="451" class="lblSm">bounded residual</text>
+</svg>

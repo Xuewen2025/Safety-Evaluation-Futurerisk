@@ -1,0 +1,38 @@
+{
+  "method_label": "GSSM (Jiao et al., zero-shot)",
+  "checkpoint": "SafeBaseline/current+acc/model_final_71epoch.pth (zero-shot)",
+  "deepaccident_indomain": {
+    "n": 1656,
+    "n_collisions": 320,
+    "auroc": 0.567399186002994,
+    "auprc": 0.22561018467086277
+  },
+  "bench2drive_crossdomain": {
+    "n": 3679,
+    "n_collisions": 346,
+    "auroc": 0.8168967185735915,
+    "auprc": 0.3081709305450357
+  },
+  "finegrained_baselines": {
+    "gssm_score_vs_max_evasive_severity": {
+      "n": 6630,
+      "spearman_rho": 0.07011697473886327,
+      "p_value": 1.0956235792610969e-08
+    },
+    "gssm_score_vs_worst_margin": {
+      "n": 286,
+      "spearman_rho": 0.08008052630759896,
+      "p_value": 0.17684813458556817
+    },
+    "gssm_score_vs_min_tau3d": null
+  },
+  "finegrained_baselines_bench2drive": {
+    "gssm_score_vs_max_evasive_severity": {
+      "n": 3333,
+      "spearman_rho": 0.31655605567414336,
+      "p_value": 1.8320302821804715e-78
+    },
+    "gssm_score_vs_worst_margin": null,
+    "gssm_score_vs_min_tau3d": null
+  }
+}

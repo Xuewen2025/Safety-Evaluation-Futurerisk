@@ -1,0 +1,20 @@
+07:05:15  Log file: dataset/logs/preprocess_deepaccident_20260905_070515.log
+07:05:15  [1/2] Building RawTrajectoryInstances from 202 .tfrecords files in dataset/DeepAccident-motion (record_stride=10) ...
+07:05:53        ... 20/202 files done, 840 instances so far (38.8s elapsed)
+07:06:36        ... 40/202 files done, 1664 instances so far (81.0s elapsed)
+07:07:10        ... 60/202 files done, 2448 instances so far (115.5s elapsed)
+07:07:46        ... 80/202 files done, 3272 instances so far (151.6s elapsed)
+07:08:10        ... 100/202 files done, 4136 instances so far (175.8s elapsed)
+07:08:49        ... 120/202 files done, 4976 instances so far (214.0s elapsed)
+07:09:26        ... 140/202 files done, 5815 instances so far (251.7s elapsed)
+07:09:50        ... 160/202 files done, 6635 instances so far (275.1s elapsed)
+07:10:23        ... 180/202 files done, 7431 instances so far (308.2s elapsed)
+07:10:59        ... 200/202 files done, 8211 instances so far (344.6s elapsed)
+07:11:03        ... 202/202 files done, 8279 instances so far (347.9s elapsed)
+07:11:03        -> 8279 instances from 202 scenario files (384494 total agent-instance pairs, 1124 instances with a geometrically-detected collision) in 347.9s
+07:11:03  [2/2] Fitting thresholds + generating T_evt/tau_phy + caching to dataset/DeepAccident-preprocessed ...
+07:44:08        thresholds: {'car-following': 10.852096397584667, 'crossing': 13.426223718735187, 'merging/lane-change': 24.141427277054063, 'oncoming': 11.956080617422245, 'other': 9.262430815033433}
+07:44:08        merged_into_other: {'car-following': False, 'crossing': False, 'merging/lane-change': False, 'oncoming': False, 'other': False}
+07:44:08        preprocessing pass took 1985.1s
+07:44:08  Total wall-clock time: 2333.0s
+07:44:08  Cached instances directory: dataset/DeepAccident-preprocessed

@@ -1,0 +1,15 @@
+21:09:22  Log file: dataset/logs/preprocess_deepaccident_20260904_210922.log
+21:09:22  [1/2] Building RawTrajectoryInstances from 202 .tfrecords files in dataset/DeepAccident-motion (record_stride=10) ...
+21:09:54        ... 20/202 files done, 840 instances so far (32.4s elapsed)
+21:10:29        ... 40/202 files done, 1664 instances so far (67.7s elapsed)
+21:10:58        ... 60/202 files done, 2448 instances so far (96.8s elapsed)
+21:11:30        ... 80/202 files done, 3272 instances so far (127.9s elapsed)
+21:11:52        ... 100/202 files done, 4136 instances so far (150.5s elapsed)
+21:12:24        ... 120/202 files done, 4976 instances so far (182.3s elapsed)
+21:12:56        ... 140/202 files done, 5815 instances so far (214.0s elapsed)
+21:13:17        ... 160/202 files done, 6635 instances so far (235.4s elapsed)
+21:13:45        ... 180/202 files done, 7431 instances so far (263.5s elapsed)
+21:14:16        ... 200/202 files done, 8211 instances so far (293.9s elapsed)
+21:14:18        ... 202/202 files done, 8279 instances so far (296.7s elapsed)
+21:14:19        -> 8279 instances from 202 scenario files (384494 total agent-instance pairs, 1124 instances with a geometrically-detected collision) in 296.7s
+21:14:19  [2/2] Fitting thresholds + generating T_evt/tau_phy + caching to dataset/DeepAccident-preprocessed ...

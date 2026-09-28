@@ -1,0 +1,26 @@
+05:32:43  Log file: dataset/logs/evaluate_no_event_ablation_20260916_053243.log
+05:32:43  Bench2Drive: 3679 preprocessed instances found
+05:32:43  --- full_carm (dataset/checkpoints/carm_deepaccident_v1.pt) ---
+05:32:43        scoring all DeepAccident instances (train+val+test pooled) ...
+05:46:12        -> 8279 DeepAccident instances scored
+05:46:12        in-domain (native, test)  n=1656 coll=320  AUROC=0.7934  AUPRC=0.4903
+05:46:12        scoring all Bench2Drive instances (zero-shot) ...
+05:46:37        ... 1000/3679 Bench2Drive instances scored
+05:46:56        ... 2000/3679 Bench2Drive instances scored
+05:47:18        ... 3000/3679 Bench2Drive instances scored
+05:47:37        cross-domain (geometric, Bench2Drive)  n=3679 coll=346  AUROC=0.8084  AUPRC=0.3278
+05:47:37        rho(R, a_max)  n=6630  rho=0.2760  p=2.96e-116
+05:47:37        rho(R, -m)     n=286  rho=0.2903  p=5.88e-07
+05:47:37  --- no_event (dataset/checkpoints/carm_deepaccident_v1_no_event.pt) ---
+05:47:37        scoring all DeepAccident instances (train+val+test pooled) ...
+06:02:07        -> 8279 DeepAccident instances scored
+06:02:07        in-domain (native, test)  n=1656 coll=320  AUROC=0.8210  AUPRC=0.5023
+06:02:07        scoring all Bench2Drive instances (zero-shot) ...
+06:02:38        ... 1000/3679 Bench2Drive instances scored
+06:03:00        ... 2000/3679 Bench2Drive instances scored
+06:03:29        ... 3000/3679 Bench2Drive instances scored
+06:03:54        cross-domain (geometric, Bench2Drive)  n=3679 coll=346  AUROC=0.8282  AUPRC=0.3562
+06:03:54        rho(R, a_max)  n=6630  rho=0.0688  p=2.03e-08
+06:03:54        rho(R, -m)     n=286  rho=0.2004  p=6.52e-04
+06:03:54  wrote dataset/results_v1/no_event_ablation_comparison.json
+06:03:54  Total wall-clock time: 1871.3s

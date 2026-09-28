@@ -1,0 +1,50 @@
+{
+  "full_carm_reference": {
+    "n": 1656,
+    "n_collisions": 320,
+    "auroc": 0.7934424120508983,
+    "auprc": 0.49034162372755663
+  },
+  "saturation_diagnostic": {
+    "n_batches": 156,
+    "n_zero_grad_batches": 79,
+    "frac_zero_grad_batches": 0.5064102564102564,
+    "n_instances": 4967,
+    "n_saturated_instances": 4872,
+    "frac_saturated_instances": 0.9808737668612845
+  },
+  "no_evt": {
+    "auroc_indomain": 0.821010712949102,
+    "auprc_indomain": 0.5022932741948842,
+    "auroc_crossdomain": 0.8286043922311308,
+    "auprc_crossdomain": 0.357226741436731,
+    "finegrained_rho": {
+      "max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": 0.08246926639813552,
+        "p_value": 1.7530787820314185e-11
+      },
+      "worst_margin": {
+        "n": 286,
+        "spearman_rho": 0.21374137139059202,
+        "p_value": 0.0002715493409629198
+      }
+    },
+    "event_head_diagnostic": {
+      "agent_level_event_auroc": 0.534361176940416,
+      "agent_level_event_auprc": 0.5582997760617947,
+      "n_agents": 75752,
+      "n_triggered": 40198,
+      "mean_F_last_triggered": 0.02996596321463585,
+      "mean_F_last_not_triggered": 0.02409113384783268
+    }
+  },
+  "full_carm_event_head_diagnostic": {
+    "agent_level_event_auroc": 0.7196962084847692,
+    "agent_level_event_auprc": 0.7550474403813836,
+    "n_agents": 75752,
+    "n_triggered": 40198,
+    "mean_F_last_triggered": 0.4262079894542694,
+    "mean_F_last_not_triggered": 0.22902750968933105
+  }
+}

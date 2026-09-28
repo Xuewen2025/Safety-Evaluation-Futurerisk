@@ -1,0 +1,20 @@
+{
+  "pooled": {
+    "n": 2416,
+    "n_collisions": 373,
+    "auroc": 0.735568651998126,
+    "auprc": 0.4354682128819594
+  },
+  "bench2drive_only": {
+    "n": 760,
+    "n_collisions": 53,
+    "auroc": 0.9536441514771424,
+    "auprc": 0.6632481352000815
+  },
+  "deepaccident_only": {
+    "n": 1656,
+    "n_collisions": 320,
+    "auroc": 0.6331797342814371,
+    "auprc": 0.40537944765776623
+  }
+}

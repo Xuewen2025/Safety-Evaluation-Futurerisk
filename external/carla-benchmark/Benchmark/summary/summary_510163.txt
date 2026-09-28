@@ -1,0 +1,64 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 22 March
+ Time: 16:50
+ Primary Road Name: SR-211
+ Secondary Road Name: None
+ Latitude: 38.63996389
+ Longitude: -78.73308611
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Front-to-Front
+ Collision Place: Not an Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 2
+ event 1: 
+    Area of Impact 1: Non-Harmful Event
+    Area of Impact 2: Non-Harmful Event
+    Vehicle Number 1: 1
+    Vehicle Number 2: 5555
+    Event Name: Cross Centerline
+
+ event 2: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 12 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Chevrolet Traverse (2009-2012 only. For 2013 on see model 423.)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 015 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: Traveling in opposite direction
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Skidding longitudinally rotation less than 30 degrees
+   P_CRASH5: Stayed on roadway, but left original travel lane
+   Accident Type: H62-Same Trafficway, Opposite Direction-Forward Impact-Specifics Other
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Toyota Camry
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Front-to-Front
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 055 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Skidding longitudinally rotation less than 30 degrees
+   P_CRASH5: Unknown
+   Accident Type: H62-Same Trafficway, Opposite Direction-Forward Impact-Specifics Other
+   Damages: ['1 Clock Value', '11 Clock Value', '12 Clock Value']
+

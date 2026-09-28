@@ -1,0 +1,18 @@
+{
+  "TRACE": {
+    "dataset": "TRACE",
+    "thresholds": {
+      "car-following": 41.2401741471524,
+      "crossing": 33.48435649268779,
+      "oncoming": 18.68605946026348,
+      "other": 25.5820892522654
+    },
+    "merged_into_other": {
+      "car-following": false,
+      "crossing": false,
+      "merging/lane-change": true,
+      "oncoming": false,
+      "other": false
+    }
+  }
+}

@@ -1,0 +1,222 @@
+Removed from Sec. IV-C ("Usability: Ranking Trajectory Danger via Planner
+Substitution") on 2026-09-07, at the user's request, to shorten that
+section. Saved here verbatim (LaTeX source) in case it's needed again
+later. This was the "Instance level" paragraph plus Table III
+(tab:planner_screening) and Figure 1 (fig:case_study_planner_ranking) that
+originally sat between the section's opening paragraph and the
+"Aggregate level" paragraph (which references Table IV,
+tab:planner_level_ranking, and was NOT removed).
+
+To restore: re-insert the block below right after the opening paragraph
+of Sec. IV-C (the one ending "...keeping their numbers directly comparable
+to one another.") and right before the "\textbf{Aggregate level:}"
+paragraph. No other part of the document refers to tab:planner_screening
+or fig:case_study_planner_ranking, so re-inserting this block alone is
+sufficient to restore it -- no other cross-references need fixing.
+
+----------------------------------------------------------------------
+
+\textbf{Instance level:} a real/substituted pair is \emph{ranked correctly}
+when the two trajectories' collision outcomes actually differ and $R$'s
+ordering agrees with which one collided; ties (no outcome change) carry no
+ranking signal and are reported separately. Table~\ref{tab:planner_screening}:
+UniAD and VAD rank the large majority of their non-tied pairs correctly
+($9/11$, $8/10$); TCP agrees on $2$ of its $3$ non-tied pairs, too few to
+draw a rate from; AD-MLP inverts this almost entirely ($3/15$ correct,
+$12/15$ backwards), the $15$-scenario aggregate confirmation that the
+single failure diagnosed in Sec.~\ref{sec:exp_case_studies} is systematic
+to AD-MLP on this scenario family. Fig.~\ref{fig:case_study_planner_ranking}
+shows the mirror image: the best-separated UniAD pair, where $R$ correctly
+separates a flat, comfortable-margin real trajectory ($R=0.037$) from a
+substituted one whose margin collapses and hazard climbs to $0.52$ by
+$t=4$s ($R=0.914$).
+
+\begin{table}[t]
+\scriptsize
+\renewcommand{\arraystretch}{0.92}
+\setlength{\tabcolsep}{3.5pt}
+\centering
+\caption{Instance-level ranking accuracy from open-loop planner
+substitution, Bench2Drive \emph{AccidentTwoWays} variants (zero-shot,
+single seed). Collision counts are geometric (box-overlap), not native.
+Ranked correctly: fraction of non-tied pairs (collision outcome actually
+differs between real and substituted) where $R$'s ordering agrees; ties
+(no outcome change) excluded from that rate and reported separately.}
+\label{tab:planner_screening}
+\begin{tabular}{lcccc}
+\toprule
+Planner & $n$ & Coll.\ (real$\to$subst.) & Ranked correctly & Ties \\
+\midrule
+AD-MLP~\cite{bench2drivezoo} & 15 & $0/15\to15/15$ & $3/15$ (20\%) & 0 \\
+TCP~\cite{bench2drivezoo} & 13 & $5/13\to4/13$ & $2/3$ (n too small) & 10 \\
+UniAD~\cite{bench2drivezoo} & 15 & $3/15\to14/15$ & $9/11$ (82\%) & 4 \\
+VAD~\cite{bench2drivezoo} & 15 & $3/15\to13/15$ & $8/10$ (80\%) & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.3in]{figures/case_study_planner_ranking.png}
+\caption{Ranking success: real expert trajectory (blue, $R=0.037$,
+collision-free) vs.\ an open-loop UniAD~\cite{bench2drivezoo} counterfactual
+(red) on the same Bench2Drive \emph{AccidentTwoWays} scenario, which
+genuinely collides and correctly scores higher ($R=0.914$) -- the
+best-separated ranked-correctly pair in Table~\ref{tab:planner_screening},
+and the mirror image of the AD-MLP failure in
+Fig.~\ref{fig:case_study_failure}. (a) $r(t)$, (b) $m(t)$ (clipped $\pm10$),
+(c) per-bin hazard $q_k$ of the worst agent.}
+\label{fig:case_study_planner_ranking}
+\end{figure}
+
+----------------------------------------------------------------------
+
+Removed from Sec. IV ("D. Case Study: A Diagnosable Failure", the AD-MLP
+failure case + Fig. case_study_failure) on 2026-09-07, at the user's
+request. Saved here verbatim (LaTeX source) in case it's needed again
+later.
+
+To restore: re-insert the block below as its own \subsection, right after
+Sec. IV-C ("Usability: Ranking Trajectory Danger via Planner Substitution")
+ends (i.e. right after Table IV / tab:planner_level_ranking) and right
+before "\subsection{Interpretability}". No other part of the document
+refers to sec:exp_case_studies or fig:case_study_failure, so re-inserting
+this block alone is sufficient to restore it -- no other cross-references
+need fixing.
+
+----------------------------------------------------------------------
+
+\subsection{Case Study: A Diagnosable Failure}
+\label{sec:exp_case_studies}
+
+Beyond a qualitative pair of collision-free instances (large sustained
+margin vs.\ brief close call, below), we construct
+one failure case designed to stress-test $R$ against ground truth stronger
+than a recorded label: we run the released AD-MLP
+checkpoint~\cite{bench2drivezoo} open-loop (no CARLA) on a Bench2Drive
+\emph{AccidentTwoWays} scenario and substitute its predicted trajectory for
+ego, keeping every other agent's real recorded track unchanged. AD-MLP
+badly under-predicts the expert's actual acceleration here (mean $12$m
+error over 3s); the resulting counterfactual ego stalls into another
+tracked agent's path and genuinely collides ($\tau_{\mathrm{3D}}\!=\!0$,
+$m\!=\!-3.05$ at $t\!=\!1.7$s) -- yet CARM scores it $R=0.106$, \emph{lower}
+than the real, truly collision-free expert trajectory's $R=0.956$
+(Fig.~\ref{fig:case_study_failure}). This is diagnosable: panel (c) shows
+$q_k$ genuinely rising for the counterfactual ($0.66$ by $t=4$s vs.\
+$\approx\!0$ for the real trajectory) -- the hazard head detects the danger
+-- but the composition (Eq.~\ref{eq:carm_composition}) still yields a low
+$R$: the event mass accumulates almost entirely in the last bin ($F_k$
+stays near $0$ until $t\!\approx\!4$s), so a hazard head that is otherwise
+detecting real danger still contributes little to the aggregated risk once
+weighted by how late it fires. This suggests the learned safe-TTC $T_s$
+may be biased toward late critical-event times on this kind of
+low-closing-speed, delayed-collision interaction -- a hypothesis this one
+diagnosed instance supports directly, but that would need the
+learned-correction visualization described below to confirm at scale; we
+do not otherwise have aggregate evidence for it yet.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.3in]{figures/case_study_failure.png}
+\caption{Failure case: real expert trajectory (blue, $R=0.956$,
+collision-free) vs.\ an open-loop AD-MLP~\cite{bench2drivezoo}
+counterfactual (red) on the same Bench2Drive \emph{AccidentTwoWays}
+scenario, which genuinely collides yet scores lower ($R=0.106$). (a)
+$r(t)$, (b) $m(t)$ (clipped $\pm10$), (c) per-bin hazard $q_k$ of the
+worst agent.}
+\label{fig:case_study_failure}
+\end{figure}
+
+----------------------------------------------------------------------
+
+Removed from Sec. IV ("E. Method-Level Ranking Consistency (Not Yet Run)"
+and "G. Case Study: Collision-Free Safety Profiles", the latter with its
+Fig. case_study_success) on 2026-09-07, at the user's request. Saved here
+verbatim (LaTeX source) in case either is needed again later.
+
+To restore "E": re-insert as its own \subsection right after
+Sec. IV-D ("Interpretability") ends and right before
+"\subsection{Binned Severity, Perturbation, and Hyperparameter Studies}"
+(the current "E" after this removal). No other part of the document
+refers to sec:method_ranking_not_run, so re-inserting this block alone is
+sufficient -- no other cross-references need fixing.
+
+To restore "G": re-insert as its own \subsection right after
+"Binned Severity, Perturbation, and Hyperparameter Studies" ends and right
+before "\subsection{Learned Safe-TTC and Component/Aggregation/Label
+Ablations (Not Yet Run)}". No other part of the document refers to
+fig:case_study_success, so re-inserting this block alone is sufficient --
+no other cross-references need fixing.
+
+----------------------------------------------------------------------
+
+\subsection{Method-Level Ranking Consistency (Not Yet Run)}
+\label{sec:method_ranking_not_run}
+
+Instance-level agreement (Sec.~\ref{sec:exp_consistency}) does not by itself
+establish that FutureRisk can replace collision rate for its most common
+practical use: ranking \emph{methods}, not individual trajectories. The
+protocol: for a set of driving policies evaluated on the same Bench2Drive
+scenarios, compare (a) each policy's empirical collision rate against (b)
+the mean and $95^{\mathrm{th}}$ percentile of $R$ over that policy's
+rollouts, reporting Spearman's $\rho$ and Kendall's $\tau$ between the two
+rankings. This needs closed-loop rollouts from multiple independent
+policies on shared Bench2Drive scenarios, which requires a CARLA-based
+rollout pipeline for third-party planners not yet built, so it has not
+been run.
+
+----------------------------------------------------------------------
+
+\subsection{Case Study: Collision-Free Safety Profiles}
+
+Fig.~\ref{fig:case_study_success} contrasts
+two collision-free DeepAccident in-domain instances with qualitatively
+different safety profiles -- a large sustained margin throughout versus a
+brief close call -- to check that $R$'s traces separate these cases
+sensibly even when no collision ever occurs in either.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.3in]{figures/case_study_success.png}
+\caption{(a) $r(t)$, (b) $m(t)$ (clipped $\pm10$), (c) per-bin hazard $q_k$
+of the worst agent, for two collision-free DeepAccident in-domain instances
+with different safety profiles (large sustained margin vs.\ brief close
+call; single seed).}
+\label{fig:case_study_success}
+\end{figure}
+
+----------------------------------------------------------------------
+
+Removed from Sec. IV ("F. Learned Safe-TTC and Component/Aggregation/Label
+Ablations (Not Yet Run)") on 2026-09-07, at the user's request. Saved here
+verbatim (LaTeX source) in case it's needed again later. This subsection
+had no \label of its own and is not referenced from anywhere else in the
+document, so removing it needed no other cross-reference fixes.
+
+To restore: re-insert as the final \subsection of Section IV, right after
+"Binned Severity, Perturbation Sweep, and Hyperparameter Sensitivity" ends
+and right before \balance/\begin{thebibliography}.
+
+----------------------------------------------------------------------
+
+\subsection{Learned Safe-TTC and Component/Aggregation/Label Ablations (Not Yet Run)}
+
+Four further analyses from the original design remain unrun, protocol
+only: (1) visualizing the learned correction
+$\exp(\Delta_{\max}\tanh(g_\mu(\bm h)))$ -- the multiplicative factor CARM
+applies to $\tau_{\mathrm{phy}}$ (Eq.~\ref{eq:adaptive_safe_ttc}) -- binned
+by interaction type and relative closing speed, checking whether its
+direction matches intuition (e.g., a larger margin for oncoming than
+car-following at the same closing speed); (2) a component ablation adding
+pipeline stages one at a time -- raw 3D-TTC, the analytic margin, the
+hazard head with $\tau_{\mathrm{safe}}$ fixed to $\tau_{\mathrm{phy}}$,
+learned safe-TTC (Stage 1), and the bounded residual (full CARM) --
+reporting consistency and fine-grained discrimination at each step; (3) an
+agent-aggregation ablation replacing the noisy-OR rule
+(Eq.~\ref{eq:candidate_risk_aggregation}) with the max and mean per-agent
+risk, holding everything else fixed; and (4) a critical-event label
+ablation comparing the hazard head trained on the full $T_{\mathrm{evt}}$
+label (collision $\lor$ evasive-severity proxy, Eq.~\ref{eq:carm_critical_event})
+against one trained on collision events alone, given that DeepAccident's
+native ground truth already makes true collisions far less sparse than in
+a planner-driven corpus like Bench2Drive (Sec.~\ref{sec:training-data}).

@@ -1,0 +1,17 @@
+19:25:43  [1/4] Loading v1 checkpoint + DeepAccident threshold table + instance Town04_type001_subtype0002_000001__ego_vehicle_behind__r0060 ...
+19:25:43        n_agents=21  T=41  worst_agent=18999  native_collision at delta=0 (min tau_3D)=0.000
+19:25:43  [2/4] Sweeping delta in [0.0, 6.0] (55 points) ...
+19:25:43        delta= 0.00  min_tau3d=0.000  R=0.2480  ttc_score=1.000  pet_score=0.640
+19:25:44        delta= 1.00  min_tau3d=0.000  R=0.2616  ttc_score=1.000  pet_score=0.640
+19:25:45        delta= 2.11  min_tau3d=0.000  R=0.1840  ttc_score=1.000  pet_score=0.640
+19:25:46        delta= 3.22  min_tau3d=inf  R=0.1816  ttc_score=0.000  pet_score=0.640
+19:25:47        delta= 4.33  min_tau3d=inf  R=0.1702  ttc_score=0.000  pet_score=0.640
+19:25:48        delta= 5.44  min_tau3d=inf  R=0.1341  ttc_score=0.000  pet_score=0.500
+19:25:49  [3/4] Smoothness metrics ...
+19:25:49        R_predicted_CARM     max|d1|=0.0190  total_variation=0.1885  monotonic(non-incr)=False
+19:25:49        raw_ttc_score        max|d1|=1.0000  total_variation=1.0000  monotonic(non-incr)=True
+19:25:49        pet_score            max|d1|=0.1200  total_variation=0.1400  monotonic(non-incr)=True
+19:25:49        wrote dataset/results_v1/perturbation_sweep.json
+19:25:49  [4/4] Rendering figure ...
+19:25:49        wrote icra/figures/perturbation_sweep.png
+19:25:49  Total wall-clock time: 6.4s

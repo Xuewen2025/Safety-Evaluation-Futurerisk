@@ -1,0 +1,43 @@
+{
+  "n": 3679,
+  "n_collisions": 346,
+  "auroc": 0.8084195702807274,
+  "auprc": 0.32778661761743666,
+  "per_interaction_type": {
+    "overall": {
+      "auroc": 0.8084195702807274,
+      "auprc": 0.32778661761743666,
+      "n": 3679.0
+    },
+    "car-following": {
+      "auroc": 0.9293715846994536,
+      "auprc": 0.062332545640053645,
+      "n": 923.0,
+      "low_sample_warning": 0.0
+    },
+    "crossing": {
+      "auroc": 0.8078823249499658,
+      "auprc": 0.4043494479055871,
+      "n": 1087.0,
+      "low_sample_warning": 0.0
+    },
+    "merging/lane-change": {
+      "auroc": 0.7484423676012462,
+      "auprc": 0.2440730228259615,
+      "n": 353.0,
+      "low_sample_warning": 0.0
+    },
+    "oncoming": {
+      "auroc": 0.7518617021276596,
+      "auprc": 0.2481319005966563,
+      "n": 584.0,
+      "low_sample_warning": 0.0
+    },
+    "other": {
+      "auroc": 0.8480048200635143,
+      "auprc": 0.5732582123368939,
+      "n": 732.0,
+      "low_sample_warning": 0.0
+    }
+  }
+}

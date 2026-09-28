@@ -1,0 +1,84 @@
+00:28:35  Log file: dataset/logs/train_mixed_20260906_002835.log
+00:28:35  [1/6] Loading cached preprocessing for both datasets ...
+00:40:05        Bench2Drive: 3679 instances   DeepAccident: 8279 instances
+00:40:05  [2/6] Per-dataset clip-level splits:
+00:40:05        Bench2Drive: train=2161 val=758 test=760
+00:40:05        DeepAccident: train=4967 val=1656 test=1656
+00:40:05        mixed: train=7128 val=2414 test=2416
+00:41:38        train dataset (>=1 agent): 7128 instances
+00:41:38        val dataset (>=1 agent): 2414 instances
+00:41:38        test dataset (>=1 agent): 2416 instances
+00:41:38        train instances with y_analytic > 0.5: 690 / 7128
+00:41:38        pos_weight(L_evt)=1.00  risk_pos_weight(L_risk)=9.33
+00:41:38  [3/6] Building CARM (d_kin=8, d_int=6, d_ctx=12, dropout=0.1) on device=cuda, training (weight_decay=0.0001) ...
+00:41:38        model params: 70237
+00:41:39        Stage 1 (L_evt + L_risk):
+00:41:43          stage1 epoch   0  train_loss=5.5093  val_L_risk=0.2833  val_auroc=0.817  val_auprc=0.384  (n=2414, collisions=298)  *best*
+00:41:46          stage1 epoch   1  train_loss=4.1099  val_L_risk=0.5532  val_auroc=0.787  val_auprc=0.363  (n=2414, collisions=298)
+00:41:49          stage1 epoch   2  train_loss=3.9060  val_L_risk=0.5831  val_auroc=0.828  val_auprc=0.412  (n=2414, collisions=298)  *best*
+00:41:52          stage1 epoch   3  train_loss=4.2078  val_L_risk=0.7343  val_auroc=0.708  val_auprc=0.239  (n=2414, collisions=298)
+00:41:54          stage1 epoch   4  train_loss=3.9342  val_L_risk=0.4704  val_auroc=0.814  val_auprc=0.399  (n=2414, collisions=298)
+00:41:57          stage1 epoch   5  train_loss=3.8043  val_L_risk=0.3517  val_auroc=0.851  val_auprc=0.475  (n=2414, collisions=298)  *best*
+00:42:00          stage1 epoch   6  train_loss=3.7316  val_L_risk=0.4866  val_auroc=0.858  val_auprc=0.493  (n=2414, collisions=298)  *best*
+00:42:03          stage1 epoch   7  train_loss=3.7133  val_L_risk=0.5772  val_auroc=0.838  val_auprc=0.448  (n=2414, collisions=298)
+00:42:06          stage1 epoch   8  train_loss=3.6699  val_L_risk=0.8106  val_auroc=0.829  val_auprc=0.406  (n=2414, collisions=298)
+00:42:09          stage1 epoch   9  train_loss=3.6340  val_L_risk=0.5206  val_auroc=0.864  val_auprc=0.514  (n=2414, collisions=298)  *best*
+00:42:12          stage1 epoch  10  train_loss=3.6079  val_L_risk=0.7742  val_auroc=0.838  val_auprc=0.470  (n=2414, collisions=298)
+00:42:15          stage1 epoch  11  train_loss=3.5805  val_L_risk=0.5727  val_auroc=0.855  val_auprc=0.511  (n=2414, collisions=298)
+00:42:18          stage1 epoch  12  train_loss=3.5527  val_L_risk=0.4206  val_auroc=0.881  val_auprc=0.613  (n=2414, collisions=298)  *best*
+00:42:21          stage1 epoch  13  train_loss=3.5344  val_L_risk=0.4660  val_auroc=0.879  val_auprc=0.604  (n=2414, collisions=298)
+00:42:24          stage1 epoch  14  train_loss=3.5188  val_L_risk=0.4002  val_auroc=0.887  val_auprc=0.631  (n=2414, collisions=298)  *best*
+00:42:27          stage1 epoch  15  train_loss=3.5472  val_L_risk=0.5691  val_auroc=0.794  val_auprc=0.427  (n=2414, collisions=298)
+00:42:30          stage1 epoch  16  train_loss=3.5116  val_L_risk=0.4761  val_auroc=0.867  val_auprc=0.549  (n=2414, collisions=298)
+00:42:33          stage1 epoch  17  train_loss=3.4721  val_L_risk=0.3886  val_auroc=0.879  val_auprc=0.625  (n=2414, collisions=298)
+00:42:36          stage1 epoch  18  train_loss=3.5757  val_L_risk=0.6352  val_auroc=0.845  val_auprc=0.481  (n=2414, collisions=298)
+00:42:39          stage1 epoch  19  train_loss=3.4729  val_L_risk=0.4264  val_auroc=0.886  val_auprc=0.610  (n=2414, collisions=298)
+00:42:42          stage1 epoch  20  train_loss=3.5137  val_L_risk=0.5974  val_auroc=0.819  val_auprc=0.413  (n=2414, collisions=298)
+00:42:44          stage1 epoch  21  train_loss=3.4654  val_L_risk=0.5123  val_auroc=0.875  val_auprc=0.600  (n=2414, collisions=298)
+00:42:47          stage1 epoch  22  train_loss=3.4164  val_L_risk=0.3723  val_auroc=0.890  val_auprc=0.649  (n=2414, collisions=298)  *best*
+00:42:50          stage1 epoch  23  train_loss=3.4253  val_L_risk=0.5309  val_auroc=0.871  val_auprc=0.575  (n=2414, collisions=298)
+00:42:53          stage1 epoch  24  train_loss=3.4018  val_L_risk=0.3745  val_auroc=0.884  val_auprc=0.650  (n=2414, collisions=298)
+00:42:56          stage1 epoch  25  train_loss=3.4355  val_L_risk=0.4848  val_auroc=0.870  val_auprc=0.572  (n=2414, collisions=298)
+00:42:59          stage1 epoch  26  train_loss=3.4184  val_L_risk=0.4976  val_auroc=0.867  val_auprc=0.589  (n=2414, collisions=298)
+00:43:02          stage1 epoch  27  train_loss=3.3882  val_L_risk=0.3994  val_auroc=0.881  val_auprc=0.661  (n=2414, collisions=298)
+00:43:05          stage1 epoch  28  train_loss=3.3706  val_L_risk=0.4329  val_auroc=0.858  val_auprc=0.609  (n=2414, collisions=298)
+00:43:08          stage1 epoch  29  train_loss=3.4065  val_L_risk=0.3462  val_auroc=0.888  val_auprc=0.675  (n=2414, collisions=298)
+00:43:11          stage1 epoch  30  train_loss=3.3691  val_L_risk=0.3791  val_auroc=0.878  val_auprc=0.638  (n=2414, collisions=298)
+00:43:14          stage1 epoch  31  train_loss=3.3464  val_L_risk=0.3500  val_auroc=0.888  val_auprc=0.679  (n=2414, collisions=298)
+00:43:17          stage1 epoch  32  train_loss=3.3322  val_L_risk=0.3690  val_auroc=0.886  val_auprc=0.663  (n=2414, collisions=298)
+00:43:20          stage1 epoch  33  train_loss=3.3211  val_L_risk=0.5801  val_auroc=0.850  val_auprc=0.548  (n=2414, collisions=298)
+00:43:23          stage1 epoch  34  train_loss=3.3454  val_L_risk=0.4310  val_auroc=0.863  val_auprc=0.588  (n=2414, collisions=298)
+00:43:26          stage1 epoch  35  train_loss=3.3100  val_L_risk=0.5343  val_auroc=0.884  val_auprc=0.631  (n=2414, collisions=298)
+00:43:29          stage1 epoch  36  train_loss=3.3047  val_L_risk=0.4839  val_auroc=0.803  val_auprc=0.403  (n=2414, collisions=298)
+00:43:32          stage1 epoch  37  train_loss=3.3441  val_L_risk=0.6130  val_auroc=0.861  val_auprc=0.565  (n=2414, collisions=298)
+00:43:35          stage1 epoch  38  train_loss=3.4370  val_L_risk=0.4632  val_auroc=0.847  val_auprc=0.540  (n=2414, collisions=298)
+00:43:37          stage1 epoch  39  train_loss=3.3839  val_L_risk=0.5957  val_auroc=0.867  val_auprc=0.560  (n=2414, collisions=298)
+00:43:37        Stage 2 (L_risk only; L_rank skipped, no matched-scenario-pair bookkeeping):
+00:43:39          stage2 epoch   0  train_loss=0.5520  val_L_risk=0.2424  val_auroc=0.905  val_auprc=0.747  *best*
+00:43:40          stage2 epoch   1  train_loss=0.5230  val_L_risk=0.2269  val_auroc=0.907  val_auprc=0.753  *best*
+00:43:42          stage2 epoch   2  train_loss=0.5240  val_L_risk=0.2421  val_auroc=0.907  val_auprc=0.750  *best*
+00:43:43          stage2 epoch   3  train_loss=0.5150  val_L_risk=0.2412  val_auroc=0.909  val_auprc=0.751  *best*
+00:43:44          stage2 epoch   4  train_loss=0.5235  val_L_risk=0.2296  val_auroc=0.909  val_auprc=0.752  *best*
+00:43:46          stage2 epoch   5  train_loss=0.4937  val_L_risk=0.2194  val_auroc=0.909  val_auprc=0.754  *best*
+00:43:47          stage2 epoch   6  train_loss=0.5047  val_L_risk=0.2304  val_auroc=0.910  val_auprc=0.753  *best*
+00:43:49          stage2 epoch   7  train_loss=0.5002  val_L_risk=0.2205  val_auroc=0.910  val_auprc=0.756
+00:43:50          stage2 epoch   8  train_loss=0.4985  val_L_risk=0.2270  val_auroc=0.910  val_auprc=0.752
+00:43:51          stage2 epoch   9  train_loss=0.4868  val_L_risk=0.2307  val_auroc=0.911  val_auprc=0.756  *best*
+00:43:53          stage2 epoch  10  train_loss=0.5029  val_L_risk=0.2276  val_auroc=0.910  val_auprc=0.755
+00:43:54          stage2 epoch  11  train_loss=0.4837  val_L_risk=0.2527  val_auroc=0.911  val_auprc=0.750
+00:43:56          stage2 epoch  12  train_loss=0.4939  val_L_risk=0.2110  val_auroc=0.909  val_auprc=0.756
+00:43:57          stage2 epoch  13  train_loss=0.4897  val_L_risk=0.2123  val_auroc=0.909  val_auprc=0.756
+00:43:58          stage2 epoch  14  train_loss=0.4875  val_L_risk=0.2180  val_auroc=0.910  val_auprc=0.757
+00:44:00          stage2 epoch  15  train_loss=0.4860  val_L_risk=0.2183  val_auroc=0.910  val_auprc=0.754
+00:44:01          stage2 epoch  16  train_loss=0.4839  val_L_risk=0.2214  val_auroc=0.910  val_auprc=0.752
+00:44:03          stage2 epoch  17  train_loss=0.4877  val_L_risk=0.2198  val_auroc=0.910  val_auprc=0.756
+00:44:04          stage2 epoch  18  train_loss=0.4807  val_L_risk=0.2197  val_auroc=0.910  val_auprc=0.755
+00:44:05          stage2 epoch  19  train_loss=0.4820  val_L_risk=0.2202  val_auroc=0.910  val_auprc=0.753
+00:44:05  [4/6] Best checkpoint: stage=2 epoch=9 val_auroc=0.911 val_auprc=0.756 -- restoring it
+00:44:05  [5/6] Test-set evaluation: pooled, Bench2Drive-only, DeepAccident-only (native label) ...
+00:44:06        pooled (both datasets)          n= 2416  collisions=  373 (15.4%)  AUROC=0.726  AUPRC=0.431  mean_R|c=1=0.407  mean_R|c=0=0.127
+00:44:06        Bench2Drive-only test           n=  760  collisions=   53 (7.0%)  AUROC=0.914  AUPRC=0.636  mean_R|c=1=0.594  mean_R|c=0=0.065
+00:44:06        DeepAccident-only test (native)  n= 1656  collisions=  320 (19.3%)  AUROC=0.638  AUPRC=0.407  mean_R|c=1=0.376  mean_R|c=0=0.159
+00:44:06        Saved checkpoint to dataset/checkpoints/carm_mixed_bench2drive_deepaccident.pt
+00:44:06  [6/6] wrote dataset/results_mixed/summary.json
+00:44:06  Total wall-clock time: 930.8s

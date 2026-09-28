@@ -1,0 +1,152 @@
+[
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1102_Weather10",
+    "ref_frame": 60,
+    "uniad_l2_mean": 6.685573822236222,
+    "n_agents": 9,
+    "R_real": 0.03658163547515869,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.9136788845062256,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1103_Weather11",
+    "ref_frame": 60,
+    "uniad_l2_mean": 5.86092034338796,
+    "n_agents": 9,
+    "R_real": 0.09675359725952148,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.8363195657730103,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1104_Weather12",
+    "ref_frame": 60,
+    "uniad_l2_mean": 4.258984446981642,
+    "n_agents": 9,
+    "R_real": 0.4505232572555542,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.03086143732070923,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1105_Weather13",
+    "ref_frame": 160,
+    "uniad_l2_mean": 4.669359418517261,
+    "n_agents": 8,
+    "R_real": 0.7933356761932373,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.9621068239212036,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1106_Weather14",
+    "ref_frame": 60,
+    "uniad_l2_mean": 5.309202638660197,
+    "n_agents": 9,
+    "R_real": 0.052030324935913086,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.04322320222854614,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1107_Weather15",
+    "ref_frame": 200,
+    "uniad_l2_mean": 10.097434617389503,
+    "n_agents": 9,
+    "R_real": 0.5554066896438599,
+    "collision_real": 1,
+    "R_uniad_counterfactual": 0.28513824939727783,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1109_Weather9",
+    "ref_frame": 280,
+    "uniad_l2_mean": 4.611516046925659,
+    "n_agents": 8,
+    "R_real": 0.7723416090011597,
+    "collision_real": 1,
+    "R_uniad_counterfactual": 0.9546639919281006,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1110_Weather18",
+    "ref_frame": 200,
+    "uniad_l2_mean": 8.148413673522532,
+    "n_agents": 7,
+    "R_real": 0.04034614562988281,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.13560253381729126,
+    "collision_uniad_counterfactual": 0
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1111_Weather19",
+    "ref_frame": 260,
+    "uniad_l2_mean": 10.368157929170211,
+    "n_agents": 8,
+    "R_real": 0.009630322456359863,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.08419686555862427,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1112_Weather20",
+    "ref_frame": 60,
+    "uniad_l2_mean": 4.7362878517454865,
+    "n_agents": 9,
+    "R_real": 0.0478631854057312,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.3107314705848694,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1113_Weather21",
+    "ref_frame": 260,
+    "uniad_l2_mean": 4.415867003796393,
+    "n_agents": 9,
+    "R_real": 0.2950945496559143,
+    "collision_real": 1,
+    "R_uniad_counterfactual": 0.11689800024032593,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1114_Weather22",
+    "ref_frame": 240,
+    "uniad_l2_mean": 5.745430795824428,
+    "n_agents": 8,
+    "R_real": 0.010217607021331787,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.08509331941604614,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1115_Weather23",
+    "ref_frame": 60,
+    "uniad_l2_mean": 9.433372675112848,
+    "n_agents": 9,
+    "R_real": 0.02057349681854248,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.3370811939239502,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1116_Weather23",
+    "ref_frame": 60,
+    "uniad_l2_mean": 7.092007262344272,
+    "n_agents": 9,
+    "R_real": 0.02607572078704834,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.5759307742118835,
+    "collision_uniad_counterfactual": 1
+  },
+  {
+    "clip_name": "AccidentTwoWays_Town12_Route1117_Weather25",
+    "ref_frame": 260,
+    "uniad_l2_mean": 6.430040319898549,
+    "n_agents": 8,
+    "R_real": 0.01019197702407837,
+    "collision_real": 0,
+    "R_uniad_counterfactual": 0.06584423780441284,
+    "collision_uniad_counterfactual": 1
+  }
+]

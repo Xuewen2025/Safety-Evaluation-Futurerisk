@@ -1,0 +1,19 @@
+# directories
+data/maps
+data/points
+data/llm
+data/output
+data/simulations
+lib/
+
+
+env/
+venv/
+
+# files
+.env
+.venv
+*.tar.gz
+*.zip
+libnvidia-gpucomp.so.*
+run_docker.sh

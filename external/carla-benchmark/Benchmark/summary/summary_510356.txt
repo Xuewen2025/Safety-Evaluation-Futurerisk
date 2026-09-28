@@ -1,0 +1,57 @@
+--- Extracted Crash Summary ---
+Crash Details:
+ Number of moving vehicles involved in the crash: 2
+ Date: 10 June
+ Time: 22:19
+ Primary Road Name: US-11
+ Secondary Road Name: TRINITY RD
+ Latitude: 37.42505
+ Longitude: -79.87001111
+ First Harmful Event: Motor Vehicle In-Transport
+ Manner of Collision: Angle
+ Collision Place: T-Intersection
+
+
+Sequence of Events:
+ Number of Total Events: 1
+ event 1: 
+    Area of Impact 1: 12 Clock Point
+    Area of Impact 2: 10 Clock Point
+    Vehicle Number 1: 1
+    Vehicle Number 2: 2
+    Event Name: Motor Vehicle In-Transport
+
+
+Vehicles Details:
+ Vehicle 1:
+   Model: Honda Accord (Note: For Crosstour model years 2010 and 2011 only. For Crosstour model years 2012-2015, see vehicle model 37-405)
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 12 Clock Point
+   Speed: 035 MPH
+   P_CRASH1: Turning Left
+   P_CRASH2: Turning Left
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Tracking
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: J68-Changing Trafficway, Vehicle Turning-Turn Across Path-Initial Opposite Directions (Left/Right)
+   Damages: ['11 Clock Value', '12 Clock Value']
+
+ Vehicle 2:
+   Model: Yamaha 750cc or greater
+   Body Type: N/A
+   Harmful Event: Motor Vehicle In-Transport
+   Manner of Collision: Angle
+   Most Harmful Event: Motor Vehicle In-Transport
+   Impact Point: 10 Clock Point
+   Speed: 045 MPH
+   P_CRASH1: Going Straight
+   P_CRASH2: From opposite direction  over left lane line
+   P_CRASH3: Unknown/Not Reported
+   P_CRASH4: Skidding longitudinally  rotation less than 30 degrees
+   P_CRASH5: Stayed in original travel lane
+   Accident Type: J69-Changing Trafficway, Vehicle Turning-Turn Across Path-Initial Opposite Directions (Going Straight)
+   Damages: ['7 Clock Value', '8 Clock Value', '9 Clock Value', '10 Clock Value']
+

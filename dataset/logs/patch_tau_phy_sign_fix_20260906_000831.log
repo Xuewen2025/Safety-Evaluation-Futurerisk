@@ -1,0 +1,10 @@
+00:08:31  Log file: dataset/logs/patch_tau_phy_sign_fix_20260906_000831.log
+00:08:31  dataset/Bench2Drive-mini-preprocessed: patched 0, skipped (no raw cache, needs full re-preprocess) 34, total 34 in 0.2s
+00:09:23    dataset/Bench2Drive-Base-preprocessed: 2000/3679 done (52.0s elapsed)
+00:10:13  dataset/Bench2Drive-Base-preprocessed: patched 3679, skipped (no raw cache, needs full re-preprocess) 0, total 3679 in 102.0s
+00:15:07    dataset/DeepAccident-preprocessed: 2000/8279 done (294.1s elapsed)
+00:18:21    dataset/DeepAccident-preprocessed: 4000/8279 done (488.5s elapsed)
+00:22:17    dataset/DeepAccident-preprocessed: 6000/8279 done (724.4s elapsed)
+00:25:32    dataset/DeepAccident-preprocessed: 8000/8279 done (919.3s elapsed)
+00:26:15  dataset/DeepAccident-preprocessed: patched 8279, skipped (no raw cache, needs full re-preprocess) 0, total 8279 in 962.3s
+00:26:15  Total time: 1064.6s

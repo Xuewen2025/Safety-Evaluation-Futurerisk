@@ -1,0 +1,41 @@
+07:44:19  Log file: dataset/logs/evaluate_crossdomain_20260905_074419.log
+07:44:19  [1/5] Loading checkpoint dataset/checkpoints/carm_bench2drive_base.pt (Bench2Drive-Base-only training) ...
+07:44:19        d_kin=8 d_int=6 d_ctx=12 best_val_auroc=0.9678796636889122 best_val_auprc=0.7582054354674826
+07:44:19  [2/5] Loading DeepAccident preprocessed instances from dataset/DeepAccident-preprocessed ...
+07:54:40        -> 8279 usable DeepAccident instances
+07:54:40        -> 8279 native (ground-truth, tau_3D-independent) collision labels loaded from dataset/DeepAccident-preprocessed/native_collision_labels.json
+07:54:40  [3/5] Running the Bench2Drive-only model on every DeepAccident instance (zero-shot) ...
+07:54:53        ... 1000/8279 instances scored
+07:55:06        ... 2000/8279 instances scored
+07:55:19        ... 3000/8279 instances scored
+07:55:32        ... 4000/8279 instances scored
+07:55:45        ... 5000/8279 instances scored
+07:55:58        ... 6000/8279 instances scored
+07:56:11        ... 7000/8279 instances scored
+07:56:24        ... 8000/8279 instances scored
+07:56:28        wrote 8279 rows -> dataset/results_crossdomain/predictions_deepaccident_zeroshot.csv
+07:56:28  [4/5] Discrimination metrics (S3.10 metric 1): model vs. analytic-only vs. raw-TTC baseline ...
+07:56:28        Ground truth = DeepAccident's OWN collision_intensity/collision_*_vehicle_id annotation, independent of tau_3D -- NOT the geometric flag (using the geometric flag here would make y_analytic/raw_ttc's scores tautological with the label, since both are tau_3D-derived).
+07:56:28        (0 instances missing a native label, excluded from this section)
+07:56:28        n=8279  collisions(native)=1649 (19.9%)  collisions(geometric)=1124 (13.6%)  label agreement=0.867
+07:56:28        CARM (Bench2Drive-only, zero-shot)        AUROC=0.590  AUPRC=0.259
+07:56:28        analytic-only (y_analytic)                AUROC=0.631  AUPRC=0.298
+07:56:28        raw 3D-TTC baseline                       AUROC=0.634  AUPRC=0.337
+07:56:28  [5/5] Early-warning lead time + calibration ...
+07:56:41        operating threshold (from 692 non-colliding Bench2Drive val instances, target 5% FPR): 0.0000
+07:56:41        DeepAccident colliding instances (native label): 1649 (811 of these have no geometric impact-time match, excluded below)
+07:56:41        warned before impact: 838/838 (100.0%)
+07:56:41        lead time (s): mean=3.58 median=3.90 min=0.00 max=4.00
+07:56:41        calibration ECE (model R vs. true collision frequency): 0.2597
+07:56:41          bin [0.0,0.1) n= 1010  confidence=0.059  empirical_freq=0.170
+07:56:41          bin [0.1,0.2) n= 1339  confidence=0.150  empirical_freq=0.148
+07:56:41          bin [0.2,0.3) n= 1252  confidence=0.248  empirical_freq=0.153
+07:56:41          bin [0.3,0.4) n=  958  confidence=0.346  empirical_freq=0.151
+07:56:41          bin [0.4,0.5) n=  703  confidence=0.448  empirical_freq=0.185
+07:56:41          bin [0.5,0.6) n=  582  confidence=0.550  empirical_freq=0.222
+07:56:41          bin [0.6,0.7) n=  536  confidence=0.650  empirical_freq=0.228
+07:56:41          bin [0.7,0.8) n=  492  confidence=0.748  empirical_freq=0.272
+07:56:41          bin [0.8,0.9) n=  444  confidence=0.852  empirical_freq=0.279
+07:56:41          bin [0.9,1.0) n=  963  confidence=0.979  empirical_freq=0.316
+07:56:41        wrote dataset/results_crossdomain/summary.json
+07:56:41  Total wall-clock time: 742.1s

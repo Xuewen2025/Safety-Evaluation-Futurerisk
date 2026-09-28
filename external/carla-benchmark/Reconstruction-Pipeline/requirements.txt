@@ -1,0 +1,13 @@
+numpy
+pyproj
+carla
+pytz
+pysolar
+pandas
+pvlib
+matplotlib
+google-generativeai
+requests
+lxml
+shapely
+networkx

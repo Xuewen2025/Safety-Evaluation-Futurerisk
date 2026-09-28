@@ -1,0 +1,16 @@
+{
+  "ablation": "lambda_evt=0.0 (no direct critical-event supervision)",
+  "n_test": 1656,
+  "geometric": {
+    "n": 1656,
+    "n_collisions": 224,
+    "auroc": 0.8590663657222664,
+    "auprc": 0.5309687760102907
+  },
+  "native": {
+    "n": 1656,
+    "n_collisions": 320,
+    "auroc": 0.821010712949102,
+    "auprc": 0.5022932741948842
+  }
+}

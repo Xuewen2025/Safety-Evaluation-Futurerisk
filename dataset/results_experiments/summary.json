@@ -1,0 +1,896 @@
+{
+  "bench2drive_test_indomain": {
+    "overall": {
+      "CARM (R)": {
+        "auroc": 0.9512689813455739,
+        "auprc": 0.7030422012393645
+      },
+      "analytic-only (y_analytic)": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "raw 3D-TTC": {
+        "auroc": 1.0,
+        "auprc": 1.0
+      },
+      "PET": {
+        "auroc": 0.6976461797123108,
+        "auprc": 0.10740169624053973
+      },
+      "DRAC": {
+        "auroc": 0.6406954711643671,
+        "auprc": 0.10251838511215387
+      }
+    },
+    "per_interaction_type": {
+      "CARM (R)": {
+        "overall": {
+          "auroc": 0.9512689813455739,
+          "auprc": 0.7030422012393645,
+          "n": 760.0
+        },
+        "car-following": {
+          "auroc": NaN,
+          "auprc": 0.0,
+          "n": 202.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.9767045454545453,
+          "auprc": 0.8682633900208898,
+          "n": 196.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.847926267281106,
+          "auprc": 0.44428550092165653,
+          "n": 69.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.7412587412587414,
+          "auprc": 0.15715811965811963,
+          "n": 147.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.9629765395894428,
+          "auprc": 0.7435192134141104,
+          "n": 146.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "analytic-only (y_analytic)": {
+        "overall": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 760.0
+        },
+        "car-following": {
+          "auroc": NaN,
+          "auprc": 0.0,
+          "n": 202.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 1.0,
+          "auprc": 1.0000000000000002,
+          "n": 196.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 1.0,
+          "auprc": 0.9999999999999998,
+          "n": 69.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 147.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 1.0,
+          "auprc": 0.9999999999999998,
+          "n": 146.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "raw 3D-TTC": {
+        "overall": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 760.0
+        },
+        "car-following": {
+          "auroc": NaN,
+          "auprc": 0.0,
+          "n": 202.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 196.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 69.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 147.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "n": 146.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "PET": {
+        "overall": {
+          "auroc": 0.6976461797123108,
+          "auprc": 0.10740169624053973,
+          "n": 760.0
+        },
+        "car-following": {
+          "auroc": NaN,
+          "auprc": 0.0,
+          "n": 202.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.8169034090909091,
+          "auprc": 0.27603207455639023,
+          "n": 196.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.5057603686635945,
+          "auprc": 0.10787546435219458,
+          "n": 69.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6879370629370629,
+          "auprc": 0.05419823232323232,
+          "n": 147.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.7379032258064516,
+          "auprc": 0.24947210207741044,
+          "n": 146.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "DRAC": {
+        "overall": {
+          "auroc": 0.6406954711643671,
+          "auprc": 0.10251838511215387,
+          "n": 760.0
+        },
+        "car-following": {
+          "auroc": NaN,
+          "auprc": 0.0,
+          "n": 202.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.86875,
+          "auprc": 0.32421496446590314,
+          "n": 196.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.4976958525345622,
+          "auprc": 0.12784603658929722,
+          "n": 69.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.7447552447552448,
+          "auprc": 0.055296092796092794,
+          "n": 147.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.6403958944281525,
+          "auprc": 0.31015249403670564,
+          "n": 146.0,
+          "low_sample_warning": 0.0
+        }
+      }
+    },
+    "spearman": {
+      "R_predicted_vs_min_tau3d": null,
+      "y_analytic_vs_min_tau3d": null,
+      "raw_ttc_score_vs_min_tau3d": null,
+      "pet_score_vs_min_tau3d": null,
+      "drac_score_vs_min_tau3d": null,
+      "R_predicted_vs_worst_margin": null,
+      "y_analytic_vs_worst_margin": null,
+      "raw_ttc_score_vs_worst_margin": null,
+      "pet_score_vs_worst_margin": null,
+      "drac_score_vs_worst_margin": null,
+      "R_predicted_vs_max_evasive_severity": {
+        "n": 707,
+        "spearman_rho": 0.5381821959333869,
+        "p_value": 2.4627639257803836e-54
+      },
+      "y_analytic_vs_max_evasive_severity": {
+        "n": 707,
+        "spearman_rho": NaN,
+        "p_value": NaN
+      },
+      "raw_ttc_score_vs_max_evasive_severity": {
+        "n": 707,
+        "spearman_rho": NaN,
+        "p_value": NaN
+      },
+      "pet_score_vs_max_evasive_severity": {
+        "n": 707,
+        "spearman_rho": 0.1311498788332524,
+        "p_value": 0.000472028487373711
+      },
+      "drac_score_vs_max_evasive_severity": {
+        "n": 707,
+        "spearman_rho": 0.24092593503958395,
+        "p_value": 8.549372628374786e-11
+      }
+    },
+    "binned": {
+      "min_tau3d": [],
+      "worst_margin": [],
+      "max_evasive_severity": [
+        {
+          "bin": 0,
+          "n": 142,
+          "max_evasive_severity_range": [
+            0.0,
+            7.777155814038794
+          ],
+          "R_predicted_mean": 0.01938510109001482,
+          "R_predicted_median": 0.0020598769187927246,
+          "y_analytic_mean": 0.0,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.0,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.2730985915492958,
+          "pet_score_median": 0.0,
+          "drac_score_mean": 0.2048215757680009,
+          "drac_score_median": 0.09988358454127139
+        },
+        {
+          "bin": 1,
+          "n": 142,
+          "max_evasive_severity_range": [
+            7.789570792419281,
+            14.984021369716457
+          ],
+          "R_predicted_mean": 0.07076470700787826,
+          "R_predicted_median": 0.02017858624458313,
+          "y_analytic_mean": 0.0,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.0,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.5474647887323945,
+          "pet_score_median": 0.6799999999999999,
+          "drac_score_mean": 0.42399595873844886,
+          "drac_score_median": 0.39370379536546385
+        },
+        {
+          "bin": 2,
+          "n": 141,
+          "max_evasive_severity_range": [
+            14.997353955546881,
+            18.03212493311126
+          ],
+          "R_predicted_mean": 0.09761682385248495,
+          "R_predicted_median": 0.02897399663925171,
+          "y_analytic_mean": 0.0,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.0,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.504113475177305,
+          "pet_score_median": 0.5800000000000001,
+          "drac_score_mean": 0.4375284992433902,
+          "drac_score_median": 0.3530191812068622
+        },
+        {
+          "bin": 3,
+          "n": 141,
+          "max_evasive_severity_range": [
+            18.032436038070653,
+            19.042172434561284
+          ],
+          "R_predicted_mean": 0.10416970354445437,
+          "R_predicted_median": 0.04981577396392822,
+          "y_analytic_mean": 0.0,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.0,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.44879432624113474,
+          "pet_score_median": 0.52,
+          "drac_score_mean": 0.42040604169083157,
+          "drac_score_median": 0.28557166162226755
+        },
+        {
+          "bin": 4,
+          "n": 141,
+          "max_evasive_severity_range": [
+            19.04709767200893,
+            331.84348616391657
+          ],
+          "R_predicted_mean": 0.12302776473633786,
+          "R_predicted_median": 0.05242079496383667,
+          "y_analytic_mean": 0.0,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.0,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.525531914893617,
+          "pet_score_median": 0.62,
+          "drac_score_mean": 0.4608524294987309,
+          "drac_score_median": 0.3456005496904767
+        }
+      ]
+    },
+    "n_instances": 760,
+    "n_collisions": 53
+  },
+  "deepaccident_crossdomain_native": {
+    "overall": {
+      "CARM (R)": {
+        "auroc": 0.6366447236635943,
+        "auprc": 0.32212050245171603
+      },
+      "analytic-only (y_analytic)": {
+        "auroc": 0.6363362044915928,
+        "auprc": 0.3613679692354078
+      },
+      "raw 3D-TTC": {
+        "auroc": 0.6339801900141501,
+        "auprc": 0.33695567414160404
+      },
+      "PET": {
+        "auroc": 0.6685322335306283,
+        "auprc": 0.3193061501269025
+      },
+      "DRAC": {
+        "auroc": 0.6520766733712191,
+        "auprc": 0.2809455075062249
+      }
+    },
+    "per_interaction_type": {
+      "CARM (R)": {
+        "overall": {
+          "auroc": 0.6366447236635943,
+          "auprc": 0.32212050245171603,
+          "n": 8279.0
+        },
+        "car-following": {
+          "auroc": 0.6284140813146337,
+          "auprc": 0.2851319794653139,
+          "n": 961.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.7010414123142293,
+          "auprc": 0.41861890720741907,
+          "n": 2621.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.5369312791131842,
+          "auprc": 0.2082193223599353,
+          "n": 1100.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6467513171845357,
+          "auprc": 0.33362889234434695,
+          "n": 2452.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.5266280307769985,
+          "auprc": 0.2194692217869409,
+          "n": 1145.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "analytic-only (y_analytic)": {
+        "overall": {
+          "auroc": 0.6363362044915928,
+          "auprc": 0.3613679692354078,
+          "n": 8279.0
+        },
+        "car-following": {
+          "auroc": 0.5644531803371582,
+          "auprc": 0.2461052923331779,
+          "n": 961.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.6859891465219536,
+          "auprc": 0.4789330408310486,
+          "n": 2621.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.6728274908031413,
+          "auprc": 0.3414185598037808,
+          "n": 1100.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6011596707952668,
+          "auprc": 0.32910361262377075,
+          "n": 2452.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.6257587232594641,
+          "auprc": 0.32744713852945834,
+          "n": 1145.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "raw 3D-TTC": {
+        "overall": {
+          "auroc": 0.6339801900141501,
+          "auprc": 0.33695567414160404,
+          "n": 8279.0
+        },
+        "car-following": {
+          "auroc": 0.5611382632100863,
+          "auprc": 0.22227583112595845,
+          "n": 961.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.685419397062219,
+          "auprc": 0.47125049750899783,
+          "n": 2621.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.6612923958352461,
+          "auprc": 0.27381219976434334,
+          "n": 1100.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6012840771989975,
+          "auprc": 0.3371342964073686,
+          "n": 2452.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.6230174410308758,
+          "auprc": 0.2911901573455002,
+          "n": 1145.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "PET": {
+        "overall": {
+          "auroc": 0.6685322335306283,
+          "auprc": 0.3193061501269025,
+          "n": 8279.0
+        },
+        "car-following": {
+          "auroc": 0.6050361240968976,
+          "auprc": 0.2491151510136989,
+          "n": 961.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.7173918098930433,
+          "auprc": 0.38877769691241354,
+          "n": 2621.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.6452491568270992,
+          "auprc": 0.26295869077787903,
+          "n": 1100.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6387106012536105,
+          "auprc": 0.30699100993239103,
+          "n": 2452.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.6574714346866871,
+          "auprc": 0.2711954466895671,
+          "n": 1145.0,
+          "low_sample_warning": 0.0
+        }
+      },
+      "DRAC": {
+        "overall": {
+          "auroc": 0.6520766733712191,
+          "auprc": 0.2809455075062249,
+          "n": 8279.0
+        },
+        "car-following": {
+          "auroc": 0.6138759031024223,
+          "auprc": 0.24500556180718697,
+          "n": 961.0,
+          "low_sample_warning": 0.0
+        },
+        "crossing": {
+          "auroc": 0.6855510374257291,
+          "auprc": 0.33206951607182633,
+          "n": 2621.0,
+          "low_sample_warning": 0.0
+        },
+        "merging/lane-change": {
+          "auroc": 0.6574330817586964,
+          "auprc": 0.23296067803802134,
+          "n": 1100.0,
+          "low_sample_warning": 0.0
+        },
+        "oncoming": {
+          "auroc": 0.6198419581669503,
+          "auprc": 0.2700060436413587,
+          "n": 2452.0,
+          "low_sample_warning": 0.0
+        },
+        "other": {
+          "auroc": 0.6355741051730383,
+          "auprc": 0.24506236397604642,
+          "n": 1145.0,
+          "low_sample_warning": 0.0
+        }
+      }
+    },
+    "spearman": {
+      "R_predicted_vs_min_tau3d": null,
+      "y_analytic_vs_min_tau3d": null,
+      "raw_ttc_score_vs_min_tau3d": null,
+      "pet_score_vs_min_tau3d": null,
+      "drac_score_vs_min_tau3d": null,
+      "R_predicted_vs_worst_margin": {
+        "n": 286,
+        "spearman_rho": 0.25118054195038025,
+        "p_value": 1.7207071848232773e-05
+      },
+      "y_analytic_vs_worst_margin": {
+        "n": 286,
+        "spearman_rho": 1.0,
+        "p_value": 0.0
+      },
+      "raw_ttc_score_vs_worst_margin": {
+        "n": 286,
+        "spearman_rho": NaN,
+        "p_value": NaN
+      },
+      "pet_score_vs_worst_margin": {
+        "n": 286,
+        "spearman_rho": 0.1545229449781738,
+        "p_value": 0.008857250914230253
+      },
+      "drac_score_vs_worst_margin": {
+        "n": 286,
+        "spearman_rho": 0.5575429981988465,
+        "p_value": 9.236230399741869e-25
+      },
+      "R_predicted_vs_max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": 0.4777526481461556,
+        "p_value": 0.0
+      },
+      "y_analytic_vs_max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": 0.006808329023437755,
+        "p_value": 0.579394895420325
+      },
+      "raw_ttc_score_vs_max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": 0.005935159007238894,
+        "p_value": 0.6289662739932106
+      },
+      "pet_score_vs_max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": -0.0932648383303255,
+        "p_value": 2.757351435136092e-14
+      },
+      "drac_score_vs_max_evasive_severity": {
+        "n": 6630,
+        "spearman_rho": 0.2448231957504053,
+        "p_value": 4.379086338413774e-91
+      }
+    },
+    "binned": {
+      "min_tau3d": [
+        {
+          "bin": 0,
+          "n": 58,
+          "min_tau3d_range": [
+            0.0,
+            0.0
+          ],
+          "R_predicted_mean": 0.5321767258233038,
+          "R_predicted_median": 0.4869177043437958,
+          "y_analytic_mean": 0.9310597635285693,
+          "y_analytic_median": 0.9786798963985346,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8575862068965517,
+          "pet_score_median": 0.92,
+          "drac_score_mean": 0.8853082057405138,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 1,
+          "n": 57,
+          "min_tau3d_range": [
+            0.0,
+            0.0
+          ],
+          "R_predicted_mean": 0.24386248253939444,
+          "R_predicted_median": 0.17291635274887085,
+          "y_analytic_mean": 0.9236368414742246,
+          "y_analytic_median": 0.9397923524843894,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8543859649122808,
+          "pet_score_median": 0.9199999999999999,
+          "drac_score_mean": 0.8648693375477468,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 2,
+          "n": 57,
+          "min_tau3d_range": [
+            0.0,
+            0.0
+          ],
+          "R_predicted_mean": 0.36022169025320755,
+          "R_predicted_median": 0.2550354599952698,
+          "y_analytic_mean": 0.9393250432182118,
+          "y_analytic_median": 0.9662368095185253,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8803508771929823,
+          "pet_score_median": 0.9,
+          "drac_score_mean": 0.8974129722698467,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 3,
+          "n": 57,
+          "min_tau3d_range": [
+            0.0,
+            0.0
+          ],
+          "R_predicted_mean": 0.38886507143054094,
+          "R_predicted_median": 0.26774442195892334,
+          "y_analytic_mean": 0.9073503482008766,
+          "y_analytic_median": 0.9250926185313104,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8926315789473684,
+          "pet_score_median": 0.9400000000000001,
+          "drac_score_mean": 0.7915170383883494,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 4,
+          "n": 57,
+          "min_tau3d_range": [
+            0.0,
+            0.0
+          ],
+          "R_predicted_mean": 0.44635870059331256,
+          "R_predicted_median": 0.42777734994888306,
+          "y_analytic_mean": 0.9425133336252484,
+          "y_analytic_median": 0.9718147830294456,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8543859649122806,
+          "pet_score_median": 0.9,
+          "drac_score_mean": 0.868309893512441,
+          "drac_score_median": 1.0
+        }
+      ],
+      "worst_margin": [
+        {
+          "bin": 0,
+          "n": 58,
+          "worst_margin_range": [
+            -10.0,
+            -5.380021792732512
+          ],
+          "R_predicted_mean": 0.5314300841298597,
+          "R_predicted_median": 0.4909490942955017,
+          "y_analytic_mean": 0.9991891872773297,
+          "y_analytic_median": 0.9996745187486911,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.9127586206896552,
+          "pet_score_median": 0.9400000000000001,
+          "drac_score_mean": 0.990264866105975,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 1,
+          "n": 57,
+          "worst_margin_range": [
+            -5.353322103380267,
+            -3.6686739791517766
+          ],
+          "R_predicted_mean": 0.3971934684535913,
+          "R_predicted_median": 0.31143033504486084,
+          "y_analytic_mean": 0.9868295415576548,
+          "y_analytic_median": 0.9881574504073345,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8533333333333334,
+          "pet_score_median": 0.88,
+          "drac_score_mean": 0.9503688859086592,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 2,
+          "n": 57,
+          "worst_margin_range": [
+            -3.652745853587864,
+            -2.650814234942221
+          ],
+          "R_predicted_mean": 0.41115097936831024,
+          "R_predicted_median": 0.3277284502983093,
+          "y_analytic_mean": 0.9561855880993956,
+          "y_analytic_median": 0.9548802344432811,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8828070175438598,
+          "pet_score_median": 0.92,
+          "drac_score_mean": 0.925293511987398,
+          "drac_score_median": 1.0
+        },
+        {
+          "bin": 3,
+          "n": 57,
+          "worst_margin_range": [
+            -2.645608502624411,
+            -2.0081893471873964
+          ],
+          "R_predicted_mean": 0.27507426341374713,
+          "R_predicted_median": 0.16281843185424805,
+          "y_analytic_mean": 0.9117912371908637,
+          "y_analytic_median": 0.912274752882247,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8673684210526316,
+          "pet_score_median": 0.9199999999999999,
+          "drac_score_mean": 0.8115032729129563,
+          "drac_score_median": 0.8587241170251998
+        },
+        {
+          "bin": 4,
+          "n": 57,
+          "worst_margin_range": [
+            -2.0081893471873964,
+            -0.2
+          ],
+          "R_predicted_mean": 0.35664897425132885,
+          "R_predicted_median": 0.26264697313308716,
+          "y_analytic_mean": 0.788694522873663,
+          "y_analytic_median": 0.82093568474191,
+          "raw_ttc_score_mean": 1.0,
+          "raw_ttc_score_median": 1.0,
+          "pet_score_mean": 0.8221052631578949,
+          "pet_score_median": 0.8400000000000001,
+          "drac_score_mean": 0.6281455656252174,
+          "drac_score_median": 0.5809928387756608
+        }
+      ],
+      "max_evasive_severity": [
+        {
+          "bin": 0,
+          "n": 1326,
+          "max_evasive_severity_range": [
+            3.5482744372740727,
+            35.09148743796822
+          ],
+          "R_predicted_mean": 0.13171649666932914,
+          "R_predicted_median": 0.07540258765220642,
+          "y_analytic_mean": 0.03676767530161215,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.03996983408748114,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.8178582202111614,
+          "pet_score_median": 0.8600000000000001,
+          "drac_score_mean": 0.4981729640847793,
+          "drac_score_median": 0.4324861791362252
+        },
+        {
+          "bin": 1,
+          "n": 1326,
+          "max_evasive_severity_range": [
+            35.09148743796822,
+            137.5150532387069
+          ],
+          "R_predicted_mean": 0.21008043083310307,
+          "R_predicted_median": 0.13330000638961792,
+          "y_analytic_mean": 0.04539170137424949,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.048265460030165915,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.728129713423831,
+          "pet_score_median": 0.82,
+          "drac_score_mean": 0.5653282963204953,
+          "drac_score_median": 0.5149961587613469
+        },
+        {
+          "bin": 2,
+          "n": 1326,
+          "max_evasive_severity_range": [
+            137.5150532387069,
+            531.1822703051208
+          ],
+          "R_predicted_mean": 0.33207856246788575,
+          "R_predicted_median": 0.24196282029151917,
+          "y_analytic_mean": 0.03996310832646728,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.043740573152337855,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.7124585218702866,
+          "pet_score_median": 0.8,
+          "drac_score_mean": 0.597089770256679,
+          "drac_score_median": 0.5558948655552156
+        },
+        {
+          "bin": 3,
+          "n": 1326,
+          "max_evasive_severity_range": [
+            531.1822703051208,
+            664.5633332283309
+          ],
+          "R_predicted_mean": 0.30162808330530133,
+          "R_predicted_median": 0.2388152778148651,
+          "y_analytic_mean": 0.034506395040551474,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.03619909502262444,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.6620663650075415,
+          "pet_score_median": 0.78,
+          "drac_score_mean": 0.6011502408898106,
+          "drac_score_median": 0.5634348995970808
+        },
+        {
+          "bin": 4,
+          "n": 1326,
+          "max_evasive_severity_range": [
+            664.5633332283309,
+            8909.555588611189
+          ],
+          "R_predicted_mean": 0.3859393842529567,
+          "R_predicted_median": 0.3181748390197754,
+          "y_analytic_mean": 0.043697306666180706,
+          "y_analytic_median": 0.0,
+          "raw_ttc_score_mean": 0.04751131221719457,
+          "raw_ttc_score_median": 0.0,
+          "pet_score_mean": 0.7027300150829563,
+          "pet_score_median": 0.78,
+          "drac_score_mean": 0.7485333346627556,
+          "drac_score_median": 0.9710475249431796
+        }
+      ]
+    },
+    "n_instances": 8279,
+    "n_collisions": 1649
+  }
+}

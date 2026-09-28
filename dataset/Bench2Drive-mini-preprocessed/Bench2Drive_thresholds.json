@@ -1,0 +1,19 @@
+{
+  "Bench2Drive": {
+    "dataset": "Bench2Drive",
+    "thresholds": {
+      "car-following": 8.300883709077972,
+      "crossing": 5.879935599147136,
+      "merging/lane-change": 9.234672713732488,
+      "oncoming": 8.76858655248139,
+      "other": 9.281363956992651
+    },
+    "merged_into_other": {
+      "car-following": false,
+      "crossing": false,
+      "merging/lane-change": false,
+      "oncoming": false,
+      "other": false
+    }
+  }
+}

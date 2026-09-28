@@ -1,0 +1,1712 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ResponseOfListOfCaseDetail xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Count>1</Count>
+  <Message>Results returned successfully</Message>
+  <SearchCriteria>StateCase: 510200 And CaseYear: 2023 And State: 51</SearchCriteria>
+  <Results>
+    <ArrayOfCaseDetail>
+      <CaseDetail>
+        <CrashResultSet>
+          <CaseYear>2023</CaseYear>
+          <State>51</State>
+          <ST_CASE>510200</ST_CASE>
+          <STATENAME>Virginia</STATENAME>
+          <VE_TOTAL>2</VE_TOTAL>
+          <VE_FORMS>2</VE_FORMS>
+          <PVH_INVL>0</PVH_INVL>
+          <PEDS>1</PEDS>
+          <PERNOTMVIT>1</PERNOTMVIT>
+          <PERMVIT>2</PERMVIT>
+          <PERSONS>2</PERSONS>
+          <COUNTY>177</COUNTY>
+          <COUNTYNAME>SPOTSYLVANIA (177)</COUNTYNAME>
+          <CITY>0</CITY>
+          <CITYNAME>NOT APPLICABLE</CITYNAME>
+          <DAY>6</DAY>
+          <DAYNAME>6</DAYNAME>
+          <MONTH>4</MONTH>
+          <MonthName>April</MonthName>
+          <YEAR>2023</YEAR>
+          <DAY_WEEK>5</DAY_WEEK>
+          <DAY_WEEKNAME>Thursday</DAY_WEEKNAME>
+          <HOUR>20</HOUR>
+          <HOURNAME>8:00pm-8:59pm</HOURNAME>
+          <MINUTE>5</MINUTE>
+          <MINUTENAME>5</MINUTENAME>
+          <NHS>0</NHS>
+          <NHSNAME>This Section IS NOT on the NHS</NHSNAME>
+          <RUR_URB>2</RUR_URB>
+          <RUR_URBNAME>Urban</RUR_URBNAME>
+          <FUNC_SYS>4</FUNC_SYS>
+          <FUNC_SYSNAME>Minor Arterial</FUNC_SYSNAME>
+          <RD_OWNER>1</RD_OWNER>
+          <RD_OWNERNAME>State Highway Agency</RD_OWNERNAME>
+          <ROUTE>2</ROUTE>
+          <ROUTENAME>U.S. Highway</ROUTENAME>
+          <TWAY_ID>US-17</TWAY_ID>
+          <TWAY_ID2>BOWMAN DR</TWAY_ID2>
+          <MILEPT>44</MILEPT>
+          <MILEPTNAME>44</MILEPTNAME>
+          <LATITUDE>38.28187222</LATITUDE>
+          <LATITUDENAME>38.28187222</LATITUDENAME>
+          <LONGITUD>-77.453805560</LONGITUD>
+          <LONGITUDNAME>-77.45380556</LONGITUDNAME>
+          <SP_JUR>0</SP_JUR>
+          <SP_JURNAME>No Special Jurisdiction</SP_JURNAME>
+          <HARM_EV>8</HARM_EV>
+          <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+          <MAN_COLL>0</MAN_COLL>
+          <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+          <RELJCT1>0</RELJCT1>
+          <RELJCT1NAME>No</RELJCT1NAME>
+          <RELJCT2>2</RELJCT2>
+          <RELJCT2NAME>Intersection</RELJCT2NAME>
+          <TYP_INT>3</TYP_INT>
+          <TYP_INTNAME>T-Intersection</TYP_INTNAME>
+          <WRK_ZONE>0</WRK_ZONE>
+          <WRK_ZONENAME>None</WRK_ZONENAME>
+          <REL_ROAD>1</REL_ROAD>
+          <REL_ROADNAME>On Roadway</REL_ROADNAME>
+          <LGT_COND>2</LGT_COND>
+          <LGT_CONDNAME>Dark - Not Lighted</LGT_CONDNAME>
+          <WEATHER>98</WEATHER>
+          <WEATHERNAME>Not Reported</WEATHERNAME>
+          <SCH_BUS>0</SCH_BUS>
+          <SCH_BUSNAME>No</SCH_BUSNAME>
+          <RAIL>0000000</RAIL>
+          <RAILNAME>Not Applicable</RAILNAME>
+          <NOT_HOUR>99</NOT_HOUR>
+          <NOT_HOURNAME>Unknown</NOT_HOURNAME>
+          <NOT_MIN>99</NOT_MIN>
+          <NOT_MINNAME>Unknown</NOT_MINNAME>
+          <ARR_HOUR>99</ARR_HOUR>
+          <ARR_HOURNAME>Unknown EMS Scene Arrival Hour</ARR_HOURNAME>
+          <ARR_MIN>99</ARR_MIN>
+          <ARR_MINNAME>Unknown EMS Scene Arrival Minutes</ARR_MINNAME>
+          <HOSP_HR>99</HOSP_HR>
+          <HOSP_HRNAME>Unknown</HOSP_HRNAME>
+          <HOSP_MN>99</HOSP_MN>
+          <HOSP_MNNAME>Unknown EMS Hospital Arrival Time</HOSP_MNNAME>
+          <FATALS>1</FATALS>
+          <NMRace>
+            <Race>
+              <CASEYEAR>2023</CASEYEAR>
+              <STATE>51</STATE>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <STATENAME>Virginia</STATENAME>
+              <ST_CASE>510200</ST_CASE>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <ORDER>1</ORDER>
+              <ORDERNAME>1</ORDERNAME>
+              <RACE>2</RACE>
+              <RACENAME>Black or African American</RACENAME>
+              <MULTRACE>0</MULTRACE>
+              <MULTRACENAME>No</MULTRACENAME>
+            </Race>
+          </NMRace>
+          <NMPersonRF>
+            <PersonRF>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <PERSONRF>0</PERSONRF>
+              <PERSONRFNAME>None Noted</PERSONRFNAME>
+            </PersonRF>
+          </NMPersonRF>
+          <NMDrugs>
+            <Drugs>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <DRUGSPEC>1</DRUGSPEC>
+              <DRUGSPECNAME>Whole Blood</DRUGSPECNAME>
+              <DRUGRES>5060</DRUGRES>
+              <DRUGRESNAME>Delta 9-tetrahydrocannabinol [THC]</DRUGRESNAME>
+              <DRUGMETHOD>19</DRUGMETHOD>
+              <DRUGMETHODNAME>Unknown Confirmatory Test Method</DRUGMETHODNAME>
+              <DRUGQTY>2</DRUGQTY>
+              <DRUGQTYNAME>Actual Drug Quantity</DRUGQTYNAME>
+              <DRUGACTQTY>0.001</DRUGACTQTY>
+              <DRUGACTQTYNAME>0.001</DRUGACTQTYNAME>
+              <DRUGUOM>2</DRUGUOM>
+              <DRUGUOMNAME>mg/L</DRUGUOMNAME>
+            </Drugs>
+            <Drugs>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <DRUGSPEC>1</DRUGSPEC>
+              <DRUGSPECNAME>Whole Blood</DRUGSPECNAME>
+              <DRUGRES>5062</DRUGRES>
+              <DRUGRESNAME>11-nor-9-carboxy-delta-9- tetrahydrocannabinol (Carboxy THC)</DRUGRESNAME>
+              <DRUGMETHOD>19</DRUGMETHOD>
+              <DRUGMETHODNAME>Unknown Confirmatory Test Method</DRUGMETHODNAME>
+              <DRUGQTY>2</DRUGQTY>
+              <DRUGQTYNAME>Actual Drug Quantity</DRUGQTYNAME>
+              <DRUGACTQTY>0.005</DRUGACTQTY>
+              <DRUGACTQTYNAME>0.005</DRUGACTQTYNAME>
+              <DRUGUOM>2</DRUGUOM>
+              <DRUGUOMNAME>mg/L</DRUGUOMNAME>
+            </Drugs>
+            <Drugs>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <DRUGSPEC>11</DRUGSPEC>
+              <DRUGSPECNAME>Blood Plasma / Serum</DRUGSPECNAME>
+              <DRUGRES>1</DRUGRES>
+              <DRUGRESNAME>None Detected/Below Threshold</DRUGRESNAME>
+              <DRUGMETHOD>97</DRUGMETHOD>
+              <DRUGMETHODNAME>Unknown Testing Method</DRUGMETHODNAME>
+              <DRUGQTY>1</DRUGQTY>
+              <DRUGQTYNAME>None Detected/Below Threshold</DRUGQTYNAME>
+              <DRUGACTQTY>-99.000</DRUGACTQTY>
+              <DRUGACTQTYNAME>Not Applicable</DRUGACTQTYNAME>
+              <DRUGUOM>-9</DRUGUOM>
+              <DRUGUOMNAME>Not Applicable</DRUGUOMNAME>
+            </Drugs>
+          </NMDrugs>
+          <CrashRFs>
+            <CrashRF>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <CRASHRF>0</CRASHRF>
+              <CRASHRFNAME>None Noted</CRASHRFNAME>
+            </CrashRF>
+          </CrashRFs>
+          <Weathers>
+            <Weather>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <WEATHER>98</WEATHER>
+              <WEATHERNAME>Not Reported</WEATHERNAME>
+            </Weather>
+          </Weathers>
+          <Vehicles>
+            <Vehicle>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <VEH_NO>1</VEH_NO>
+              <VE_FORMS>2</VE_FORMS>
+              <NUMOCCS>1</NUMOCCS>
+              <NUMOCCSNAME>01</NUMOCCSNAME>
+              <DAY>6</DAY>
+              <DAYNAME>6</DAYNAME>
+              <MONTH>4</MONTH>
+              <HOUR>20</HOUR>
+              <HOURNAME>8:00pm-8:59pm</HOURNAME>
+              <MINUTE>5</MINUTE>
+              <MINUTENAME>5</MINUTENAME>
+              <HARM_EV>8</HARM_EV>
+              <MAN_COLL>0</MAN_COLL>
+              <UNITTYPE>1</UNITTYPE>
+              <HIT_RUN>0</HIT_RUN>
+              <REG_STAT>51</REG_STAT>
+              <OWNER>1</OWNER>
+              <MAKE>59</MAKE>
+              <MAKENAME>Lexus</MAKENAME>
+              <MODEL>403</MODEL>
+              <MODELNAME>RX330/350/400h/450h</MODELNAME>
+              <MAK_MOD>59403</MAK_MOD>
+              <MAK_MODNAME>Lexus RX330/350/400h/450h</MAK_MODNAME>
+              <BODY_TYP>14</BODY_TYP>
+              <BODY_TYPNAME>Compact Utility (Utility Vehicle Categories "Small" and "Midsize")</BODY_TYPNAME>
+              <MOD_YEAR>2005</MOD_YEAR>
+              <MOD_YEARNAME>2005</MOD_YEARNAME>
+              <VIN>2T2HA31U95C0</VIN>
+              <VINNAME>2T2HA31U95C0</VINNAME>
+              <VIN_1>2</VIN_1>
+              <VIN_2>T</VIN_2>
+              <VIN_3>2</VIN_3>
+              <VIN_4>H</VIN_4>
+              <VIN_5>A</VIN_5>
+              <VIN_6>3</VIN_6>
+              <VIN_7>1</VIN_7>
+              <VIN_8>U</VIN_8>
+              <VIN_9>9</VIN_9>
+              <VIN_10>5</VIN_10>
+              <VIN_11>C</VIN_11>
+              <VIN_12>0</VIN_12>
+              <TRLR1VIN>777777777777</TRLR1VIN>
+              <TRLR1VINNAME>No Trailing Units</TRLR1VINNAME>
+              <TRLR2VIN>777777777777</TRLR2VIN>
+              <TRLR2VINNAME>No Trailing Units</TRLR2VINNAME>
+              <TRLR3VIN>777777777777</TRLR3VIN>
+              <TRLR3VINNAME>No Trailing Units</TRLR3VINNAME>
+              <TOW_VEH>0</TOW_VEH>
+              <J_KNIFE>0</J_KNIFE>
+              <MCARR_I1>0</MCARR_I1>
+              <MCARR_I2>000000000</MCARR_I2>
+              <MCARR_ID>00000000000</MCARR_ID>
+              <MCARR_IDNAME>Not Applicable</MCARR_IDNAME>
+              <V_CONFIG>0</V_CONFIG>
+              <CARGO_BT>0</CARGO_BT>
+              <HAZ_INV>1</HAZ_INV>
+              <HAZ_PLAC>0</HAZ_PLAC>
+              <HAZ_ID>0</HAZ_ID>
+              <HAZ_IDNAME>Not Applicable</HAZ_IDNAME>
+              <HAZ_CNO>0</HAZ_CNO>
+              <HAZ_REL>0</HAZ_REL>
+              <BUS_USE>0</BUS_USE>
+              <SPEC_USE>0</SPEC_USE>
+              <EMER_USE>0</EMER_USE>
+              <TRAV_SP>35</TRAV_SP>
+              <UNDEROVERRIDE>7</UNDEROVERRIDE>
+              <ROLLOVER>0</ROLLOVER>
+              <ROLINLOC>0</ROLINLOC>
+              <IMPACT1>11</IMPACT1>
+              <DEFORMED>7</DEFORMED>
+              <TOWED>8</TOWED>
+              <M_HARM>8</M_HARM>
+              <FIRE_EXP>0</FIRE_EXP>
+              <DR_PRES>1</DR_PRES>
+              <L_STATE>51</L_STATE>
+              <DR_ZIP>22408</DR_ZIP>
+              <DR_ZIPNAME>22408</DR_ZIPNAME>
+              <L_STATUS>6</L_STATUS>
+              <L_TYPE>1</L_TYPE>
+              <CDL_STAT>0</CDL_STAT>
+              <L_ENDORS>0</L_ENDORS>
+              <L_COMPL>3</L_COMPL>
+              <L_RESTRI>0</L_RESTRI>
+              <DR_HGT>65</DR_HGT>
+              <DR_WGT>250</DR_WGT>
+              <DR_WGTNAME>250 lbs.</DR_WGTNAME>
+              <PREV_ACC>0</PREV_ACC>
+              <PREV_DWI>0</PREV_DWI>
+              <PREV_SPD>0</PREV_SPD>
+              <PREV_OTH>1</PREV_OTH>
+              <FIRST_MO>7</FIRST_MO>
+              <FIRST_YR>2021</FIRST_YR>
+              <FIRST_YRNAME>2021</FIRST_YRNAME>
+              <LAST_MO>7</LAST_MO>
+              <LAST_YR>2021</LAST_YR>
+              <LAST_YRNAME>2021</LAST_YRNAME>
+              <SPEEDREL>0</SPEEDREL>
+              <VTRAFWAY>5</VTRAFWAY>
+              <VNUM_LAN>5</VNUM_LAN>
+              <VSPD_LIM>45</VSPD_LIM>
+              <VSPD_LIMNAME>45 MPH</VSPD_LIMNAME>
+              <VALIGN>1</VALIGN>
+              <VPROFILE>1</VPROFILE>
+              <VPAVETYP>2</VPAVETYP>
+              <VSURCOND>1</VSURCOND>
+              <VTRAFCON>0</VTRAFCON>
+              <VTCONT_F>0</VTCONT_F>
+              <P_CRASH1>1</P_CRASH1>
+              <P_CRASH2>80</P_CRASH2>
+              <P_CRASH3>1</P_CRASH3>
+              <PCRASH5>1</PCRASH5>
+              <ACC_TYPE>13</ACC_TYPE>
+              <DEATHS>0</DEATHS>
+              <STATENAME>Virginia</STATENAME>
+              <DR_DRINK>0</DR_DRINK>
+              <DR_DRINKNAME>No</DR_DRINKNAME>
+              <MonthName>April</MonthName>
+              <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+              <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+              <UNITTYPENAME>Motor Vehicle In-Transport (Inside or Outside the Trafficway)</UNITTYPENAME>
+              <HIT_RUNNAME>No</HIT_RUNNAME>
+              <REG_STATNAME>Virginia</REG_STATNAME>
+              <OWNERNAME>Driver (in this crash) was  Registered Owner</OWNERNAME>
+              <TOW_VEHNAME>No Trailers</TOW_VEHNAME>
+              <J_KNIFENAME>Not an Articulated Vehicle</J_KNIFENAME>
+              <MCARR_I1NAME>Not Applicable</MCARR_I1NAME>
+              <MCARR_I2NAME>Not Applicable</MCARR_I2NAME>
+              <V_CONFIGNAME>Not Applicable</V_CONFIGNAME>
+              <CARGO_BTNAME>Not Applicable (N/A)</CARGO_BTNAME>
+              <HAZ_INVNAME>No</HAZ_INVNAME>
+              <HAZ_PLACNAME>Not Applicable</HAZ_PLACNAME>
+              <HAZ_CNONAME>Not Applicable</HAZ_CNONAME>
+              <HAZ_RELNAME>Not Applicable</HAZ_RELNAME>
+              <BUS_USENAME>Not a Bus</BUS_USENAME>
+              <SPEC_USENAME>No Special Use Noted</SPEC_USENAME>
+              <EMER_USENAME>Not Applicable</EMER_USENAME>
+              <TRAV_SPNAME>035 MPH</TRAV_SPNAME>
+              <UNDEROVERRIDENAME>Not Applicable</UNDEROVERRIDENAME>
+              <ROLLOVERNAME>No Rollover</ROLLOVERNAME>
+              <ROLINLOCNAME>No Rollover</ROLINLOCNAME>
+              <IMPACT1NAME>11 Clock Point</IMPACT1NAME>
+              <DEFORMEDNAME>Damage Reported, Extent Unknown</DEFORMEDNAME>
+              <TOWEDNAME>Not Reported</TOWEDNAME>
+              <M_HARMNAME>Pedestrian</M_HARMNAME>
+              <FIRE_EXPNAME>No or Not Reported</FIRE_EXPNAME>
+              <DR_PRESNAME>Yes</DR_PRESNAME>
+              <L_STATENAME>Virginia</L_STATENAME>
+              <L_STATUSNAME>Valid</L_STATUSNAME>
+              <L_TYPENAME>Full Driver License</L_TYPENAME>
+              <CDL_STATNAME>No (CDL)</CDL_STATNAME>
+              <L_ENDORSNAME>No Endorsements required for this vehicle</L_ENDORSNAME>
+              <L_COMPLNAME>Valid license for this class vehicle</L_COMPLNAME>
+              <L_RESTRINAME>No Restrictions or Not Applicable</L_RESTRINAME>
+              <PREV_ACCNAME>None</PREV_ACCNAME>
+              <PREV_DWINAME>None</PREV_DWINAME>
+              <PREV_SPDNAME>None</PREV_SPDNAME>
+              <PREV_OTHNAME>1</PREV_OTHNAME>
+              <FIRST_MONAME>July</FIRST_MONAME>
+              <LAST_MONAME>July</LAST_MONAME>
+              <SPEEDRELNAME>No</SPEEDRELNAME>
+              <VTRAFWAYNAME>Two-Way, Not Divided With a Continuous Left-Turn Lane</VTRAFWAYNAME>
+              <VNUM_LANNAME>Five lanes</VNUM_LANNAME>
+              <VALIGNNAME>Straight</VALIGNNAME>
+              <VPROFILENAME>Level</VPROFILENAME>
+              <VPAVETYPNAME>Blacktop, Bituminous, or Asphalt</VPAVETYPNAME>
+              <VSURCONDNAME>Dry</VSURCONDNAME>
+              <VTRAFCONNAME>No Controls</VTRAFCONNAME>
+              <VTCONT_FNAME>No Controls</VTCONT_FNAME>
+              <P_CRASH1NAME>Going Straight</P_CRASH1NAME>
+              <P_CRASH2NAME>Pedestrian in road</P_CRASH2NAME>
+              <P_CRASH3NAME>No Avoidance Maneuver</P_CRASH3NAME>
+              <PCRASH4NAME>Tracking</PCRASH4NAME>
+              <PCRASH5NAME>Stayed in original travel lane</PCRASH5NAME>
+              <ACC_TYPENAME>C13-Single Driver-Forward Impact-Pedestrian/ Animal</ACC_TYPENAME>
+              <PREV_SUS1>0</PREV_SUS1>
+              <PREV_SUS1NAME>None</PREV_SUS1NAME>
+              <PREV_SUS2>0</PREV_SUS2>
+              <PREV_SUS2NAME>None</PREV_SUS2NAME>
+              <PREV_SUS3>0</PREV_SUS3>
+              <PREV_SUS3NAME>None</PREV_SUS3NAME>
+              <VPICMAKE>515</VPICMAKE>
+              <VPICMAKENAME>Lexus</VPICMAKENAME>
+              <VPICMODEL>2214</VPICMODEL>
+              <VPICMODELNAME>RX</VPICMODELNAME>
+              <VPICBODYCLASS>7</VPICBODYCLASS>
+              <VPICBODYCLASSNAME>Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)</VPICBODYCLASSNAME>
+              <GVWR_FROM>11</GVWR_FROM>
+              <GVWR_FROMNAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_FROMNAME>
+              <ICFINALBODY>0</ICFINALBODY>
+              <ICFINALBODYNAME>Not Applicable</ICFINALBODYNAME>
+              <GVWR_TO>11</GVWR_TO>
+              <GVWR_TONAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_TONAME>
+              <TRLR1GVWR>77</TRLR1GVWR>
+              <TRLR1GVWRNAME>No Trailing Units</TRLR1GVWRNAME>
+              <TRLR2GVWR>77</TRLR2GVWR>
+              <TRLR2GVWRNAME>No Trailing Units</TRLR2GVWRNAME>
+              <TRLR3GVWR>77</TRLR3GVWR>
+              <TRLR3GVWRNAME>No Trailing Units</TRLR3GVWRNAME>
+              <ACC_CONFIG>103</ACC_CONFIG>
+              <ACC_CONFIGNAME>Single Driver-Struck Object While Moving Forward</ACC_CONFIGNAME>
+              <Persons>
+                <Person>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <VE_FORMS>2</VE_FORMS>
+                  <PER_NO>1</PER_NO>
+                  <STR_VEH>0</STR_VEH>
+                  <STR_VEHNAME>Occupant of a Motor Vehicle</STR_VEHNAME>
+                  <COUNTY>177</COUNTY>
+                  <COUNTYNAME>SPOTSYLVANIA (177)</COUNTYNAME>
+                  <DAY>6</DAY>
+                  <DAYNAME>6</DAYNAME>
+                  <MONTH>4</MONTH>
+                  <MonthName>April</MonthName>
+                  <HOUR>20</HOUR>
+                  <HOURNAME>8:00pm-8:59pm</HOURNAME>
+                  <MINUTE>5</MINUTE>
+                  <MINUTENAME>5</MINUTENAME>
+                  <RUR_URB>2</RUR_URB>
+                  <RUR_URBNAME>Urban</RUR_URBNAME>
+                  <FUNC_SYS>4</FUNC_SYS>
+                  <FUNC_SYSNAME>Minor Arterial</FUNC_SYSNAME>
+                  <HARM_EV>8</HARM_EV>
+                  <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+                  <MAN_COLL>0</MAN_COLL>
+                  <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+                  <SCH_BUS>0</SCH_BUS>
+                  <SCH_BUSNAME>No</SCH_BUSNAME>
+                  <MAKE>59</MAKE>
+                  <MAKENAME>Lexus</MAKENAME>
+                  <MAK_MOD>59403</MAK_MOD>
+                  <BODY_TYP>14</BODY_TYP>
+                  <BODY_TYPNAME>Compact Utility (Utility Vehicle Categories "Small" and "Midsize")</BODY_TYPNAME>
+                  <MOD_YEAR>2005</MOD_YEAR>
+                  <MOD_YEARNAME>2005</MOD_YEARNAME>
+                  <TOW_VEH>0</TOW_VEH>
+                  <TOW_VEHNAME>No Trailers</TOW_VEHNAME>
+                  <SPEC_USE>0</SPEC_USE>
+                  <SPEC_USENAME>No Special Use Noted</SPEC_USENAME>
+                  <EMER_USE>0</EMER_USE>
+                  <EMER_USENAME>Not Applicable</EMER_USENAME>
+                  <ROLLOVER>0</ROLLOVER>
+                  <ROLLOVERNAME>No Rollover</ROLLOVERNAME>
+                  <IMPACT1>11</IMPACT1>
+                  <IMPACT1NAME>11 Clock Point</IMPACT1NAME>
+                  <FIRE_EXP>0</FIRE_EXP>
+                  <FIRE_EXPNAME>No or Not Reported</FIRE_EXPNAME>
+                  <AGE>56</AGE>
+                  <AGENAME>56 Years</AGENAME>
+                  <SEX>2</SEX>
+                  <SEXNAME>Female</SEXNAME>
+                  <PER_TYP>1</PER_TYP>
+                  <PER_TYPNAME>Driver of a Motor Vehicle In-Transport</PER_TYPNAME>
+                  <INJ_SEV>0</INJ_SEV>
+                  <INJ_SEVNAME>No Apparent Injury (O)</INJ_SEVNAME>
+                  <SEAT_POS>11</SEAT_POS>
+                  <SEAT_POSNAME>Front Seat, Left Side</SEAT_POSNAME>
+                  <REST_USE>3</REST_USE>
+                  <REST_USENAME>Shoulder and Lap Belt Used</REST_USENAME>
+                  <REST_MIS>0</REST_MIS>
+                  <REST_MISNAME>No Indication of Misuse</REST_MISNAME>
+                  <AIR_BAG>20</AIR_BAG>
+                  <AIR_BAGNAME>Not Deployed</AIR_BAGNAME>
+                  <EJECTION>0</EJECTION>
+                  <EJECTIONNAME>Not Ejected</EJECTIONNAME>
+                  <EJ_PATH>0</EJ_PATH>
+                  <EJ_PATHNAME>Ejection Path Not Applicable</EJ_PATHNAME>
+                  <EXTRICAT>0</EXTRICAT>
+                  <EXTRICATNAME>Not Extricated or Not Applicable</EXTRICATNAME>
+                  <DRINKING>0</DRINKING>
+                  <DRINKINGNAME>No (Alcohol Not Involved)</DRINKINGNAME>
+                  <ALC_STATUS>0</ALC_STATUS>
+                  <ALC_STATUSNAME>Test Not Given</ALC_STATUSNAME>
+                  <ATST_TYP>0</ATST_TYP>
+                  <ATST_TYPNAME>Test Not Given</ATST_TYPNAME>
+                  <ALC_RES>996</ALC_RES>
+                  <ALC_RESNAME>Test Not Given</ALC_RESNAME>
+                  <DRUGS>0</DRUGS>
+                  <DRUGSNAME>No (drugs not involved)</DRUGSNAME>
+                  <DSTATUS>0</DSTATUS>
+                  <DSTATUSNAME>Test Not Given</DSTATUSNAME>
+                  <HOSPITAL>0</HOSPITAL>
+                  <HOSPITALNAME>Not Transported for Treatment</HOSPITALNAME>
+                  <DOA>0</DOA>
+                  <DEATH_DA>88</DEATH_DA>
+                  <DEATH_DANAME>Not Applicable (Non-Fatal)</DEATH_DANAME>
+                  <DEATH_MO>88</DEATH_MO>
+                  <DEATH_MONAME>Not Applicable (Non-Fatal)</DEATH_MONAME>
+                  <DEATH_YR>8888</DEATH_YR>
+                  <DEATH_YRNAME>Not Applicable (Non-fatal)</DEATH_YRNAME>
+                  <DEATH_HR>88</DEATH_HR>
+                  <DEATH_HRNAME>Not Applicable (Non-fatal)</DEATH_HRNAME>
+                  <DEATH_MN>88</DEATH_MN>
+                  <DEATH_MNNAME>Not Applicable (Non-fatal)</DEATH_MNNAME>
+                  <DEATH_TM>8888</DEATH_TM>
+                  <DEATH_TMNAME>Not Applicable (Non-fatal)</DEATH_TMNAME>
+                  <LAG_HRS>999</LAG_HRS>
+                  <LAG_MINS>99</LAG_MINS>
+                  <WORK_INJ>8</WORK_INJ>
+                  <WORK_INJNAME>Not Applicable (not a fatality)</WORK_INJNAME>
+                  <HISPANIC>0</HISPANIC>
+                  <HISPANICNAME>Not A Fatality (not Applicable)</HISPANICNAME>
+                  <DOANAME>Not Applicable</DOANAME>
+                  <LOCATION>0</LOCATION>
+                  <LOCATIONNAME>Occupant of a Motor Vehicle</LOCATIONNAME>
+                  <HELM_USE>20</HELM_USE>
+                  <HELM_USENAME>Not Applicable</HELM_USENAME>
+                  <HELM_MIS>7</HELM_MIS>
+                  <HELM_MISNAME>None Used/Not Applicable</HELM_MISNAME>
+                  <LAG_HRSNAME>Unknown</LAG_HRSNAME>
+                  <LAG_MINSNAME>Unknown</LAG_MINSNAME>
+                  <MAK_MODNAME>Lexus RX330/350/400h/450h</MAK_MODNAME>
+                  <VPICMAKE>515</VPICMAKE>
+                  <VPICMAKENAME>Lexus</VPICMAKENAME>
+                  <VPICMODEL>2214</VPICMODEL>
+                  <VPICMODELNAME>RX</VPICMODELNAME>
+                  <VPICBODYCLASS>7</VPICBODYCLASS>
+                  <VPICBODYCLASSNAME>Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)</VPICBODYCLASSNAME>
+                  <ICFINALBODY>0</ICFINALBODY>
+                  <ICFINALBODYNAME>Not Applicable</ICFINALBODYNAME>
+                  <GVWR_FROM>11</GVWR_FROM>
+                  <GVWR_FROMNAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_FROMNAME>
+                  <GVWR_TO>11</GVWR_TO>
+                  <GVWR_TONAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_TONAME>
+                  <PersonRFs>
+                    <PersonRF>
+                      <CaseYear>2023</CaseYear>
+                      <STATE>51</STATE>
+                      <ST_CASE>510200</ST_CASE>
+                      <STATENAME>Virginia</STATENAME>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <VEH_NO>1</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <PERSONRF>0</PERSONRF>
+                      <PERSONRFNAME>None Noted</PERSONRFNAME>
+                    </PersonRF>
+                  </PersonRFs>
+                  <Races>
+                    <Race>
+                      <CASEYEAR>2023</CASEYEAR>
+                      <STATE>51</STATE>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <STATENAME>Virginia</STATENAME>
+                      <ST_CASE>510200</ST_CASE>
+                      <VEH_NO>1</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <ORDER>1</ORDER>
+                      <ORDERNAME>1</ORDERNAME>
+                      <RACE>0</RACE>
+                      <RACENAME>Not a Fatality (not applicable)</RACENAME>
+                      <MULTRACE>0</MULTRACE>
+                      <MULTRACENAME>No</MULTRACENAME>
+                    </Race>
+                  </Races>
+                  <OCCDrugs>
+                    <Drugs>
+                      <CaseYear>2023</CaseYear>
+                      <STATE>51</STATE>
+                      <ST_CASE>510200</ST_CASE>
+                      <STATENAME>Virginia</STATENAME>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <VEH_NO>1</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <DRUGSPEC>0</DRUGSPEC>
+                      <DRUGSPECNAME>Test Not Given</DRUGSPECNAME>
+                      <DRUGRES>0</DRUGRES>
+                      <DRUGRESNAME>Test Not Given</DRUGRESNAME>
+                      <DRUGMETHOD>0</DRUGMETHOD>
+                      <DRUGMETHODNAME>Test Not Given</DRUGMETHODNAME>
+                      <DRUGQTY>0</DRUGQTY>
+                      <DRUGQTYNAME>Test Not Given</DRUGQTYNAME>
+                      <DRUGACTQTY>-99.000</DRUGACTQTY>
+                      <DRUGACTQTYNAME>Not Applicable</DRUGACTQTYNAME>
+                      <DRUGUOM>-9</DRUGUOM>
+                      <DRUGUOMNAME>Not Applicable</DRUGUOMNAME>
+                    </Drugs>
+                  </OCCDrugs>
+                </Person>
+              </Persons>
+              <Damages>
+                <Damage>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MDAREAS>11</MDAREAS>
+                  <MDAREASNAME>11 Clock Value</MDAREASNAME>
+                  <DAMAGE>11</DAMAGE>
+                  <DAMAGENAME>11 Clock Value</DAMAGENAME>
+                </Damage>
+                <Damage>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MDAREAS>12</MDAREAS>
+                  <MDAREASNAME>12 Clock Value</MDAREASNAME>
+                  <DAMAGE>12</DAMAGE>
+                  <DAMAGENAME>12 Clock Value</DAMAGENAME>
+                </Damage>
+              </Damages>
+              <VinDecodes/>
+              <VinDeriveds>
+                <VINDerived>
+                  <CASEYEAR>2023</CASEYEAR>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <VEH_NO>1</VEH_NO>
+                  <VehicleDescriptor>2T2HA31U*5C******</VehicleDescriptor>
+                  <VINDecodedOn>8/22/2024 12:30:01 AM</VINDecodedOn>
+                  <VINDecodeError>0</VINDecodeError>
+                  <VehicleTypeId>7</VehicleTypeId>
+                  <VehicleType>MULTIPURPOSE PASSENGER VEHICLE (MPV)</VehicleType>
+                  <ManufacturerFullNameId>1085</ManufacturerFullNameId>
+                  <ManufacturerFullName>TOYOTA MOTOR MANUFACTURING CANADA</ManufacturerFullName>
+                  <MakeId>515</MakeId>
+                  <Make>LEXUS</Make>
+                  <ModelId>2214</ModelId>
+                  <Model>RX</Model>
+                  <ModelYear>2005</ModelYear>
+                  <Series>MCU33L/MCU38L</Series>
+                  <Trim>RX330</Trim>
+                  <Series2>Wagon Body Type</Series2>
+                  <Trim2/>
+                  <PlantCountryId>1</PlantCountryId>
+                  <PlantCountry>CANADA</PlantCountry>
+                  <PlantState>ONTARIO</PlantState>
+                  <PlantCity>CAMBRIDGE</PlantCity>
+                  <PlantCompanyName>Toyota Motor Manufacturing, Canada, Inc.</PlantCompanyName>
+                  <Note>Grade: STD</Note>
+                  <BodyClassId>7</BodyClassId>
+                  <BodyClass>Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)</BodyClass>
+                  <DoorsCount>5</DoorsCount>
+                  <GrossVehicleWeightRatingFromId>13</GrossVehicleWeightRatingFromId>
+                  <GrossVehicleWeightRatingFrom>Class 1D: 5,001 - 6,000 lb (2,268 - 2,722 kg)</GrossVehicleWeightRatingFrom>
+                  <BusTypeId>0</BusTypeId>
+                  <BusType>Not Applicable</BusType>
+                  <BusFloorConfigurationTypeId>0</BusFloorConfigurationTypeId>
+                  <BusFloorConfigurationType>Not Applicable</BusFloorConfigurationType>
+                  <CustomMotorcycleTypeId>0</CustomMotorcycleTypeId>
+                  <CustomMotorcycleType>Not Applicable</CustomMotorcycleType>
+                  <MotorcycleSuspensionTypeId>0</MotorcycleSuspensionTypeId>
+                  <MotorcycleSuspensionType>Not Applicable</MotorcycleSuspensionType>
+                  <MotorcycleChassisTypeId>0</MotorcycleChassisTypeId>
+                  <MotorcycleChassisType>Not Applicable</MotorcycleChassisType>
+                  <EngineModel>3MZ-FE</EngineModel>
+                  <EngineConfigurationId>2</EngineConfigurationId>
+                  <EngineConfiguration>V-Shaped</EngineConfiguration>
+                  <EngineCylindersCount>6</EngineCylindersCount>
+                  <EngineBrakeHP_from>223</EngineBrakeHP_from>
+                  <DisplacementCI>201</DisplacementCI>
+                  <DisplacementCC>3300</DisplacementCC>
+                  <DisplacementL>3</DisplacementL>
+                  <FuelTypePrimaryId>4</FuelTypePrimaryId>
+                  <FuelTypePrimary>Gasoline</FuelTypePrimary>
+                  <TPMSId>2</TPMSId>
+                  <TPMS>Indirect</TPMS>
+                </VINDerived>
+              </VinDeriveds>
+              <TrailerVinDeriveds/>
+              <Maneuvers>
+                <Maneuver>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MDRMANAV>0</MDRMANAV>
+                  <MDRMANAVNAME>Driver Did Not Maneuver to Avoid</MDRMANAVNAME>
+                  <MANEUVER>0</MANEUVER>
+                  <MANEUVERNAME>Driver Did Not Maneuver to Avoid</MANEUVERNAME>
+                </Maneuver>
+              </Maneuvers>
+              <DrImpairs>
+                <DrImpair>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <DRIMPAIR>0</DRIMPAIR>
+                  <DRIMPAIRNAME>None/Apparently Normal</DRIMPAIRNAME>
+                </DrImpair>
+              </DrImpairs>
+              <Distractions>
+                <Distract>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MDRDSTRD>0</MDRDSTRD>
+                  <MDRDSTRDNAME>Not Distracted</MDRDSTRDNAME>
+                  <DRDISTRACT>0</DRDISTRACT>
+                  <DRDISTRACTNAME>Not Distracted</DRDISTRACTNAME>
+                </Distract>
+              </Distractions>
+              <Violations>
+                <Violation>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MVIOLATN>0</MVIOLATN>
+                  <MVIOLATNNAME>None</MVIOLATNNAME>
+                  <VIOLATION>0</VIOLATION>
+                  <VIOLATIONNAME>None</VIOLATIONNAME>
+                </Violation>
+              </Violations>
+              <VEvents>
+                <VEvent>
+                  <STATE>51</STATE>
+                  <EVENTNUM>1</EVENTNUM>
+                  <VEH_NO>1</VEH_NO>
+                  <VEVENTNUM>1</VEVENTNUM>
+                  <AOI1>11</AOI1>
+                  <AOI1NAME>11 Clock Point</AOI1NAME>
+                  <SOE>8</SOE>
+                  <SOENAME>Pedestrian</SOENAME>
+                  <AOI2>77</AOI2>
+                  <AOI2NAME>Not a Motor Vehicle</AOI2NAME>
+                  <CaseYear>2023</CaseYear>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VNUMBER1>1</VNUMBER1>
+                  <VNUMBER2>9999</VNUMBER2>
+                  <VNUMBER2NAME>Not a Motor Vehicle</VNUMBER2NAME>
+                </VEvent>
+              </VEvents>
+              <Vsoes>
+                <VSOEs>
+                  <CASEYEAR>2023</CASEYEAR>
+                  <STATE>51</STATE>
+                  <STATENAME>Virginia</STATENAME>
+                  <ST_CASE>510200</ST_CASE>
+                  <VEH_NO>1</VEH_NO>
+                  <VEVENTNUM>1</VEVENTNUM>
+                  <SOE>8</SOE>
+                  <SOENAME>Pedestrian</SOENAME>
+                  <AOI>11</AOI>
+                  <AOINAME>11 Clock Point</AOINAME>
+                </VSOEs>
+              </Vsoes>
+              <Factors>
+                <Factor>
+                  <CaseYear>2023</CaseYear>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATE>51</STATE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>1</VEH_NO>
+                  <MFACTOR>0</MFACTOR>
+                  <MFACTORNAME>None Noted</MFACTORNAME>
+                  <VEHICLECC>0</VEHICLECC>
+                  <VEHICLECCNAME>None Noted</VEHICLECCNAME>
+                </Factor>
+              </Factors>
+              <Visions>
+                <Vision>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <VEH_NO>1</VEH_NO>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <MVISOBSC>0</MVISOBSC>
+                  <MVISOBSCNAME>No Obstruction Noted</MVISOBSCNAME>
+                  <VISION>0</VISION>
+                  <VISIONNAME>No Obstruction Noted</VISIONNAME>
+                </Vision>
+              </Visions>
+              <VehicleSFs>
+                <VehicleSF>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <STATEINITIAL>VA</STATEINITIAL>
+                  <VEH_NO>1</VEH_NO>
+                  <VEHICLESF>0</VEHICLESF>
+                  <VEHICLESFNAME>None Noted</VEHICLESFNAME>
+                </VehicleSF>
+              </VehicleSFs>
+              <DrierRFs>
+                <DriverRF>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <STATEINITIAL>VA</STATEINITIAL>
+                  <VEH_NO>1</VEH_NO>
+                  <DRIVERRF>0</DRIVERRF>
+                  <DRIVERRFNAME>None Noted</DRIVERRFNAME>
+                </DriverRF>
+              </DrierRFs>
+            </Vehicle>
+            <Vehicle>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <VEH_NO>2</VEH_NO>
+              <VE_FORMS>2</VE_FORMS>
+              <NUMOCCS>1</NUMOCCS>
+              <NUMOCCSNAME>01</NUMOCCSNAME>
+              <DAY>6</DAY>
+              <DAYNAME>6</DAYNAME>
+              <MONTH>4</MONTH>
+              <HOUR>20</HOUR>
+              <HOURNAME>8:00pm-8:59pm</HOURNAME>
+              <MINUTE>5</MINUTE>
+              <MINUTENAME>5</MINUTENAME>
+              <HARM_EV>8</HARM_EV>
+              <MAN_COLL>0</MAN_COLL>
+              <UNITTYPE>1</UNITTYPE>
+              <HIT_RUN>0</HIT_RUN>
+              <REG_STAT>24</REG_STAT>
+              <OWNER>1</OWNER>
+              <MAKE>63</MAKE>
+              <MAKENAME>KIA</MAKENAME>
+              <MODEL>34</MODEL>
+              <MODELNAME>Optima</MODELNAME>
+              <MAK_MOD>63034</MAK_MOD>
+              <MAK_MODNAME>KIA Optima</MAK_MODNAME>
+              <BODY_TYP>4</BODY_TYP>
+              <BODY_TYPNAME>4-door sedan, hardtop</BODY_TYPNAME>
+              <MOD_YEAR>2013</MOD_YEAR>
+              <MOD_YEARNAME>2013</MOD_YEARNAME>
+              <VIN>5XXGN4A74DG1</VIN>
+              <VINNAME>5XXGN4A74DG1</VINNAME>
+              <VIN_1>5</VIN_1>
+              <VIN_2>X</VIN_2>
+              <VIN_3>X</VIN_3>
+              <VIN_4>G</VIN_4>
+              <VIN_5>N</VIN_5>
+              <VIN_6>4</VIN_6>
+              <VIN_7>A</VIN_7>
+              <VIN_8>7</VIN_8>
+              <VIN_9>4</VIN_9>
+              <VIN_10>D</VIN_10>
+              <VIN_11>G</VIN_11>
+              <VIN_12>1</VIN_12>
+              <TRLR1VIN>777777777777</TRLR1VIN>
+              <TRLR1VINNAME>No Trailing Units</TRLR1VINNAME>
+              <TRLR2VIN>777777777777</TRLR2VIN>
+              <TRLR2VINNAME>No Trailing Units</TRLR2VINNAME>
+              <TRLR3VIN>777777777777</TRLR3VIN>
+              <TRLR3VINNAME>No Trailing Units</TRLR3VINNAME>
+              <TOW_VEH>0</TOW_VEH>
+              <J_KNIFE>0</J_KNIFE>
+              <MCARR_I1>0</MCARR_I1>
+              <MCARR_I2>000000000</MCARR_I2>
+              <MCARR_ID>00000000000</MCARR_ID>
+              <MCARR_IDNAME>Not Applicable</MCARR_IDNAME>
+              <V_CONFIG>0</V_CONFIG>
+              <CARGO_BT>0</CARGO_BT>
+              <HAZ_INV>1</HAZ_INV>
+              <HAZ_PLAC>0</HAZ_PLAC>
+              <HAZ_ID>0</HAZ_ID>
+              <HAZ_IDNAME>Not Applicable</HAZ_IDNAME>
+              <HAZ_CNO>0</HAZ_CNO>
+              <HAZ_REL>0</HAZ_REL>
+              <BUS_USE>0</BUS_USE>
+              <SPEC_USE>0</SPEC_USE>
+              <EMER_USE>0</EMER_USE>
+              <TRAV_SP>15</TRAV_SP>
+              <UNDEROVERRIDE>7</UNDEROVERRIDE>
+              <ROLLOVER>0</ROLLOVER>
+              <ROLINLOC>0</ROLINLOC>
+              <IMPACT1>12</IMPACT1>
+              <DEFORMED>7</DEFORMED>
+              <TOWED>8</TOWED>
+              <M_HARM>8</M_HARM>
+              <FIRE_EXP>0</FIRE_EXP>
+              <DR_PRES>1</DR_PRES>
+              <L_STATE>51</L_STATE>
+              <DR_ZIP>22408</DR_ZIP>
+              <DR_ZIPNAME>22408</DR_ZIPNAME>
+              <L_STATUS>6</L_STATUS>
+              <L_TYPE>1</L_TYPE>
+              <CDL_STAT>0</CDL_STAT>
+              <L_ENDORS>0</L_ENDORS>
+              <L_COMPL>3</L_COMPL>
+              <L_RESTRI>0</L_RESTRI>
+              <DR_HGT>66</DR_HGT>
+              <DR_WGT>270</DR_WGT>
+              <DR_WGTNAME>270 lbs.</DR_WGTNAME>
+              <PREV_ACC>0</PREV_ACC>
+              <PREV_DWI>0</PREV_DWI>
+              <PREV_SPD>0</PREV_SPD>
+              <PREV_OTH>0</PREV_OTH>
+              <FIRST_MO>0</FIRST_MO>
+              <FIRST_YR>0</FIRST_YR>
+              <FIRST_YRNAME>No Record</FIRST_YRNAME>
+              <LAST_MO>0</LAST_MO>
+              <LAST_YR>0</LAST_YR>
+              <LAST_YRNAME>No Record</LAST_YRNAME>
+              <SPEEDREL>0</SPEEDREL>
+              <VTRAFWAY>5</VTRAFWAY>
+              <VNUM_LAN>5</VNUM_LAN>
+              <VSPD_LIM>45</VSPD_LIM>
+              <VSPD_LIMNAME>45 MPH</VSPD_LIMNAME>
+              <VALIGN>1</VALIGN>
+              <VPROFILE>1</VPROFILE>
+              <VPAVETYP>2</VPAVETYP>
+              <VSURCOND>1</VSURCOND>
+              <VTRAFCON>0</VTRAFCON>
+              <VTCONT_F>0</VTCONT_F>
+              <P_CRASH1>1</P_CRASH1>
+              <P_CRASH2>80</P_CRASH2>
+              <P_CRASH3>1</P_CRASH3>
+              <PCRASH5>1</PCRASH5>
+              <ACC_TYPE>98</ACC_TYPE>
+              <DEATHS>0</DEATHS>
+              <STATENAME>Virginia</STATENAME>
+              <DR_DRINK>0</DR_DRINK>
+              <DR_DRINKNAME>No</DR_DRINKNAME>
+              <MonthName>April</MonthName>
+              <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+              <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+              <UNITTYPENAME>Motor Vehicle In-Transport (Inside or Outside the Trafficway)</UNITTYPENAME>
+              <HIT_RUNNAME>No</HIT_RUNNAME>
+              <REG_STATNAME>Maryland</REG_STATNAME>
+              <OWNERNAME>Driver (in this crash) was  Registered Owner</OWNERNAME>
+              <TOW_VEHNAME>No Trailers</TOW_VEHNAME>
+              <J_KNIFENAME>Not an Articulated Vehicle</J_KNIFENAME>
+              <MCARR_I1NAME>Not Applicable</MCARR_I1NAME>
+              <MCARR_I2NAME>Not Applicable</MCARR_I2NAME>
+              <V_CONFIGNAME>Not Applicable</V_CONFIGNAME>
+              <CARGO_BTNAME>Not Applicable (N/A)</CARGO_BTNAME>
+              <HAZ_INVNAME>No</HAZ_INVNAME>
+              <HAZ_PLACNAME>Not Applicable</HAZ_PLACNAME>
+              <HAZ_CNONAME>Not Applicable</HAZ_CNONAME>
+              <HAZ_RELNAME>Not Applicable</HAZ_RELNAME>
+              <BUS_USENAME>Not a Bus</BUS_USENAME>
+              <SPEC_USENAME>No Special Use Noted</SPEC_USENAME>
+              <EMER_USENAME>Not Applicable</EMER_USENAME>
+              <TRAV_SPNAME>015 MPH</TRAV_SPNAME>
+              <UNDEROVERRIDENAME>Not Applicable</UNDEROVERRIDENAME>
+              <ROLLOVERNAME>No Rollover</ROLLOVERNAME>
+              <ROLINLOCNAME>No Rollover</ROLINLOCNAME>
+              <IMPACT1NAME>12 Clock Point</IMPACT1NAME>
+              <DEFORMEDNAME>Damage Reported, Extent Unknown</DEFORMEDNAME>
+              <TOWEDNAME>Not Reported</TOWEDNAME>
+              <M_HARMNAME>Pedestrian</M_HARMNAME>
+              <FIRE_EXPNAME>No or Not Reported</FIRE_EXPNAME>
+              <DR_PRESNAME>Yes</DR_PRESNAME>
+              <L_STATENAME>Virginia</L_STATENAME>
+              <L_STATUSNAME>Valid</L_STATUSNAME>
+              <L_TYPENAME>Full Driver License</L_TYPENAME>
+              <CDL_STATNAME>No (CDL)</CDL_STATNAME>
+              <L_ENDORSNAME>No Endorsements required for this vehicle</L_ENDORSNAME>
+              <L_COMPLNAME>Valid license for this class vehicle</L_COMPLNAME>
+              <L_RESTRINAME>No Restrictions or Not Applicable</L_RESTRINAME>
+              <PREV_ACCNAME>None</PREV_ACCNAME>
+              <PREV_DWINAME>None</PREV_DWINAME>
+              <PREV_SPDNAME>None</PREV_SPDNAME>
+              <PREV_OTHNAME>None</PREV_OTHNAME>
+              <FIRST_MONAME>No Record</FIRST_MONAME>
+              <LAST_MONAME>No Record</LAST_MONAME>
+              <SPEEDRELNAME>No</SPEEDRELNAME>
+              <VTRAFWAYNAME>Two-Way, Not Divided With a Continuous Left-Turn Lane</VTRAFWAYNAME>
+              <VNUM_LANNAME>Five lanes</VNUM_LANNAME>
+              <VALIGNNAME>Straight</VALIGNNAME>
+              <VPROFILENAME>Level</VPROFILENAME>
+              <VPAVETYPNAME>Blacktop, Bituminous, or Asphalt</VPAVETYPNAME>
+              <VSURCONDNAME>Dry</VSURCONDNAME>
+              <VTRAFCONNAME>No Controls</VTRAFCONNAME>
+              <VTCONT_FNAME>No Controls</VTCONT_FNAME>
+              <P_CRASH1NAME>Going Straight</P_CRASH1NAME>
+              <P_CRASH2NAME>Pedestrian in road</P_CRASH2NAME>
+              <P_CRASH3NAME>No Avoidance Maneuver</P_CRASH3NAME>
+              <PCRASH4NAME>Tracking</PCRASH4NAME>
+              <PCRASH5NAME>Stayed in original travel lane</PCRASH5NAME>
+              <ACC_TYPENAME>M98-Other Crash Type</ACC_TYPENAME>
+              <PREV_SUS1>0</PREV_SUS1>
+              <PREV_SUS1NAME>None</PREV_SUS1NAME>
+              <PREV_SUS2>0</PREV_SUS2>
+              <PREV_SUS2NAME>None</PREV_SUS2NAME>
+              <PREV_SUS3>0</PREV_SUS3>
+              <PREV_SUS3NAME>None</PREV_SUS3NAME>
+              <VPICMAKE>499</VPICMAKE>
+              <VPICMAKENAME>Kia</VPICMAKENAME>
+              <VPICMODEL>2739</VPICMODEL>
+              <VPICMODELNAME>Optima</VPICMODELNAME>
+              <VPICBODYCLASS>13</VPICBODYCLASS>
+              <VPICBODYCLASSNAME>Sedan/Saloon</VPICBODYCLASSNAME>
+              <GVWR_FROM>11</GVWR_FROM>
+              <GVWR_FROMNAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_FROMNAME>
+              <ICFINALBODY>0</ICFINALBODY>
+              <ICFINALBODYNAME>Not Applicable</ICFINALBODYNAME>
+              <GVWR_TO>11</GVWR_TO>
+              <GVWR_TONAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_TONAME>
+              <TRLR1GVWR>77</TRLR1GVWR>
+              <TRLR1GVWRNAME>No Trailing Units</TRLR1GVWRNAME>
+              <TRLR2GVWR>77</TRLR2GVWR>
+              <TRLR2GVWRNAME>No Trailing Units</TRLR2GVWRNAME>
+              <TRLR3GVWR>77</TRLR3GVWR>
+              <TRLR3GVWRNAME>No Trailing Units</TRLR3GVWRNAME>
+              <ACC_CONFIG>998</ACC_CONFIG>
+              <ACC_CONFIGNAME>Other Crash Type</ACC_CONFIGNAME>
+              <Persons>
+                <Person>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <VE_FORMS>2</VE_FORMS>
+                  <PER_NO>1</PER_NO>
+                  <STR_VEH>0</STR_VEH>
+                  <STR_VEHNAME>Occupant of a Motor Vehicle</STR_VEHNAME>
+                  <COUNTY>177</COUNTY>
+                  <COUNTYNAME>SPOTSYLVANIA (177)</COUNTYNAME>
+                  <DAY>6</DAY>
+                  <DAYNAME>6</DAYNAME>
+                  <MONTH>4</MONTH>
+                  <MonthName>April</MonthName>
+                  <HOUR>20</HOUR>
+                  <HOURNAME>8:00pm-8:59pm</HOURNAME>
+                  <MINUTE>5</MINUTE>
+                  <MINUTENAME>5</MINUTENAME>
+                  <RUR_URB>2</RUR_URB>
+                  <RUR_URBNAME>Urban</RUR_URBNAME>
+                  <FUNC_SYS>4</FUNC_SYS>
+                  <FUNC_SYSNAME>Minor Arterial</FUNC_SYSNAME>
+                  <HARM_EV>8</HARM_EV>
+                  <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+                  <MAN_COLL>0</MAN_COLL>
+                  <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+                  <SCH_BUS>0</SCH_BUS>
+                  <SCH_BUSNAME>No</SCH_BUSNAME>
+                  <MAKE>63</MAKE>
+                  <MAKENAME>KIA</MAKENAME>
+                  <MAK_MOD>63034</MAK_MOD>
+                  <BODY_TYP>4</BODY_TYP>
+                  <BODY_TYPNAME>4-door sedan, hardtop</BODY_TYPNAME>
+                  <MOD_YEAR>2013</MOD_YEAR>
+                  <MOD_YEARNAME>2013</MOD_YEARNAME>
+                  <TOW_VEH>0</TOW_VEH>
+                  <TOW_VEHNAME>No Trailers</TOW_VEHNAME>
+                  <SPEC_USE>0</SPEC_USE>
+                  <SPEC_USENAME>No Special Use Noted</SPEC_USENAME>
+                  <EMER_USE>0</EMER_USE>
+                  <EMER_USENAME>Not Applicable</EMER_USENAME>
+                  <ROLLOVER>0</ROLLOVER>
+                  <ROLLOVERNAME>No Rollover</ROLLOVERNAME>
+                  <IMPACT1>12</IMPACT1>
+                  <IMPACT1NAME>12 Clock Point</IMPACT1NAME>
+                  <FIRE_EXP>0</FIRE_EXP>
+                  <FIRE_EXPNAME>No or Not Reported</FIRE_EXPNAME>
+                  <AGE>43</AGE>
+                  <AGENAME>43 Years</AGENAME>
+                  <SEX>1</SEX>
+                  <SEXNAME>Male</SEXNAME>
+                  <PER_TYP>1</PER_TYP>
+                  <PER_TYPNAME>Driver of a Motor Vehicle In-Transport</PER_TYPNAME>
+                  <INJ_SEV>0</INJ_SEV>
+                  <INJ_SEVNAME>No Apparent Injury (O)</INJ_SEVNAME>
+                  <SEAT_POS>11</SEAT_POS>
+                  <SEAT_POSNAME>Front Seat, Left Side</SEAT_POSNAME>
+                  <REST_USE>3</REST_USE>
+                  <REST_USENAME>Shoulder and Lap Belt Used</REST_USENAME>
+                  <REST_MIS>0</REST_MIS>
+                  <REST_MISNAME>No Indication of Misuse</REST_MISNAME>
+                  <AIR_BAG>20</AIR_BAG>
+                  <AIR_BAGNAME>Not Deployed</AIR_BAGNAME>
+                  <EJECTION>0</EJECTION>
+                  <EJECTIONNAME>Not Ejected</EJECTIONNAME>
+                  <EJ_PATH>0</EJ_PATH>
+                  <EJ_PATHNAME>Ejection Path Not Applicable</EJ_PATHNAME>
+                  <EXTRICAT>0</EXTRICAT>
+                  <EXTRICATNAME>Not Extricated or Not Applicable</EXTRICATNAME>
+                  <DRINKING>0</DRINKING>
+                  <DRINKINGNAME>No (Alcohol Not Involved)</DRINKINGNAME>
+                  <ALC_STATUS>0</ALC_STATUS>
+                  <ALC_STATUSNAME>Test Not Given</ALC_STATUSNAME>
+                  <ATST_TYP>0</ATST_TYP>
+                  <ATST_TYPNAME>Test Not Given</ATST_TYPNAME>
+                  <ALC_RES>996</ALC_RES>
+                  <ALC_RESNAME>Test Not Given</ALC_RESNAME>
+                  <DRUGS>0</DRUGS>
+                  <DRUGSNAME>No (drugs not involved)</DRUGSNAME>
+                  <DSTATUS>0</DSTATUS>
+                  <DSTATUSNAME>Test Not Given</DSTATUSNAME>
+                  <HOSPITAL>0</HOSPITAL>
+                  <HOSPITALNAME>Not Transported for Treatment</HOSPITALNAME>
+                  <DOA>0</DOA>
+                  <DEATH_DA>88</DEATH_DA>
+                  <DEATH_DANAME>Not Applicable (Non-Fatal)</DEATH_DANAME>
+                  <DEATH_MO>88</DEATH_MO>
+                  <DEATH_MONAME>Not Applicable (Non-Fatal)</DEATH_MONAME>
+                  <DEATH_YR>8888</DEATH_YR>
+                  <DEATH_YRNAME>Not Applicable (Non-fatal)</DEATH_YRNAME>
+                  <DEATH_HR>88</DEATH_HR>
+                  <DEATH_HRNAME>Not Applicable (Non-fatal)</DEATH_HRNAME>
+                  <DEATH_MN>88</DEATH_MN>
+                  <DEATH_MNNAME>Not Applicable (Non-fatal)</DEATH_MNNAME>
+                  <DEATH_TM>8888</DEATH_TM>
+                  <DEATH_TMNAME>Not Applicable (Non-fatal)</DEATH_TMNAME>
+                  <LAG_HRS>999</LAG_HRS>
+                  <LAG_MINS>99</LAG_MINS>
+                  <WORK_INJ>8</WORK_INJ>
+                  <WORK_INJNAME>Not Applicable (not a fatality)</WORK_INJNAME>
+                  <HISPANIC>0</HISPANIC>
+                  <HISPANICNAME>Not A Fatality (not Applicable)</HISPANICNAME>
+                  <DOANAME>Not Applicable</DOANAME>
+                  <LOCATION>0</LOCATION>
+                  <LOCATIONNAME>Occupant of a Motor Vehicle</LOCATIONNAME>
+                  <HELM_USE>20</HELM_USE>
+                  <HELM_USENAME>Not Applicable</HELM_USENAME>
+                  <HELM_MIS>7</HELM_MIS>
+                  <HELM_MISNAME>None Used/Not Applicable</HELM_MISNAME>
+                  <LAG_HRSNAME>Unknown</LAG_HRSNAME>
+                  <LAG_MINSNAME>Unknown</LAG_MINSNAME>
+                  <MAK_MODNAME>KIA Optima</MAK_MODNAME>
+                  <VPICMAKE>499</VPICMAKE>
+                  <VPICMAKENAME>Kia</VPICMAKENAME>
+                  <VPICMODEL>2739</VPICMODEL>
+                  <VPICMODELNAME>Optima</VPICMODELNAME>
+                  <VPICBODYCLASS>13</VPICBODYCLASS>
+                  <VPICBODYCLASSNAME>Sedan/Saloon</VPICBODYCLASSNAME>
+                  <ICFINALBODY>0</ICFINALBODY>
+                  <ICFINALBODYNAME>Not Applicable</ICFINALBODYNAME>
+                  <GVWR_FROM>11</GVWR_FROM>
+                  <GVWR_FROMNAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_FROMNAME>
+                  <GVWR_TO>11</GVWR_TO>
+                  <GVWR_TONAME>Class 1: 6,000 lbs. or less (2,722 kg or less)</GVWR_TONAME>
+                  <PersonRFs>
+                    <PersonRF>
+                      <CaseYear>2023</CaseYear>
+                      <STATE>51</STATE>
+                      <ST_CASE>510200</ST_CASE>
+                      <STATENAME>Virginia</STATENAME>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <VEH_NO>2</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <PERSONRF>0</PERSONRF>
+                      <PERSONRFNAME>None Noted</PERSONRFNAME>
+                    </PersonRF>
+                  </PersonRFs>
+                  <Races>
+                    <Race>
+                      <CASEYEAR>2023</CASEYEAR>
+                      <STATE>51</STATE>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <STATENAME>Virginia</STATENAME>
+                      <ST_CASE>510200</ST_CASE>
+                      <VEH_NO>2</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <ORDER>1</ORDER>
+                      <ORDERNAME>1</ORDERNAME>
+                      <RACE>0</RACE>
+                      <RACENAME>Not a Fatality (not applicable)</RACENAME>
+                      <MULTRACE>0</MULTRACE>
+                      <MULTRACENAME>No</MULTRACENAME>
+                    </Race>
+                  </Races>
+                  <OCCDrugs>
+                    <Drugs>
+                      <CaseYear>2023</CaseYear>
+                      <STATE>51</STATE>
+                      <ST_CASE>510200</ST_CASE>
+                      <STATENAME>Virginia</STATENAME>
+                      <STATEINITIAL>VA</STATEINITIAL>
+                      <VEH_NO>2</VEH_NO>
+                      <PER_NO>1</PER_NO>
+                      <DRUGSPEC>0</DRUGSPEC>
+                      <DRUGSPECNAME>Test Not Given</DRUGSPECNAME>
+                      <DRUGRES>0</DRUGRES>
+                      <DRUGRESNAME>Test Not Given</DRUGRESNAME>
+                      <DRUGMETHOD>0</DRUGMETHOD>
+                      <DRUGMETHODNAME>Test Not Given</DRUGMETHODNAME>
+                      <DRUGQTY>0</DRUGQTY>
+                      <DRUGQTYNAME>Test Not Given</DRUGQTYNAME>
+                      <DRUGACTQTY>-99.000</DRUGACTQTY>
+                      <DRUGACTQTYNAME>Not Applicable</DRUGACTQTYNAME>
+                      <DRUGUOM>-9</DRUGUOM>
+                      <DRUGUOMNAME>Not Applicable</DRUGUOMNAME>
+                    </Drugs>
+                  </OCCDrugs>
+                </Person>
+              </Persons>
+              <Damages>
+                <Damage>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <MDAREAS>12</MDAREAS>
+                  <MDAREASNAME>12 Clock Value</MDAREASNAME>
+                  <DAMAGE>12</DAMAGE>
+                  <DAMAGENAME>12 Clock Value</DAMAGENAME>
+                </Damage>
+              </Damages>
+              <VinDecodes/>
+              <VinDeriveds>
+                <VINDerived>
+                  <CASEYEAR>2023</CASEYEAR>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <VEH_NO>2</VEH_NO>
+                  <VehicleDescriptor>5XXGN4A7*DG******</VehicleDescriptor>
+                  <VINDecodedOn>8/22/2024 12:30:01 AM</VINDecodedOn>
+                  <VINDecodeError>0</VINDecodeError>
+                  <VehicleTypeId>2</VehicleTypeId>
+                  <VehicleType>PASSENGER CAR</VehicleType>
+                  <ManufacturerFullNameId>20996</ManufacturerFullNameId>
+                  <ManufacturerFullName>KIA GEORGIA, INC</ManufacturerFullName>
+                  <MakeId>499</MakeId>
+                  <Make>KIA</Make>
+                  <ModelId>2739</ModelId>
+                  <Model>Optima</Model>
+                  <ModelYear>2013</ModelYear>
+                  <Series>EX</Series>
+                  <Trim/>
+                  <Series2>QF</Series2>
+                  <Trim2/>
+                  <PlantCountryId>6</PlantCountryId>
+                  <PlantCountry>UNITED STATES (USA)</PlantCountry>
+                  <PlantState>GEORGIA</PlantState>
+                  <PlantCompanyName>Kia Motor Manufacturing, Georgia</PlantCompanyName>
+                  <BodyClassId>13</BodyClassId>
+                  <BodyClass>Sedan/Saloon</BodyClass>
+                  <DoorsCount>4</DoorsCount>
+                  <GrossVehicleWeightRatingFromId>1</GrossVehicleWeightRatingFromId>
+                  <GrossVehicleWeightRatingFrom>Class 1: 6,000 lb or less (2,722 kg or less)</GrossVehicleWeightRatingFrom>
+                  <GrossVehicleWeightRatingToId>1</GrossVehicleWeightRatingToId>
+                  <GrossVehicleWeightRatingTo>Class 1: 6,000 lb or less (2,722 kg or less)</GrossVehicleWeightRatingTo>
+                  <TruckBodyCabTypeId>0</TruckBodyCabTypeId>
+                  <TruckBodyCabType>Not Applicable</TruckBodyCabType>
+                  <TruckBedTypeId>0</TruckBedTypeId>
+                  <TruckBedType>Not Applicable</TruckBedType>
+                  <BusTypeId>0</BusTypeId>
+                  <BusType>Not Applicable</BusType>
+                  <BusFloorConfigurationTypeId>0</BusFloorConfigurationTypeId>
+                  <BusFloorConfigurationType>Not Applicable</BusFloorConfigurationType>
+                  <CustomMotorcycleTypeId>0</CustomMotorcycleTypeId>
+                  <CustomMotorcycleType>Not Applicable</CustomMotorcycleType>
+                  <MotorcycleSuspensionTypeId>0</MotorcycleSuspensionTypeId>
+                  <MotorcycleSuspensionType>Not Applicable</MotorcycleSuspensionType>
+                  <MotorcycleChassisTypeId>0</MotorcycleChassisTypeId>
+                  <MotorcycleChassisType>Not Applicable</MotorcycleChassisType>
+                  <EngineModel>DOHC GDI Theta II</EngineModel>
+                  <DisplacementCI>146</DisplacementCI>
+                  <DisplacementCC>2400</DisplacementCC>
+                  <DisplacementL>2</DisplacementL>
+                  <FuelTypePrimaryId>4</FuelTypePrimaryId>
+                  <FuelTypePrimary>Gasoline</FuelTypePrimary>
+                  <FuelDeliveryInjectionTypeId>1</FuelDeliveryInjectionTypeId>
+                  <FuelDeliveryInjectionType>Stoichiometric Gasoline Direct Injection (SGDI)</FuelDeliveryInjectionType>
+                  <EngineValveTrainDesignId>2</EngineValveTrainDesignId>
+                  <EngineValveTrainDesign>Dual Overhead Cam (DOHC)</EngineValveTrainDesign>
+                  <EngineTurboId>1</EngineTurboId>
+                  <EngineTurbo>Yes</EngineTurbo>
+                  <SeatBeltTypeId>1</SeatBeltTypeId>
+                  <SeatBeltType>Manual</SeatBeltType>
+                  <AirBagLocFrontId>3</AirBagLocFrontId>
+                  <AirBagLocFront>1st Row (Driver and Passenger)</AirBagLocFront>
+                  <AirBagLocSideId>3</AirBagLocSideId>
+                  <AirBagLocSide>1st Row (Driver and Passenger)</AirBagLocSide>
+                  <AirBagLocCurtainId>4</AirBagLocCurtainId>
+                  <AirBagLocCurtain>1st and 2nd Rows</AirBagLocCurtain>
+                  <TPMSId>1</TPMSId>
+                  <TPMS>Direct</TPMS>
+                </VINDerived>
+              </VinDeriveds>
+              <TrailerVinDeriveds/>
+              <Maneuvers>
+                <Maneuver>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <MDRMANAV>0</MDRMANAV>
+                  <MDRMANAVNAME>Driver Did Not Maneuver to Avoid</MDRMANAVNAME>
+                  <MANEUVER>0</MANEUVER>
+                  <MANEUVERNAME>Driver Did Not Maneuver to Avoid</MANEUVERNAME>
+                </Maneuver>
+              </Maneuvers>
+              <DrImpairs>
+                <DrImpair>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <DRIMPAIR>0</DRIMPAIR>
+                  <DRIMPAIRNAME>None/Apparently Normal</DRIMPAIRNAME>
+                </DrImpair>
+              </DrImpairs>
+              <Distractions>
+                <Distract>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <MDRDSTRD>0</MDRDSTRD>
+                  <MDRDSTRDNAME>Not Distracted</MDRDSTRDNAME>
+                  <DRDISTRACT>0</DRDISTRACT>
+                  <DRDISTRACTNAME>Not Distracted</DRDISTRACTNAME>
+                </Distract>
+              </Distractions>
+              <Violations>
+                <Violation>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <MVIOLATN>0</MVIOLATN>
+                  <MVIOLATNNAME>None</MVIOLATNNAME>
+                  <VIOLATION>0</VIOLATION>
+                  <VIOLATIONNAME>None</VIOLATIONNAME>
+                </Violation>
+              </Violations>
+              <VEvents>
+                <VEvent>
+                  <STATE>51</STATE>
+                  <EVENTNUM>2</EVENTNUM>
+                  <VEH_NO>2</VEH_NO>
+                  <VEVENTNUM>1</VEVENTNUM>
+                  <AOI1>12</AOI1>
+                  <AOI1NAME>12 Clock Point</AOI1NAME>
+                  <SOE>8</SOE>
+                  <SOENAME>Pedestrian</SOENAME>
+                  <AOI2>77</AOI2>
+                  <AOI2NAME>Not a Motor Vehicle</AOI2NAME>
+                  <CaseYear>2023</CaseYear>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VNUMBER1>2</VNUMBER1>
+                  <VNUMBER2>9999</VNUMBER2>
+                  <VNUMBER2NAME>Not a Motor Vehicle</VNUMBER2NAME>
+                </VEvent>
+              </VEvents>
+              <Vsoes>
+                <VSOEs>
+                  <CASEYEAR>2023</CASEYEAR>
+                  <STATE>51</STATE>
+                  <STATENAME>Virginia</STATENAME>
+                  <ST_CASE>510200</ST_CASE>
+                  <VEH_NO>2</VEH_NO>
+                  <VEVENTNUM>1</VEVENTNUM>
+                  <SOE>8</SOE>
+                  <SOENAME>Pedestrian</SOENAME>
+                  <AOI>12</AOI>
+                  <AOINAME>12 Clock Point</AOINAME>
+                </VSOEs>
+              </Vsoes>
+              <Factors>
+                <Factor>
+                  <CaseYear>2023</CaseYear>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATE>51</STATE>
+                  <STATENAME>Virginia</STATENAME>
+                  <VEH_NO>2</VEH_NO>
+                  <MFACTOR>0</MFACTOR>
+                  <MFACTORNAME>None Noted</MFACTORNAME>
+                  <VEHICLECC>0</VEHICLECC>
+                  <VEHICLECCNAME>None Noted</VEHICLECCNAME>
+                </Factor>
+              </Factors>
+              <Visions>
+                <Vision>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <VEH_NO>2</VEH_NO>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <MVISOBSC>0</MVISOBSC>
+                  <MVISOBSCNAME>No Obstruction Noted</MVISOBSCNAME>
+                  <VISION>0</VISION>
+                  <VISIONNAME>No Obstruction Noted</VISIONNAME>
+                </Vision>
+              </Visions>
+              <VehicleSFs>
+                <VehicleSF>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <STATEINITIAL>VA</STATEINITIAL>
+                  <VEH_NO>2</VEH_NO>
+                  <VEHICLESF>0</VEHICLESF>
+                  <VEHICLESFNAME>None Noted</VEHICLESFNAME>
+                </VehicleSF>
+              </VehicleSFs>
+              <DrierRFs>
+                <DriverRF>
+                  <CaseYear>2023</CaseYear>
+                  <STATE>51</STATE>
+                  <ST_CASE>510200</ST_CASE>
+                  <STATENAME>Virginia</STATENAME>
+                  <STATEINITIAL>VA</STATEINITIAL>
+                  <VEH_NO>2</VEH_NO>
+                  <DRIVERRF>0</DRIVERRF>
+                  <DRIVERRFNAME>None Noted</DRIVERRFNAME>
+                </DriverRF>
+              </DrierRFs>
+            </Vehicle>
+          </Vehicles>
+          <PbTypes>
+            <PBType>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <Veh_No>0</Veh_No>
+              <PER_NO>1</PER_NO>
+              <PBPTYPE>5</PBPTYPE>
+              <PBPTYPENAME>Pedestrian</PBPTYPENAME>
+              <PBAGE>59</PBAGE>
+              <PBAGENAME>59 Years</PBAGENAME>
+              <PBSEX>1</PBSEX>
+              <PBSEXNAME>Male</PBSEXNAME>
+              <PBCWALK>0</PBCWALK>
+              <PBCWALKNAME>None Noted</PBCWALKNAME>
+              <PBSWALK>0</PBSWALK>
+              <PBSWALKNAME>None Noted</PBSWALKNAME>
+              <PBSZONE>0</PBSZONE>
+              <PBSZONENAME>None Noted</PBSZONENAME>
+              <PEDCTYPE>760</PEDCTYPE>
+              <PEDCTYPENAME>Pedestrian Failed to Yield</PEDCTYPENAME>
+              <BIKECTYPE>0</BIKECTYPE>
+              <BIKECTYPENAME>Not a Cyclist</BIKECTYPENAME>
+              <PEDLOC>1</PEDLOC>
+              <PEDLOCNAME>At Intersection</PEDLOCNAME>
+              <BIKELOC>7</BIKELOC>
+              <BIKELOCNAME>Not a Cyclist</BIKELOCNAME>
+              <PEDPOS>1</PEDPOS>
+              <PEDPOSNAME>Intersection Area</PEDPOSNAME>
+              <BIKEPOS>7</BIKEPOS>
+              <BIKEPOSNAME>Not a Cyclist</BIKEPOSNAME>
+              <PEDDIR>2</PEDDIR>
+              <PEDDIRNAME>Eastbound</PEDDIRNAME>
+              <BIKEDIR>7</BIKEDIR>
+              <BIKEDIRNAME>Not a Cyclist</BIKEDIRNAME>
+              <MOTDIR>3</MOTDIR>
+              <MOTDIRNAME>Southbound</MOTDIRNAME>
+              <MOTMAN>3</MOTMAN>
+              <MOTMANNAME>Straight through</MOTMANNAME>
+              <PEDLEG>2</PEDLEG>
+              <PEDLEGNAME>Farside</PEDLEGNAME>
+              <PEDSNR>4b</PEDSNR>
+              <PEDSNRNAME>Motorist traveling straight through - Crash Occurred on Far Side of Intersection / Pedestrian outside crosswalk area, traveled from motorist’s right.</PEDSNRNAME>
+              <PEDCGP>750</PEDCGP>
+              <PEDCGPNAME>Crossing Roadway - Vehicle Not Turning</PEDCGPNAME>
+              <BIKECGP>0</BIKECGP>
+              <BIKECGPNAME>Not a Cyclist</BIKECGPNAME>
+            </PBType>
+          </PbTypes>
+          <NPersons>
+            <Person>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <VE_FORMS>2</VE_FORMS>
+              <PER_NO>1</PER_NO>
+              <STR_VEH>1</STR_VEH>
+              <STR_VEHNAME>01</STR_VEHNAME>
+              <COUNTY>177</COUNTY>
+              <COUNTYNAME>SPOTSYLVANIA (177)</COUNTYNAME>
+              <DAY>6</DAY>
+              <DAYNAME>6</DAYNAME>
+              <MONTH>4</MONTH>
+              <MonthName>April</MonthName>
+              <HOUR>20</HOUR>
+              <HOURNAME>8:00pm-8:59pm</HOURNAME>
+              <MINUTE>5</MINUTE>
+              <MINUTENAME>5</MINUTENAME>
+              <RUR_URB>2</RUR_URB>
+              <RUR_URBNAME>Urban</RUR_URBNAME>
+              <FUNC_SYS>4</FUNC_SYS>
+              <FUNC_SYSNAME>Minor Arterial</FUNC_SYSNAME>
+              <HARM_EV>8</HARM_EV>
+              <HARM_EVNAME>Pedestrian</HARM_EVNAME>
+              <MAN_COLL>0</MAN_COLL>
+              <MAN_COLLNAME>The First Harmful Event was Not a Collision with a Motor Vehicle in Transport</MAN_COLLNAME>
+              <SCH_BUS>0</SCH_BUS>
+              <SCH_BUSNAME>No</SCH_BUSNAME>
+              <AGE>59</AGE>
+              <AGENAME>59 Years</AGENAME>
+              <SEX>1</SEX>
+              <SEXNAME>Male</SEXNAME>
+              <PER_TYP>5</PER_TYP>
+              <PER_TYPNAME>Pedestrian</PER_TYPNAME>
+              <INJ_SEV>4</INJ_SEV>
+              <INJ_SEVNAME>Fatal Injury (K)</INJ_SEVNAME>
+              <SEAT_POS>0</SEAT_POS>
+              <SEAT_POSNAME>Not a Motor Vehicle Occupant</SEAT_POSNAME>
+              <REST_USE>96</REST_USE>
+              <REST_USENAME>Not a Motor Vehicle Occupant</REST_USENAME>
+              <REST_MIS>8</REST_MIS>
+              <REST_MISNAME>Not a Motor Vehicle Occupant</REST_MISNAME>
+              <AIR_BAG>97</AIR_BAG>
+              <AIR_BAGNAME>Not a Motor Vehicle Occupant</AIR_BAGNAME>
+              <EJECTION>8</EJECTION>
+              <EJECTIONNAME>Not Applicable</EJECTIONNAME>
+              <EJ_PATH>0</EJ_PATH>
+              <EJ_PATHNAME>Ejection Path Not Applicable</EJ_PATHNAME>
+              <EXTRICAT>0</EXTRICAT>
+              <EXTRICATNAME>Not Extricated or Not Applicable</EXTRICATNAME>
+              <DRINKING>1</DRINKING>
+              <DRINKINGNAME>Yes (Alcohol Involved)</DRINKINGNAME>
+              <ALC_STATUS>2</ALC_STATUS>
+              <ALC_STATUSNAME>Test Given</ALC_STATUSNAME>
+              <ATST_TYP>5</ATST_TYP>
+              <ATST_TYPNAME>Blood Plasma/Serum</ATST_TYPNAME>
+              <ALC_RES>0</ALC_RES>
+              <ALC_RESNAME>0.000 % BAC</ALC_RESNAME>
+              <DRUGS>9</DRUGS>
+              <DRUGSNAME>Reported as Unknown</DRUGSNAME>
+              <DSTATUS>2</DSTATUS>
+              <DSTATUSNAME>Test Given</DSTATUSNAME>
+              <HOSPITAL>3</HOSPITAL>
+              <HOSPITALNAME>EMS Unknown Mode</HOSPITALNAME>
+              <DOA>0</DOA>
+              <DEATH_DA>6</DEATH_DA>
+              <DEATH_DANAME>6</DEATH_DANAME>
+              <DEATH_MO>4</DEATH_MO>
+              <DEATH_MONAME>April</DEATH_MONAME>
+              <DEATH_YR>2023</DEATH_YR>
+              <DEATH_YRNAME>2023</DEATH_YRNAME>
+              <DEATH_HR>20</DEATH_HR>
+              <DEATH_HRNAME>20:00-20:59</DEATH_HRNAME>
+              <DEATH_MN>59</DEATH_MN>
+              <DEATH_MNNAME>59</DEATH_MNNAME>
+              <DEATH_TM>2059</DEATH_TM>
+              <DEATH_TMNAME>2059</DEATH_TMNAME>
+              <LAG_HRS>0</LAG_HRS>
+              <LAG_MINS>54</LAG_MINS>
+              <WORK_INJ>0</WORK_INJ>
+              <WORK_INJNAME>No</WORK_INJNAME>
+              <HISPANIC>7</HISPANIC>
+              <HISPANICNAME>Non-Hispanic</HISPANICNAME>
+              <DOANAME>Not Applicable</DOANAME>
+              <LOCATION>3</LOCATION>
+              <LOCATIONNAME>At Intersection - Not In Crosswalk</LOCATIONNAME>
+              <HELM_USE>96</HELM_USE>
+              <HELM_USENAME>Not a Motor Vehicle Occupant</HELM_USENAME>
+              <HELM_MIS>8</HELM_MIS>
+              <HELM_MISNAME>Not a Motor Vehicle Occupant</HELM_MISNAME>
+              <LAG_HRSNAME>0</LAG_HRSNAME>
+              <LAG_MINSNAME>54</LAG_MINSNAME>
+              <DEVTYPE>0</DEVTYPE>
+              <DEVTYPENAME>Not Applicable</DEVTYPENAME>
+              <DEVMOTOR>0</DEVMOTOR>
+              <DEVMOTORNAME>Not Applicable</DEVMOTORNAME>
+            </Person>
+          </NPersons>
+          <NmImpairs>
+            <NMImpair>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <NMIMPAIR>10</NMIMPAIR>
+              <NMIMPAIRNAME>Physical Impairment - No Details</NMIMPAIRNAME>
+            </NMImpair>
+          </NmImpairs>
+          <NmCrashes>
+            <NMCrash>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <MTM_CRSH>2</MTM_CRSH>
+              <MTM_CRSHNAME>Failure to Yield Right-Of-Way</MTM_CRSHNAME>
+              <NMCC>2</NMCC>
+              <NMCCNAME>Failure to Yield Right-Of-Way</NMCCNAME>
+            </NMCrash>
+            <NMCrash>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <MTM_CRSH>12</MTM_CRSH>
+              <MTM_CRSHNAME>Improper Crossing of Roadway or Intersection (Jaywalking)</MTM_CRSHNAME>
+              <NMCC>12</NMCC>
+              <NMCCNAME>Improper Crossing of Roadway or Intersection (Jaywalking)</NMCCNAME>
+            </NMCrash>
+            <NMCrash>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <MTM_CRSH>19</MTM_CRSH>
+              <MTM_CRSHNAME>Not Visible (Dark clothing, No Lighting, etc.)</MTM_CRSHNAME>
+              <NMCC>19</NMCC>
+              <NMCCNAME>Not Visible (Dark clothing, No Lighting, etc.)</NMCCNAME>
+            </NMCrash>
+          </NmCrashes>
+          <NmPriors>
+            <NMPrior>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <MPR_ACT>3</MPR_ACT>
+              <MPR_ACTNAME>Crossing Roadway</MPR_ACTNAME>
+              <NMACTION>3</NMACTION>
+              <NMACTIONNAME>Crossing Roadway</NMACTIONNAME>
+            </NMPrior>
+          </NmPriors>
+          <NmDistract>
+            <NMDistract>
+              <CASEYEAR>2023</CASEYEAR>
+              <STATE>51</STATE>
+              <STATEINITIAL>VA</STATEINITIAL>
+              <STATENAME>Virginia</STATENAME>
+              <ST_CASE>510200</ST_CASE>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <MNMDSTRD>96</MNMDSTRD>
+              <MNMDSTRDNAME>Not Reported</MNMDSTRDNAME>
+              <NMDISTRACT>96</NMDISTRACT>
+              <NMDISTRACTNAME>Not Reported</NMDISTRACTNAME>
+            </NMDistract>
+          </NmDistract>
+          <SafetyEQs>
+            <SafetyEQ>
+              <STATE>51</STATE>
+              <VEH_NO>0</VEH_NO>
+              <PER_NO>1</PER_NO>
+              <CaseYear>2023</CaseYear>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <MSAFEQMT>-1</MSAFEQMT>
+              <NMHELMET>8</NMHELMET>
+              <NMHELMETNAME>Not Reported</NMHELMETNAME>
+              <NMLIGHT>8</NMLIGHT>
+              <NMLIGHTNAME>Not Reported</NMLIGHTNAME>
+              <NMOTHPRE>8</NMOTHPRE>
+              <NMOTHPRENAME>Not Reported</NMOTHPRENAME>
+              <NMOTHPRO>8</NMOTHPRO>
+              <NMOTHPRONAME>Not Reported</NMOTHPRONAME>
+              <NMPROPAD>8</NMPROPAD>
+              <NMPROPADNAME>Not Reported</NMPROPADNAME>
+              <NMREFCLO>8</NMREFCLO>
+              <NMREFCLONAME>Not Reported</NMREFCLONAME>
+            </SafetyEQ>
+          </SafetyEQs>
+          <CEvents>
+            <CEvent>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <EVENTNUM>1</EVENTNUM>
+              <AOI1>11</AOI1>
+              <AOI1NAME>11 Clock Point</AOI1NAME>
+              <AOI2>77</AOI2>
+              <AOI2NAME>Not a Motor Vehicle</AOI2NAME>
+              <SOE>8</SOE>
+              <SOENAME>Pedestrian</SOENAME>
+              <VNUMBER1>1</VNUMBER1>
+              <VNUMBER2>9999</VNUMBER2>
+              <VNUMBER2NAME>Not a Motor Vehicle</VNUMBER2NAME>
+            </CEvent>
+            <CEvent>
+              <CaseYear>2023</CaseYear>
+              <STATE>51</STATE>
+              <ST_CASE>510200</ST_CASE>
+              <STATENAME>Virginia</STATENAME>
+              <EVENTNUM>2</EVENTNUM>
+              <AOI1>12</AOI1>
+              <AOI1NAME>12 Clock Point</AOI1NAME>
+              <AOI2>77</AOI2>
+              <AOI2NAME>Not a Motor Vehicle</AOI2NAME>
+              <SOE>8</SOE>
+              <SOENAME>Pedestrian</SOENAME>
+              <VNUMBER1>2</VNUMBER1>
+              <VNUMBER2>9999</VNUMBER2>
+              <VNUMBER2NAME>Not a Motor Vehicle</VNUMBER2NAME>
+            </CEvent>
+          </CEvents>
+        </CrashResultSet>
+      </CaseDetail>
+    </ArrayOfCaseDetail>
+  </Results>
+</ResponseOfListOfCaseDetail>

@@ -1,0 +1,6 @@
+.git
+.github
+.gitignore
+Dockerfile
+build_docker.sh
+run_docker.sh

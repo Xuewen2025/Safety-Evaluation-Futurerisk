@@ -1,0 +1,11 @@
+{
+  "temperature": 1.82108040201005,
+  "val_ece_before": 0.1532493729306304,
+  "val_ece_after": 0.2029961616399329,
+  "test_auroc_before": 0.7934424120508983,
+  "test_auroc_after": 0.7934447511227545,
+  "test_auprc_before": 0.49034162372755663,
+  "test_auprc_after": 0.49034162372755663,
+  "test_ece_before": 0.1335014022058911,
+  "test_ece_after": 0.1909502448091267
+}
