@@ -1,4 +1,4 @@
-# Safety Evaluation — FutureRisk / CARM
+# Safety Evaluation — FutureRisk
 
 Implementation and experiments for **FutureRisk**, a post-hoc,
 outcome-agnostic safety-evaluation metric for already-executed AV
